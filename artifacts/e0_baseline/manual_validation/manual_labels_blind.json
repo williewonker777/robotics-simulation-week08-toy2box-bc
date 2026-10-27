@@ -1,0 +1,22 @@
+{
+ "V01": ["grasp", "reached and closed on the truck, truck stayed on table, arm went to box empty"],
+ "V02": ["grasp", "fingers around truck at t252-284, truck ejected upward at closure (t290), episode terminated"],
+ "V03": ["grasp", "closed on truck, truck tipped onto its end at lift, arm went to box empty"],
+ "V04": ["grasp|transport", "closed on truck late (t~500), truck held tilted near origin until timeout, never carried"],
+ "V05": ["grasp", "contact/close at t300, truck left on table, arm went to box empty"],
+ "V06": ["grasp", "contact/close at t400, truck left on table, arm wandered"],
+ "V07": ["placement", "lifted, carried, truck dropped inside box at t~499, success never registered (gripper/pose)"],
+ "V08": ["transport", "lifted at t400, dropped on table part-way to box"],
+ "V09": ["grasp", "fingers around truck t339-371, truck ejected at closure (t377), episode terminated"],
+ "V10": ["transport", "held from t400, moved toward box, dropped short of box at t~650"],
+ "V11": ["transport", "picked at t300, truck ended on table in front of box"],
+ "V12": ["grasp", "contact t300, truck displaced not lifted, arm to box empty"],
+ "V13": ["transport|placement", "grasped t400, slow carry, still holding over box rim at timeout"],
+ "V14": ["grasp", "closed above/at truck t300, truck not lifted"],
+ "V15": ["grasp|transport", "contact t300, truck ended on its side ~4cm toward box"],
+ "V16": ["grasp", "repeated attempts, truck flipped, never lifted"],
+ "V17": ["transport|placement", "truck ended at box base outside, arm hovered over box"],
+ "V18": ["grasp", "contact t300, truck pushed around, repeated attempts"],
+ "V19": ["approach", "hovered/dithered near truck whole episode, no contact marker"],
+ "V20": ["grasp|transport", "closed on truck t300, held in place until timeout, never carried"]
+}

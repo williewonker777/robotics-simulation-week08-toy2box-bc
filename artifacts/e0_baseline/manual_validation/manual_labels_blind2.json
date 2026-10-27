@@ -1,0 +1,22 @@
+{
+ "W01": ["grasp", "closed on truck with contact from t~363, truck held at table level to timeout, never lifted"],
+ "W02": ["approach", "gripper wandered above, never descended onto truck, truck untouched, went to box empty"],
+ "W03": ["transport", "contact t290, lifted t363-435, dropped near box front-left, regrasp attempts"],
+ "W04": ["grasp", "contact t363, truck knocked onto its side at the plate edge, never carried"],
+ "W05": ["grasp|transport", "contact/lift around t435, truck ended on table in front of box"],
+ "W06": ["grasp", "closed at truck t290-363, truck left on plate edge, arm to box empty"],
+ "W07": ["transport|placement", "lifted t363, carried toward box t435, truck gone from view by t508"],
+ "W08": ["grasp", "early termination at 298, truck ejected near closure"],
+ "W09": ["approach", "arm swung out of view most of the episode, truck untouched"],
+ "W10": ["approach", "hovered above truck, no visible contact, truck unchanged, arm to box empty"],
+ "W11": ["approach", "dithered around truck, no visible contact or lift"],
+ "W12": ["transport|placement", "lifted t435, carried over box corner, still holding at timeout"],
+ "W13": ["grasp", "contact t290, truck knocked ~5cm away at closure, never lifted"],
+ "W14": ["approach", "arm swung out of view, came back, never touched truck"],
+ "W15": ["approach", "gripper around plate near truck, no contact, truck unchanged"],
+ "W16": ["approach", "hovered near truck, no contact, went to box empty"],
+ "W17": ["grasp|transport", "contact t290-363, truck ended near box front-left on table"],
+ "W18": ["grasp", "truck knocked and rotated at closure t~330, never lifted"],
+ "W19": ["grasp", "truck knocked onto its side at closure, arm to box empty"],
+ "W20": ["approach", "hovered above truck, no contact, arm to box empty"]
+}

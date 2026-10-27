@@ -1,0 +1,142 @@
+[
+ {
+  "id": "W01",
+  "seed": 111,
+  "trial": 25,
+  "stage_v31": "grasp",
+  "frames": 800
+ },
+ {
+  "id": "W02",
+  "seed": 101,
+  "trial": 19,
+  "stage_v31": "approach",
+  "frames": 800
+ },
+ {
+  "id": "W03",
+  "seed": 111,
+  "trial": 13,
+  "stage_v31": "transport",
+  "frames": 800
+ },
+ {
+  "id": "W04",
+  "seed": 101,
+  "trial": 45,
+  "stage_v31": "transport",
+  "frames": 800
+ },
+ {
+  "id": "W05",
+  "seed": 111,
+  "trial": 60,
+  "stage_v31": "transport",
+  "frames": 800
+ },
+ {
+  "id": "W06",
+  "seed": 101,
+  "trial": 70,
+  "stage_v31": "grasp",
+  "frames": 800
+ },
+ {
+  "id": "W07",
+  "seed": 101,
+  "trial": 15,
+  "stage_v31": "transport",
+  "frames": 800
+ },
+ {
+  "id": "W08",
+  "seed": 101,
+  "trial": 63,
+  "stage_v31": "grasp",
+  "frames": 299
+ },
+ {
+  "id": "W09",
+  "seed": 101,
+  "trial": 98,
+  "stage_v31": "approach",
+  "frames": 800
+ },
+ {
+  "id": "W10",
+  "seed": 111,
+  "trial": 12,
+  "stage_v31": "approach",
+  "frames": 800
+ },
+ {
+  "id": "W11",
+  "seed": 101,
+  "trial": 49,
+  "stage_v31": "approach",
+  "frames": 800
+ },
+ {
+  "id": "W12",
+  "seed": 111,
+  "trial": 64,
+  "stage_v31": "transport",
+  "frames": 800
+ },
+ {
+  "id": "W13",
+  "seed": 101,
+  "trial": 25,
+  "stage_v31": "grasp",
+  "frames": 800
+ },
+ {
+  "id": "W14",
+  "seed": 111,
+  "trial": 2,
+  "stage_v31": "approach",
+  "frames": 800
+ },
+ {
+  "id": "W15",
+  "seed": 111,
+  "trial": 73,
+  "stage_v31": "grasp",
+  "frames": 800
+ },
+ {
+  "id": "W16",
+  "seed": 111,
+  "trial": 53,
+  "stage_v31": "grasp",
+  "frames": 800
+ },
+ {
+  "id": "W17",
+  "seed": 101,
+  "trial": 82,
+  "stage_v31": "transport",
+  "frames": 800
+ },
+ {
+  "id": "W18",
+  "seed": 111,
+  "trial": 91,
+  "stage_v31": "grasp",
+  "frames": 800
+ },
+ {
+  "id": "W19",
+  "seed": 101,
+  "trial": 5,
+  "stage_v31": "grasp",
+  "frames": 800
+ },
+ {
+  "id": "W20",
+  "seed": 101,
+  "trial": 4,
+  "stage_v31": "approach",
+  "frames": 800
+ }
+]

@@ -1,0 +1,8 @@
+datasets/toy2box_agibot_codex_smooth.hdf5: 40 demos with a close; convention (-90,90] +/-5 deg: 100.0%
+  truck-yaw bin      n  convention  mode0:mode180  |wrist rot| median
+  [-180,-135)    11     100.0%      0:11         87.4
+  [-135, -90)     5     100.0%      0:5          30.1
+  [ -45,  +0)     2     100.0%      2:0         110.4
+  [  +0, +45)     3     100.0%      3:0          97.5
+  [ +90,+135)     7     100.0%      0:7         157.7
+  [+135,+180)    12     100.0%      0:12        119.6

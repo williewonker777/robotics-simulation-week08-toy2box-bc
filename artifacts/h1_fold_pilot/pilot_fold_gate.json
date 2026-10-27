@@ -1,0 +1,119 @@
+{
+ "utc": "2026-10-27T05:02:19.804533+00:00",
+ "gate_passed": false,
+ "conditions": {
+  "a_normal_no_cap_or_error": true,
+  "b_convention_and_no_mixed_bins": true,
+  "c_fold_selection_audit": true,
+  "d_success_rate_at_least_40pct": false
+ },
+ "error": null,
+ "successes": 50,
+ "failures": 90,
+ "success_rate": 0.35714285714285715,
+ "scope6_raw_capped_cycles": 0,
+ "scope6_retry_operations": 0,
+ "settling_errors": [],
+ "elapsed_seconds": 416.6729236659594,
+ "minimum_ram_gib": 13.347450256347656,
+ "convention": {
+  "episodes": 50,
+  "with_close": 50,
+  "without_close": [],
+  "conforming": 50,
+  "convention_fraction": 1.0,
+  "tolerance_deg": 5.0,
+  "bins": [
+   {
+    "range_deg": [
+     -180,
+     -135
+    ],
+    "count": 12,
+    "conforming": 12,
+    "mode0": 0,
+    "mode180": 12
+   },
+   {
+    "range_deg": [
+     -135,
+     -90
+    ],
+    "count": 9,
+    "conforming": 9,
+    "mode0": 0,
+    "mode180": 9
+   },
+   {
+    "range_deg": [
+     -90,
+     -45
+    ],
+    "count": 1,
+    "conforming": 1,
+    "mode0": 1,
+    "mode180": 0
+   },
+   {
+    "range_deg": [
+     -45,
+     0
+    ],
+    "count": 7,
+    "conforming": 7,
+    "mode0": 7,
+    "mode180": 0
+   },
+   {
+    "range_deg": [
+     0,
+     45
+    ],
+    "count": 6,
+    "conforming": 6,
+    "mode0": 6,
+    "mode180": 0
+   },
+   {
+    "range_deg": [
+     45,
+     90
+    ],
+    "count": 0,
+    "conforming": 0,
+    "mode0": 0,
+    "mode180": 0
+   },
+   {
+    "range_deg": [
+     90,
+     135
+    ],
+    "count": 4,
+    "conforming": 4,
+    "mode0": 0,
+    "mode180": 4
+   },
+   {
+    "range_deg": [
+     135,
+     180
+    ],
+    "count": 11,
+    "conforming": 11,
+    "mode0": 0,
+    "mode180": 11
+   }
+  ],
+  "mixed_bins": []
+ },
+ "fold_audit": {
+  "all_selection_records": 432,
+  "truck_selection_records": 232,
+  "box_selection_records": 200,
+  "source_folded_selections": 214,
+  "target_folded_selections": 115,
+  "abs_delta_yaw_median_deg": 4.462492620920784,
+  "abs_delta_yaw_p90_deg": 14.293626215475264
+ }
+}

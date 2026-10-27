@@ -1,0 +1,21 @@
+per |target yaw| bin: median |dyaw| over the top-3 candidates, share of targets whose top-3 mixes grasp modes
+stock    
+  |yaw| [  0, 45) n= 44 median|dyaw|  13.3  p90  35.6  mixed-mode targets  0.0%   E0 success 6/44
+  |yaw| [ 45, 90) n= 55 median|dyaw|  37.2  p90  46.5  mixed-mode targets 23.6%   E0 success 1/55
+  |yaw| [ 90,135) n= 51 median|dyaw|   5.7  p90  15.0  mixed-mode targets  0.0%   E0 success 13/51
+  |yaw| [135,181) n= 50 median|dyaw|   3.3  p90   8.6  mixed-mode targets  0.0%   E0 success 19/50
+symmetric
+  |yaw| [  0, 45) n= 44 median|dyaw|   3.3  p90   8.0  mixed-mode targets  0.0%   E0 success 6/44
+  |yaw| [ 45, 90) n= 55 median|dyaw|   5.1  p90  15.4  mixed-mode targets 14.5%   E0 success 1/55
+  |yaw| [ 90,135) n= 51 median|dyaw|   5.7  p90  14.8  mixed-mode targets 11.8%   E0 success 13/51
+  |yaw| [135,181) n= 50 median|dyaw|   2.6  p90   7.3  mixed-mode targets  0.0%   E0 success 19/50
+canonical (fold to (-90, 90])
+  |yaw| [  0, 45) n= 44 median|dyaw|   3.3  p90   8.0  mixed-mode targets   0.0% (by construction)
+  |yaw| [ 45, 90) n= 55 median|dyaw|   5.1  p90  16.5  mixed-mode targets   0.0% (by construction)
+  |yaw| [ 90,135) n= 51 median|dyaw|   5.7  p90  15.0  mixed-mode targets   0.0% (by construction)
+  |yaw| [135,181) n= 50 median|dyaw|   2.6  p90   7.3  mixed-mode targets   0.0% (by construction)
+mode-consistent (same-mode sources only, no flip)
+  |yaw| [  0, 45) n= 44 median|dyaw|  13.3  p90  35.6  mixed-mode targets   0.0% (by construction)
+  |yaw| [ 45, 90) n= 55 median|dyaw|  60.4  p90  77.6  mixed-mode targets   0.0% (by construction)
+  |yaw| [ 90,135) n= 51 median|dyaw|   5.7  p90  15.0  mixed-mode targets   0.0% (by construction)
+  |yaw| [135,181) n= 50 median|dyaw|   3.3  p90   8.6  mixed-mode targets   0.0% (by construction)
