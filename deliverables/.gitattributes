@@ -1,0 +1,8 @@
+# Store binary results as plain git blobs (the root .gitattributes routes some of these to Git LFS).
+*.hdf5 -filter binary
+*.mp4 -filter binary
+*.gif -filter binary
+*.pt -filter binary
+*.pth binary
+*.npz binary
+*.png binary

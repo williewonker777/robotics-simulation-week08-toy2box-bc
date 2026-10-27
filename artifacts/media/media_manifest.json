@@ -1,0 +1,95 @@
+{
+ "01_source_demos": {
+  "mp4": "01_source_demos.mp4",
+  "gif": "01_source_demos.gif",
+  "mp4_bytes": 709273,
+  "gif_bytes": 3614903,
+  "seconds": 14.7,
+  "speed": 2,
+  "panels": [
+   {
+    "label": "원본 시범 demo_0",
+    "sub": "트럭 yaw 157° · 180° 자세로 잡음",
+    "source": "demo_0.mp4"
+   },
+   {
+    "label": "원본 시범 demo_15",
+    "sub": "트럭 yaw -6° · 0° 자세로 잡음",
+    "source": "demo_15.mp4"
+   },
+   {
+    "label": "원본 시범 demo_4",
+    "sub": "트럭 yaw -134° · 180° 자세로 잡음",
+    "source": "demo_4.mp4"
+   }
+  ]
+ },
+ "02_baseline_outcomes": {
+  "mp4": "02_baseline_outcomes.mp4",
+  "gif": "02_baseline_outcomes.gif",
+  "mp4_bytes": 1483664,
+  "gif_bytes": 5921391,
+  "seconds": 20.0,
+  "speed": 2,
+  "panels": [
+   {
+    "label": "성공",
+    "sub": "seed 111 · #78 · yaw -172°",
+    "source": "rollout-episode-78.mp4"
+   },
+   {
+    "label": "접근 실패: 트럭까지 못 내려감",
+    "sub": "seed 101 · #19 · yaw 78°",
+    "source": "rollout-episode-19.mp4"
+   },
+   {
+    "label": "파지 실패: 닫다가 트럭을 쳐냄",
+    "sub": "seed 101 · #25 · yaw 43°",
+    "source": "rollout-episode-25.mp4"
+   },
+   {
+    "label": "파지 실패: 트럭이 튕겨 나감",
+    "sub": "seed 101 · #63 · yaw 16° · 조기 종료",
+    "source": "rollout-episode-63.mp4"
+   },
+   {
+    "label": "운반 실패: 들었다가 떨어뜨림",
+    "sub": "seed 111 · #13 · yaw 47°",
+    "source": "rollout-episode-13.mp4"
+   },
+   {
+    "label": "배치 실패: 상자 안, 판정 실패",
+    "sub": "seed 111 · #3 · yaw -163°",
+    "source": "rollout-episode-3.mp4"
+   }
+  ]
+ },
+ "03_diagnosis_grasp_mode": {
+  "mp4": "03_diagnosis_grasp_mode.mp4",
+  "gif": "03_diagnosis_grasp_mode.gif",
+  "mp4_bytes": 587177,
+  "gif_bytes": 3339796,
+  "seconds": 10.5,
+  "speed": 2,
+  "panels": [
+   {
+    "end": 21,
+    "label": "yaw 64° (원본 0개 구간): 실패",
+    "sub": "손목을 210° 돌리다 닫아 트럭을 쳐냄",
+    "source": "rollout-episode-0.mp4"
+   },
+   {
+    "end": 21,
+    "label": "yaw 44° (원본 3개 구간): 실패",
+    "sub": "트럭과 수직(85°)으로 닫아 못 잡음",
+    "source": "rollout-episode-70.mp4"
+   },
+   {
+    "end": 21,
+    "label": "yaw -103° (원본 5개 구간): 성공",
+    "sub": "트럭 방향에 맞춰 닫고 들어 올림",
+    "source": "rollout-episode-20.mp4"
+   }
+  ]
+ }
+}
