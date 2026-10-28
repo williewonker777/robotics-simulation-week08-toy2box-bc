@@ -1,0 +1,17 @@
+200 trials from 2 dir(s)
+by v3.1 stage:
+  success   n= 40 closed= 40 |herr| med   1.7 p75   3.5  |ox| med  0.6 |oy| med  0.5 cm
+  placement n=  5 closed=  5 |herr| med  10.6 p75  13.0  |ox| med  1.0 |oy| med  0.1 cm
+  transport n= 53 closed= 53 |herr| med   2.6 p75   6.2  |ox| med  0.7 |oy| med  0.4 cm
+  grasp     n= 75 closed= 75 |herr| med   5.8 p75  12.3  |ox| med  1.6 |oy| med  0.7 cm
+  approach  n= 27 closed= 27 |herr| med  30.2 p75  45.2  |ox| med  6.4 |oy| med  7.9 cm
+by |initial truck yaw| (all trials, decisive close):
+  [  0, 45) n= 47 closed= 47 |herr| med   6.3 p75  13.3  |ox| med  1.4 |oy| med  0.6 cm   success 6/47
+  [ 45, 90) n= 57 closed= 57 |herr| med  15.3 p75  25.5  |ox| med  1.5 |oy| med  0.9 cm   success 5/57
+  [ 90,135) n= 48 closed= 48 |herr| med   2.6 p75   6.1  |ox| med  0.8 |oy| med  0.6 cm   success 13/48
+  [135,181) n= 48 closed= 48 |herr| med   1.3 p75   2.7  |ox| med  0.6 |oy| med  0.4 cm   success 16/48
+grasp mode at the decisive close (truck-relative heading ~0 / ~180 / between):
+  [  0, 45) n= 47  ~0  42  ~180   1  between   4
+  [ 45, 90) n= 57  ~0  26  ~180  18  between  13
+  [ 90,135) n= 48  ~0   0  ~180  47  between   1
+  [135,181) n= 48  ~0   0  ~180  48  between   0

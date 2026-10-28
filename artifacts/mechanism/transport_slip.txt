@@ -1,0 +1,16 @@
+E0: secured first 55, slipped 23, grasp height median 1.07 cm
+E1: secured first 54, slipped 21, grasp height median 1.17 cm
+E2: secured first 78, slipped 42, grasp height median 1.13 cm
+E4: secured first 28, slipped 14, grasp height median 1.10 cm
+pooled_by_grasp_height_cm
+    -9.0 .. 0.8    n= 50 slip 0.10
+     0.8 .. 1.1    n= 57 slip 0.42
+     1.1 .. 1.3    n= 33 slip 0.52
+     1.3 .. 1.5    n= 37 slip 0.70
+     1.5 .. 9.0    n= 38 slip 0.74
+pooled_by_lift_delay_steps
+       0 .. 15     n= 75 slip 0.43
+      15 .. 25     n= 39 slip 0.67
+      25 .. 35     n= 32 slip 0.50
+      35 .. 45     n= 17 slip 0.29
+      45 .. 10000  n= 52 slip 0.40

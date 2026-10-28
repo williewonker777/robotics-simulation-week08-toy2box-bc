@@ -1,0 +1,1700 @@
+{
+  "comparisons": {
+    "E1_vs_E0": {
+      "per_seed_unpaired": {
+        "101": {
+          "abs_yaw_le_90": {
+            "alternative": "first_rate_greater_than_second_rate",
+            "first": {
+              "successes": 8,
+              "trials": 49
+            },
+            "p_one_sided": 0.04759308444238991,
+            "second": {
+              "successes": 3,
+              "trials": 51
+            },
+            "z": 1.6686529991621166
+          },
+          "whole": {
+            "alternative": "first_rate_greater_than_second_rate",
+            "first": {
+              "successes": 21,
+              "trials": 100
+            },
+            "p_one_sided": 0.36183680491588166,
+            "second": {
+              "successes": 19,
+              "trials": 100
+            },
+            "z": 0.35355339059327356
+          }
+        },
+        "111": {
+          "abs_yaw_le_90": {
+            "alternative": "first_rate_greater_than_second_rate",
+            "first": {
+              "successes": 3,
+              "trials": 47
+            },
+            "p_one_sided": 0.6419937790739138,
+            "second": {
+              "successes": 4,
+              "trials": 48
+            },
+            "z": -0.3637931986555612
+          },
+          "whole": {
+            "alternative": "first_rate_greater_than_second_rate",
+            "first": {
+              "successes": 10,
+              "trials": 100
+            },
+            "p_one_sided": 0.9761648096719193,
+            "second": {
+              "successes": 20,
+              "trials": 100
+            },
+            "z": -1.9802950859533488
+          }
+        }
+      },
+      "pooled_abs_yaw_le_90": {
+        "alternative": "first_rate_greater_than_second_rate",
+        "first": {
+          "successes": 11,
+          "trials": 96
+        },
+        "p_one_sided": 0.14497685804057037,
+        "second": {
+          "successes": 7,
+          "trials": 99
+        },
+        "z": 1.0582231574329455
+      },
+      "pooled_whole": {
+        "alternative": "first_rate_greater_than_second_rate",
+        "first": {
+          "successes": 31,
+          "trials": 200
+        },
+        "p_one_sided": 0.85376595187224,
+        "second": {
+          "successes": 39,
+          "trials": 200
+        },
+        "z": -1.0527227119356306
+      }
+    },
+    "E2_vs_E0": {
+      "per_seed_unpaired": {
+        "101": {
+          "abs_yaw_le_90": {
+            "alternative": "first_rate_greater_than_second_rate",
+            "first": {
+              "successes": 4,
+              "trials": 50
+            },
+            "p_one_sided": 0.33762308875662567,
+            "second": {
+              "successes": 3,
+              "trials": 51
+            },
+            "z": 0.4189588894461488
+          },
+          "whole": {
+            "alternative": "first_rate_greater_than_second_rate",
+            "first": {
+              "successes": 18,
+              "trials": 100
+            },
+            "p_one_sided": 0.5722495847186911,
+            "second": {
+              "successes": 19,
+              "trials": 100
+            },
+            "z": -0.18210435566504293
+          }
+        },
+        "111": {
+          "abs_yaw_le_90": {
+            "alternative": "first_rate_greater_than_second_rate",
+            "first": {
+              "successes": 7,
+              "trials": 54
+            },
+            "p_one_sided": 0.2259063108231548,
+            "second": {
+              "successes": 4,
+              "trials": 48
+            },
+            "z": 0.7523965484374354
+          },
+          "whole": {
+            "alternative": "first_rate_greater_than_second_rate",
+            "first": {
+              "successes": 22,
+              "trials": 100
+            },
+            "p_one_sided": 0.36421690547573754,
+            "second": {
+              "successes": 20,
+              "trials": 100
+            },
+            "z": 0.3472096642294072
+          }
+        }
+      },
+      "pooled_abs_yaw_le_90": {
+        "alternative": "first_rate_greater_than_second_rate",
+        "first": {
+          "successes": 11,
+          "trials": 104
+        },
+        "p_one_sided": 0.18985977065035953,
+        "second": {
+          "successes": 7,
+          "trials": 99
+        },
+        "z": 0.8784131672755285
+      },
+      "pooled_whole": {
+        "alternative": "first_rate_greater_than_second_rate",
+        "first": {
+          "successes": 40,
+          "trials": 200
+        },
+        "p_one_sided": 0.4500272238980512,
+        "second": {
+          "successes": 39,
+          "trials": 200
+        },
+        "z": 0.12559256604436858
+      }
+    },
+    "E4_vs_E0": {
+      "per_seed_unpaired": {
+        "101": {
+          "abs_yaw_le_90": {
+            "alternative": "first_rate_greater_than_second_rate",
+            "first": {
+              "successes": 3,
+              "trials": 53
+            },
+            "p_one_sided": 0.5193551177801266,
+            "second": {
+              "successes": 3,
+              "trials": 51
+            },
+            "z": -0.048535134128072664
+          },
+          "whole": {
+            "alternative": "first_rate_greater_than_second_rate",
+            "first": {
+              "successes": 9,
+              "trials": 100
+            },
+            "p_one_sided": 0.9792174250813441,
+            "second": {
+              "successes": 19,
+              "trials": 100
+            },
+            "z": -2.037847864848056
+          }
+        },
+        "111": {
+          "abs_yaw_le_90": {
+            "alternative": "first_rate_greater_than_second_rate",
+            "first": {
+              "successes": 2,
+              "trials": 50
+            },
+            "p_one_sided": 0.8144677581029875,
+            "second": {
+              "successes": 4,
+              "trials": 48
+            },
+            "z": -0.8944812006730425
+          },
+          "whole": {
+            "alternative": "first_rate_greater_than_second_rate",
+            "first": {
+              "successes": 5,
+              "trials": 100
+            },
+            "p_one_sided": 0.9993296794413853,
+            "second": {
+              "successes": 20,
+              "trials": 100
+            },
+            "z": -3.2071349029490928
+          }
+        }
+      },
+      "pooled_abs_yaw_le_90": {
+        "alternative": "first_rate_greater_than_second_rate",
+        "first": {
+          "successes": 5,
+          "trials": 103
+        },
+        "p_one_sided": 0.747346531927683,
+        "second": {
+          "successes": 7,
+          "trials": 99
+        },
+        "z": -0.6661629743251756
+      },
+      "pooled_whole": {
+        "alternative": "first_rate_greater_than_second_rate",
+        "first": {
+          "successes": 14,
+          "trials": 200
+        },
+        "p_one_sided": 0.9998865213540581,
+        "second": {
+          "successes": 39,
+          "trials": 200
+        },
+        "z": -3.686950714064515
+      }
+    }
+  },
+  "conditions": {
+    "E0": {
+      "close_by_abs_yaw_pooled": {
+        "[0,45)": {
+          "between": 9,
+          "closed": 42,
+          "heading_error_abs_median_deg": 6.312590972240635,
+          "heading_error_abs_p75_deg": 22.29036838840776,
+          "mode0": 32,
+          "mode180": 1,
+          "successes": 6,
+          "trials": 44
+        },
+        "[135,181)": {
+          "between": 0,
+          "closed": 50,
+          "heading_error_abs_median_deg": 2.5508319118220584,
+          "heading_error_abs_p75_deg": 3.937496552054995,
+          "mode0": 0,
+          "mode180": 50,
+          "successes": 19,
+          "trials": 50
+        },
+        "[45,90)": {
+          "between": 25,
+          "closed": 55,
+          "heading_error_abs_median_deg": 27.613239832265265,
+          "heading_error_abs_p75_deg": 44.453223191362135,
+          "mode0": 14,
+          "mode180": 16,
+          "successes": 1,
+          "trials": 55
+        },
+        "[90,135)": {
+          "between": 2,
+          "closed": 51,
+          "heading_error_abs_median_deg": 3.983367359428968,
+          "heading_error_abs_p75_deg": 9.05047843731694,
+          "mode0": 0,
+          "mode180": 49,
+          "successes": 13,
+          "trials": 51
+        }
+      },
+      "condition_success": {
+        "mean_rate": 0.195,
+        "sample_sd_rate_ddof1": 0.007071067811865475,
+        "seed_success_counts": [
+          19,
+          20
+        ]
+      },
+      "dataset_convention": {
+        "convention_fraction": 0.942,
+        "demos_with_close": 500,
+        "path": "datasets/toy2box_agibot_mimic_v1_500.hdf5",
+        "signed_yaw_bins": {
+          "[-135,-90)": {
+            "convention_fraction": 1.0,
+            "mode0": 0,
+            "mode180": 45,
+            "n": 45
+          },
+          "[-180,-135)": {
+            "convention_fraction": 1.0,
+            "mode0": 0,
+            "mode180": 82,
+            "n": 82
+          },
+          "[-45,0)": {
+            "convention_fraction": 1.0,
+            "mode0": 95,
+            "mode180": 0,
+            "n": 95
+          },
+          "[-90,-45)": {
+            "convention_fraction": 0.5853658536585366,
+            "mode0": 14,
+            "mode180": 27,
+            "n": 41
+          },
+          "[0,45)": {
+            "convention_fraction": 1.0,
+            "mode0": 63,
+            "mode180": 0,
+            "n": 63
+          },
+          "[135,180)": {
+            "convention_fraction": 1.0,
+            "mode0": 0,
+            "mode180": 92,
+            "n": 92
+          },
+          "[45,90)": {
+            "convention_fraction": 0.6571428571428571,
+            "mode0": 17,
+            "mode180": 18,
+            "n": 35
+          },
+          "[90,135)": {
+            "convention_fraction": 1.0,
+            "mode0": 0,
+            "mode180": 47,
+            "n": 47
+          }
+        },
+        "tool_contract": "dataset_convention.py; first close; (-90,90] +/-5deg",
+        "total_demos": 500
+      },
+      "generation_yield": {
+        "attempts": 933,
+        "denominator": "completed success+failed demos; settling-reset discarded layouts excluded",
+        "failures": 433,
+        "signed_yaw_bins": [
+          {
+            "attempts": 130,
+            "failures": 48,
+            "successes": 82,
+            "yaw_bin": "[-180,-135)",
+            "yield": 0.6307692307692307
+          },
+          {
+            "attempts": 98,
+            "failures": 53,
+            "successes": 45,
+            "yaw_bin": "[-135,-90)",
+            "yield": 0.45918367346938777
+          },
+          {
+            "attempts": 135,
+            "failures": 94,
+            "successes": 41,
+            "yaw_bin": "[-90,-45)",
+            "yield": 0.3037037037037037
+          },
+          {
+            "attempts": 141,
+            "failures": 46,
+            "successes": 95,
+            "yaw_bin": "[-45,0)",
+            "yield": 0.6737588652482269
+          },
+          {
+            "attempts": 137,
+            "failures": 74,
+            "successes": 63,
+            "yaw_bin": "[0,45)",
+            "yield": 0.45985401459854014
+          },
+          {
+            "attempts": 90,
+            "failures": 55,
+            "successes": 35,
+            "yaw_bin": "[45,90)",
+            "yield": 0.3888888888888889
+          },
+          {
+            "attempts": 78,
+            "failures": 31,
+            "successes": 47,
+            "yaw_bin": "[90,135)",
+            "yield": 0.6025641025641025
+          },
+          {
+            "attempts": 124,
+            "failures": 32,
+            "successes": 92,
+            "yaw_bin": "[135,180)",
+            "yield": 0.7419354838709677
+          }
+        ],
+        "successes": 500,
+        "yield": 0.5359056806002144
+      },
+      "models": {
+        "101": {
+          "close_by_abs_yaw": {
+            "[0,45)": {
+              "between": 5,
+              "closed": 22,
+              "heading_error_abs_median_deg": 5.354806501582175,
+              "heading_error_abs_p75_deg": 22.29036838840776,
+              "mode0": 17,
+              "mode180": 0,
+              "successes": 2,
+              "trials": 22
+            },
+            "[135,181)": {
+              "between": 0,
+              "closed": 24,
+              "heading_error_abs_median_deg": 2.391639193278394,
+              "heading_error_abs_p75_deg": 2.991061073258308,
+              "mode0": 0,
+              "mode180": 24,
+              "successes": 8,
+              "trials": 24
+            },
+            "[45,90)": {
+              "between": 13,
+              "closed": 29,
+              "heading_error_abs_median_deg": 28.27610333079889,
+              "heading_error_abs_p75_deg": 49.39626695663341,
+              "mode0": 6,
+              "mode180": 10,
+              "successes": 1,
+              "trials": 29
+            },
+            "[90,135)": {
+              "between": 0,
+              "closed": 25,
+              "heading_error_abs_median_deg": 3.7162513428627335,
+              "heading_error_abs_p75_deg": 6.627541980912213,
+              "mode0": 0,
+              "mode180": 25,
+              "successes": 8,
+              "trials": 25
+            }
+          },
+          "observer_verification": {
+            "npz_count": 100,
+            "results_json": "local-only/e0_observer101_100.results.json",
+            "vector_match": true
+          },
+          "rate": 0.19,
+          "recovery": {
+            "first_failed": 52,
+            "first_failed_later_secured": 7,
+            "first_failed_retried_near": 18,
+            "first_secured": 21,
+            "never_near": 27,
+            "recoveries": 3,
+            "secured_then_failed": 5,
+            "secured_then_failed_regrasped_near": 1,
+            "success_given_first_secured": 16,
+            "success_given_never_near": 0,
+            "trials": 100
+          },
+          "successes": 19,
+          "trials": 100,
+          "v3_1_stages": {
+            "approach": 25,
+            "grasp": 47,
+            "placement": 0,
+            "success": 19,
+            "transport": 9
+          },
+          "wilson95": {
+            "high": 0.27778845379064376,
+            "low": 0.12514751509768735
+          }
+        },
+        "111": {
+          "close_by_abs_yaw": {
+            "[0,45)": {
+              "between": 4,
+              "closed": 20,
+              "heading_error_abs_median_deg": 7.603296371759988,
+              "heading_error_abs_p75_deg": 19.54396526091438,
+              "mode0": 15,
+              "mode180": 1,
+              "successes": 4,
+              "trials": 22
+            },
+            "[135,181)": {
+              "between": 0,
+              "closed": 26,
+              "heading_error_abs_median_deg": 2.743121705053227,
+              "heading_error_abs_p75_deg": 5.172912174448427,
+              "mode0": 0,
+              "mode180": 26,
+              "successes": 11,
+              "trials": 26
+            },
+            "[45,90)": {
+              "between": 12,
+              "closed": 26,
+              "heading_error_abs_median_deg": 26.24992161325389,
+              "heading_error_abs_p75_deg": 42.76829398585597,
+              "mode0": 8,
+              "mode180": 6,
+              "successes": 0,
+              "trials": 26
+            },
+            "[90,135)": {
+              "between": 2,
+              "closed": 26,
+              "heading_error_abs_median_deg": 4.153318814334909,
+              "heading_error_abs_p75_deg": 10.705006602454638,
+              "mode0": 0,
+              "mode180": 24,
+              "successes": 5,
+              "trials": 26
+            }
+          },
+          "observer_verification": {
+            "npz_count": 100,
+            "results_json": "local-only/e0_observer111_100.results.json",
+            "vector_match": true
+          },
+          "rate": 0.2,
+          "recovery": {
+            "first_failed": 50,
+            "first_failed_later_secured": 6,
+            "first_failed_retried_near": 17,
+            "first_secured": 34,
+            "never_near": 16,
+            "recoveries": 2,
+            "secured_then_failed": 16,
+            "secured_then_failed_regrasped_near": 2,
+            "success_given_first_secured": 18,
+            "success_given_never_near": 0,
+            "trials": 100
+          },
+          "successes": 20,
+          "trials": 100,
+          "v3_1_stages": {
+            "approach": 14,
+            "grasp": 46,
+            "placement": 2,
+            "success": 20,
+            "transport": 18
+          },
+          "wilson95": {
+            "high": 0.2888291655931589,
+            "low": 0.1333669333310325
+          }
+        }
+      },
+      "pooled_successes": 39,
+      "pooled_trials": 200,
+      "provenance": {
+        "combined_dataset": "datasets/toy2box_agibot_mimic_v1_500.hdf5"
+      },
+      "recovery_pooled": {
+        "first_failed": 102,
+        "first_failed_later_secured": 13,
+        "first_failed_retried_near": 35,
+        "first_secured": 55,
+        "never_near": 43,
+        "recoveries": 5,
+        "secured_then_failed": 21,
+        "secured_then_failed_regrasped_near": 3,
+        "success_given_first_secured": 34,
+        "success_given_never_near": 0,
+        "trials": 200
+      },
+      "source_yaw_histogram": {
+        "[-135,-90)": 5,
+        "[-180,-135)": 11,
+        "[-45,0)": 2,
+        "[-90,-45)": 0,
+        "[0,45)": 3,
+        "[135,180)": 12,
+        "[45,90)": 0,
+        "[90,135)": 7
+      },
+      "v3_1_pooled_stages": {
+        "approach": 39,
+        "grasp": 93,
+        "placement": 2,
+        "success": 39,
+        "transport": 27
+      }
+    },
+    "E1": {
+      "close_by_abs_yaw_pooled": {
+        "[0,45)": {
+          "between": 2,
+          "closed": 43,
+          "heading_error_abs_median_deg": 7.05230731330451,
+          "heading_error_abs_p75_deg": 13.979516501479708,
+          "mode0": 41,
+          "mode180": 0,
+          "successes": 5,
+          "trials": 43
+        },
+        "[135,181)": {
+          "between": 0,
+          "closed": 48,
+          "heading_error_abs_median_deg": 2.7290290312365357,
+          "heading_error_abs_p75_deg": 4.687905819844303,
+          "mode0": 0,
+          "mode180": 48,
+          "successes": 14,
+          "trials": 48
+        },
+        "[45,90)": {
+          "between": 9,
+          "closed": 53,
+          "heading_error_abs_median_deg": 8.06369319317281,
+          "heading_error_abs_p75_deg": 20.0514806080962,
+          "mode0": 39,
+          "mode180": 5,
+          "successes": 6,
+          "trials": 53
+        },
+        "[90,135)": {
+          "between": 5,
+          "closed": 55,
+          "heading_error_abs_median_deg": 5.316958210353249,
+          "heading_error_abs_p75_deg": 10.363566238364228,
+          "mode0": 4,
+          "mode180": 46,
+          "successes": 6,
+          "trials": 56
+        }
+      },
+      "condition_success": {
+        "mean_rate": 0.155,
+        "sample_sd_rate_ddof1": 0.07778174593052023,
+        "seed_success_counts": [
+          21,
+          10
+        ]
+      },
+      "dataset_convention": {
+        "convention_fraction": 0.99,
+        "demos_with_close": 500,
+        "path": "datasets/toy2box_agibot_mimic_e1_targeted_500.hdf5",
+        "signed_yaw_bins": {
+          "[-135,-90)": {
+            "convention_fraction": 1.0,
+            "mode0": 0,
+            "mode180": 56,
+            "n": 56
+          },
+          "[-180,-135)": {
+            "convention_fraction": 1.0,
+            "mode0": 0,
+            "mode180": 90,
+            "n": 90
+          },
+          "[-45,0)": {
+            "convention_fraction": 1.0,
+            "mode0": 76,
+            "mode180": 0,
+            "n": 76
+          },
+          "[-90,-45)": {
+            "convention_fraction": 0.8717948717948718,
+            "mode0": 23,
+            "mode180": 16,
+            "n": 39
+          },
+          "[0,45)": {
+            "convention_fraction": 1.0,
+            "mode0": 59,
+            "mode180": 0,
+            "n": 59
+          },
+          "[135,180)": {
+            "convention_fraction": 1.0,
+            "mode0": 0,
+            "mode180": 89,
+            "n": 89
+          },
+          "[45,90)": {
+            "convention_fraction": 1.0,
+            "mode0": 46,
+            "mode180": 1,
+            "n": 47
+          },
+          "[90,135)": {
+            "convention_fraction": 1.0,
+            "mode0": 0,
+            "mode180": 44,
+            "n": 44
+          }
+        },
+        "tool_contract": "dataset_convention.py; first close; (-90,90] +/-5deg",
+        "total_demos": 500
+      },
+      "generation_yield": {
+        "attempts": 910,
+        "denominator": "completed success+failed demos; settling-reset discarded layouts excluded",
+        "failures": 410,
+        "signed_yaw_bins": [
+          {
+            "attempts": 130,
+            "failures": 40,
+            "successes": 90,
+            "yaw_bin": "[-180,-135)",
+            "yield": 0.6923076923076923
+          },
+          {
+            "attempts": 98,
+            "failures": 42,
+            "successes": 56,
+            "yaw_bin": "[-135,-90)",
+            "yield": 0.5714285714285714
+          },
+          {
+            "attempts": 106,
+            "failures": 67,
+            "successes": 39,
+            "yaw_bin": "[-90,-45)",
+            "yield": 0.36792452830188677
+          },
+          {
+            "attempts": 126,
+            "failures": 50,
+            "successes": 76,
+            "yaw_bin": "[-45,0)",
+            "yield": 0.6031746031746031
+          },
+          {
+            "attempts": 135,
+            "failures": 76,
+            "successes": 59,
+            "yaw_bin": "[0,45)",
+            "yield": 0.43703703703703706
+          },
+          {
+            "attempts": 111,
+            "failures": 64,
+            "successes": 47,
+            "yaw_bin": "[45,90)",
+            "yield": 0.42342342342342343
+          },
+          {
+            "attempts": 80,
+            "failures": 36,
+            "successes": 44,
+            "yaw_bin": "[90,135)",
+            "yield": 0.55
+          },
+          {
+            "attempts": 124,
+            "failures": 35,
+            "successes": 89,
+            "yaw_bin": "[135,180)",
+            "yield": 0.717741935483871
+          }
+        ],
+        "successes": 500,
+        "yield": 0.5494505494505495
+      },
+      "models": {
+        "101": {
+          "close_by_abs_yaw": {
+            "[0,45)": {
+              "between": 0,
+              "closed": 20,
+              "heading_error_abs_median_deg": 4.1745313612292705,
+              "heading_error_abs_p75_deg": 7.2775009467208776,
+              "mode0": 20,
+              "mode180": 0,
+              "successes": 3,
+              "trials": 20
+            },
+            "[135,181)": {
+              "between": 0,
+              "closed": 24,
+              "heading_error_abs_median_deg": 3.0376247991764274,
+              "heading_error_abs_p75_deg": 5.273579932035233,
+              "mode0": 0,
+              "mode180": 24,
+              "successes": 9,
+              "trials": 24
+            },
+            "[45,90)": {
+              "between": 5,
+              "closed": 29,
+              "heading_error_abs_median_deg": 8.482188502560959,
+              "heading_error_abs_p75_deg": 19.28854600795546,
+              "mode0": 22,
+              "mode180": 2,
+              "successes": 5,
+              "trials": 29
+            },
+            "[90,135)": {
+              "between": 0,
+              "closed": 26,
+              "heading_error_abs_median_deg": 2.911272249530086,
+              "heading_error_abs_p75_deg": 7.3079916452857105,
+              "mode0": 2,
+              "mode180": 24,
+              "successes": 4,
+              "trials": 27
+            }
+          },
+          "observer_verification": {
+            "npz_count": 100,
+            "results_json": "artifacts/experiments/e1/seed101/results.json",
+            "vector_match": true
+          },
+          "rate": 0.21,
+          "recovery": {
+            "first_failed": 61,
+            "first_failed_later_secured": 13,
+            "first_failed_retried_near": 29,
+            "first_secured": 31,
+            "never_near": 8,
+            "recoveries": 5,
+            "secured_then_failed": 15,
+            "secured_then_failed_regrasped_near": 3,
+            "success_given_first_secured": 16,
+            "success_given_never_near": 0,
+            "trials": 100
+          },
+          "successes": 21,
+          "trials": 100,
+          "v3_1_stages": {
+            "approach": 8,
+            "grasp": 48,
+            "placement": 4,
+            "success": 21,
+            "transport": 19
+          },
+          "wilson95": {
+            "high": 0.29979968834089865,
+            "low": 0.141656540619153
+          }
+        },
+        "111": {
+          "close_by_abs_yaw": {
+            "[0,45)": {
+              "between": 2,
+              "closed": 23,
+              "heading_error_abs_median_deg": 11.50903541147946,
+              "heading_error_abs_p75_deg": 21.22344596919561,
+              "mode0": 21,
+              "mode180": 0,
+              "successes": 2,
+              "trials": 23
+            },
+            "[135,181)": {
+              "between": 0,
+              "closed": 24,
+              "heading_error_abs_median_deg": 1.9507421247350152,
+              "heading_error_abs_p75_deg": 4.251597533965324,
+              "mode0": 0,
+              "mode180": 24,
+              "successes": 5,
+              "trials": 24
+            },
+            "[45,90)": {
+              "between": 4,
+              "closed": 24,
+              "heading_error_abs_median_deg": 7.035229898619875,
+              "heading_error_abs_p75_deg": 20.673772694335618,
+              "mode0": 17,
+              "mode180": 3,
+              "successes": 1,
+              "trials": 24
+            },
+            "[90,135)": {
+              "between": 5,
+              "closed": 29,
+              "heading_error_abs_median_deg": 6.5246766760106425,
+              "heading_error_abs_p75_deg": 20.58856250081088,
+              "mode0": 2,
+              "mode180": 22,
+              "successes": 2,
+              "trials": 29
+            }
+          },
+          "observer_verification": {
+            "npz_count": 100,
+            "results_json": "artifacts/experiments/e1/seed111/results.json",
+            "vector_match": true
+          },
+          "rate": 0.1,
+          "recovery": {
+            "first_failed": 62,
+            "first_failed_later_secured": 6,
+            "first_failed_retried_near": 24,
+            "first_secured": 23,
+            "never_near": 15,
+            "recoveries": 2,
+            "secured_then_failed": 15,
+            "secured_then_failed_regrasped_near": 3,
+            "success_given_first_secured": 8,
+            "success_given_never_near": 0,
+            "trials": 100
+          },
+          "successes": 10,
+          "trials": 100,
+          "v3_1_stages": {
+            "approach": 15,
+            "grasp": 56,
+            "placement": 3,
+            "success": 10,
+            "transport": 16
+          },
+          "wilson95": {
+            "high": 0.17436566150491345,
+            "low": 0.0552291370606751
+          }
+        }
+      },
+      "pooled_successes": 31,
+      "pooled_trials": 200,
+      "provenance": {
+        "combined_dataset": "datasets/toy2box_agibot_mimic_e1_targeted_500.hdf5"
+      },
+      "recovery_pooled": {
+        "first_failed": 123,
+        "first_failed_later_secured": 19,
+        "first_failed_retried_near": 53,
+        "first_secured": 54,
+        "never_near": 23,
+        "recoveries": 7,
+        "secured_then_failed": 30,
+        "secured_then_failed_regrasped_near": 6,
+        "success_given_first_secured": 24,
+        "success_given_never_near": 0,
+        "trials": 200
+      },
+      "source_yaw_histogram": {
+        "[-135,-90)": 5,
+        "[-180,-135)": 11,
+        "[-45,0)": 7,
+        "[-90,-45)": 5,
+        "[0,45)": 8,
+        "[135,180)": 12,
+        "[45,90)": 5,
+        "[90,135)": 7
+      },
+      "v3_1_pooled_stages": {
+        "approach": 23,
+        "grasp": 104,
+        "placement": 7,
+        "success": 31,
+        "transport": 35
+      }
+    },
+    "E2": {
+      "close_by_abs_yaw_pooled": {
+        "[0,45)": {
+          "between": 4,
+          "closed": 47,
+          "heading_error_abs_median_deg": 6.313999157077035,
+          "heading_error_abs_p75_deg": 13.253878653683799,
+          "mode0": 42,
+          "mode180": 1,
+          "successes": 6,
+          "trials": 47
+        },
+        "[135,181)": {
+          "between": 0,
+          "closed": 48,
+          "heading_error_abs_median_deg": 1.2772340010064056,
+          "heading_error_abs_p75_deg": 2.6924977641084524,
+          "mode0": 0,
+          "mode180": 48,
+          "successes": 16,
+          "trials": 48
+        },
+        "[45,90)": {
+          "between": 13,
+          "closed": 57,
+          "heading_error_abs_median_deg": 15.286425496020541,
+          "heading_error_abs_p75_deg": 25.50193031007106,
+          "mode0": 26,
+          "mode180": 18,
+          "successes": 5,
+          "trials": 57
+        },
+        "[90,135)": {
+          "between": 1,
+          "closed": 48,
+          "heading_error_abs_median_deg": 2.628337900035291,
+          "heading_error_abs_p75_deg": 6.126230508630542,
+          "mode0": 0,
+          "mode180": 47,
+          "successes": 13,
+          "trials": 48
+        }
+      },
+      "condition_success": {
+        "mean_rate": 0.2,
+        "sample_sd_rate_ddof1": 0.0282842712474619,
+        "seed_success_counts": [
+          18,
+          22
+        ]
+      },
+      "dataset_convention": {
+        "convention_fraction": 0.932,
+        "demos_with_close": 500,
+        "path": "datasets/toy2box_agibot_mimic_e2_natural_500.hdf5",
+        "signed_yaw_bins": {
+          "[-135,-90)": {
+            "convention_fraction": 1.0,
+            "mode0": 0,
+            "mode180": 41,
+            "n": 41
+          },
+          "[-180,-135)": {
+            "convention_fraction": 1.0,
+            "mode0": 0,
+            "mode180": 86,
+            "n": 86
+          },
+          "[-45,0)": {
+            "convention_fraction": 1.0,
+            "mode0": 90,
+            "mode180": 0,
+            "n": 90
+          },
+          "[-90,-45)": {
+            "convention_fraction": 0.5428571428571428,
+            "mode0": 15,
+            "mode180": 20,
+            "n": 35
+          },
+          "[0,45)": {
+            "convention_fraction": 1.0,
+            "mode0": 60,
+            "mode180": 0,
+            "n": 60
+          },
+          "[135,180)": {
+            "convention_fraction": 1.0,
+            "mode0": 0,
+            "mode180": 86,
+            "n": 86
+          },
+          "[45,90)": {
+            "convention_fraction": 0.5135135135135135,
+            "mode0": 12,
+            "mode180": 25,
+            "n": 37
+          },
+          "[90,135)": {
+            "convention_fraction": 1.0,
+            "mode0": 0,
+            "mode180": 65,
+            "n": 65
+          }
+        },
+        "tool_contract": "dataset_convention.py; first close; (-90,90] +/-5deg",
+        "total_demos": 500
+      },
+      "generation_yield": {
+        "attempts": 1073,
+        "denominator": "completed success+failed demos; settling-reset discarded layouts excluded",
+        "failures": 523,
+        "signed_yaw_bins": [
+          {
+            "attempts": 151,
+            "failures": 55,
+            "successes": 96,
+            "yaw_bin": "[-180,-135)",
+            "yield": 0.6357615894039735
+          },
+          {
+            "attempts": 117,
+            "failures": 65,
+            "successes": 52,
+            "yaw_bin": "[-135,-90)",
+            "yield": 0.4444444444444444
+          },
+          {
+            "attempts": 156,
+            "failures": 118,
+            "successes": 38,
+            "yaw_bin": "[-90,-45)",
+            "yield": 0.24358974358974358
+          },
+          {
+            "attempts": 156,
+            "failures": 59,
+            "successes": 97,
+            "yaw_bin": "[-45,0)",
+            "yield": 0.6217948717948718
+          },
+          {
+            "attempts": 146,
+            "failures": 83,
+            "successes": 63,
+            "yaw_bin": "[0,45)",
+            "yield": 0.4315068493150685
+          },
+          {
+            "attempts": 94,
+            "failures": 55,
+            "successes": 39,
+            "yaw_bin": "[45,90)",
+            "yield": 0.4148936170212766
+          },
+          {
+            "attempts": 121,
+            "failures": 46,
+            "successes": 75,
+            "yaw_bin": "[90,135)",
+            "yield": 0.6198347107438017
+          },
+          {
+            "attempts": 132,
+            "failures": 42,
+            "successes": 90,
+            "yaw_bin": "[135,180)",
+            "yield": 0.6818181818181818
+          }
+        ],
+        "successes": 550,
+        "yield": 0.5125815470643057
+      },
+      "models": {
+        "101": {
+          "close_by_abs_yaw": {
+            "[0,45)": {
+              "between": 3,
+              "closed": 21,
+              "heading_error_abs_median_deg": 8.574824949047297,
+              "heading_error_abs_p75_deg": 21.725919011656174,
+              "mode0": 18,
+              "mode180": 0,
+              "successes": 1,
+              "trials": 21
+            },
+            "[135,181)": {
+              "between": 0,
+              "closed": 25,
+              "heading_error_abs_median_deg": 1.826414881334074,
+              "heading_error_abs_p75_deg": 2.9794365375515213,
+              "mode0": 0,
+              "mode180": 25,
+              "successes": 8,
+              "trials": 25
+            },
+            "[45,90)": {
+              "between": 9,
+              "closed": 29,
+              "heading_error_abs_median_deg": 19.85939601693859,
+              "heading_error_abs_p75_deg": 31.307622357014168,
+              "mode0": 14,
+              "mode180": 6,
+              "successes": 3,
+              "trials": 29
+            },
+            "[90,135)": {
+              "between": 1,
+              "closed": 25,
+              "heading_error_abs_median_deg": 4.311036890808623,
+              "heading_error_abs_p75_deg": 7.470439188721571,
+              "mode0": 0,
+              "mode180": 24,
+              "successes": 6,
+              "trials": 25
+            }
+          },
+          "observer_verification": {
+            "npz_count": 100,
+            "results_json": "artifacts/experiments/e2/seed101/results.json",
+            "vector_match": true
+          },
+          "rate": 0.18,
+          "recovery": {
+            "first_failed": 45,
+            "first_failed_later_secured": 8,
+            "first_failed_retried_near": 14,
+            "first_secured": 32,
+            "never_near": 23,
+            "recoveries": 2,
+            "secured_then_failed": 16,
+            "secured_then_failed_regrasped_near": 4,
+            "success_given_first_secured": 16,
+            "success_given_never_near": 0,
+            "trials": 100
+          },
+          "successes": 18,
+          "trials": 100,
+          "v3_1_stages": {
+            "approach": 19,
+            "grasp": 40,
+            "placement": 3,
+            "success": 18,
+            "transport": 20
+          },
+          "wilson95": {
+            "high": 0.2666735838630073,
+            "low": 0.1170022549894635
+          }
+        },
+        "111": {
+          "close_by_abs_yaw": {
+            "[0,45)": {
+              "between": 1,
+              "closed": 26,
+              "heading_error_abs_median_deg": 4.9618159322939945,
+              "heading_error_abs_p75_deg": 9.247073692148529,
+              "mode0": 24,
+              "mode180": 1,
+              "successes": 5,
+              "trials": 26
+            },
+            "[135,181)": {
+              "between": 0,
+              "closed": 23,
+              "heading_error_abs_median_deg": 1.1243523403113898,
+              "heading_error_abs_p75_deg": 1.5821335007519224,
+              "mode0": 0,
+              "mode180": 23,
+              "successes": 8,
+              "trials": 23
+            },
+            "[45,90)": {
+              "between": 4,
+              "closed": 28,
+              "heading_error_abs_median_deg": 11.824610968024444,
+              "heading_error_abs_p75_deg": 18.515781484916793,
+              "mode0": 12,
+              "mode180": 12,
+              "successes": 2,
+              "trials": 28
+            },
+            "[90,135)": {
+              "between": 0,
+              "closed": 23,
+              "heading_error_abs_median_deg": 1.7088573828963263,
+              "heading_error_abs_p75_deg": 3.5822530004782465,
+              "mode0": 0,
+              "mode180": 23,
+              "successes": 7,
+              "trials": 23
+            }
+          },
+          "observer_verification": {
+            "npz_count": 100,
+            "results_json": "artifacts/experiments/e2/seed111/results.json",
+            "vector_match": true
+          },
+          "rate": 0.22,
+          "recovery": {
+            "first_failed": 44,
+            "first_failed_later_secured": 11,
+            "first_failed_retried_near": 20,
+            "first_secured": 46,
+            "never_near": 10,
+            "recoveries": 1,
+            "secured_then_failed": 25,
+            "secured_then_failed_regrasped_near": 3,
+            "success_given_first_secured": 21,
+            "success_given_never_near": 0,
+            "trials": 100
+          },
+          "successes": 22,
+          "trials": 100,
+          "v3_1_stages": {
+            "approach": 8,
+            "grasp": 35,
+            "placement": 2,
+            "success": 22,
+            "transport": 33
+          },
+          "wilson95": {
+            "high": 0.31070353514985793,
+            "low": 0.150012823846054
+          }
+        }
+      },
+      "pooled_successes": 40,
+      "pooled_trials": 200,
+      "provenance": {
+        "combined_dataset": "datasets/toy2box_agibot_mimic_e2_natural_500.hdf5"
+      },
+      "recovery_pooled": {
+        "first_failed": 89,
+        "first_failed_later_secured": 19,
+        "first_failed_retried_near": 34,
+        "first_secured": 78,
+        "never_near": 33,
+        "recoveries": 3,
+        "secured_then_failed": 41,
+        "secured_then_failed_regrasped_near": 7,
+        "success_given_first_secured": 37,
+        "success_given_never_near": 0,
+        "trials": 200
+      },
+      "source_yaw_histogram": {
+        "[-135,-90)": 8,
+        "[-180,-135)": 14,
+        "[-45,0)": 2,
+        "[-90,-45)": 1,
+        "[0,45)": 3,
+        "[135,180)": 16,
+        "[45,90)": 0,
+        "[90,135)": 16
+      },
+      "v3_1_pooled_stages": {
+        "approach": 27,
+        "grasp": 75,
+        "placement": 5,
+        "success": 40,
+        "transport": 53
+      }
+    },
+    "E4": {
+      "close_by_abs_yaw_pooled": {
+        "[0,45)": {
+          "between": 4,
+          "closed": 42,
+          "heading_error_abs_median_deg": 4.0944008808815155,
+          "heading_error_abs_p75_deg": 10.299023526532046,
+          "mode0": 38,
+          "mode180": 0,
+          "successes": 3,
+          "trials": 44
+        },
+        "[135,181)": {
+          "between": 1,
+          "closed": 49,
+          "heading_error_abs_median_deg": 2.778761641741937,
+          "heading_error_abs_p75_deg": 5.414912876913007,
+          "mode0": 0,
+          "mode180": 48,
+          "successes": 5,
+          "trials": 49
+        },
+        "[45,90)": {
+          "between": 27,
+          "closed": 59,
+          "heading_error_abs_median_deg": 27.9732919983108,
+          "heading_error_abs_p75_deg": 40.84376222599872,
+          "mode0": 10,
+          "mode180": 22,
+          "successes": 2,
+          "trials": 59
+        },
+        "[90,135)": {
+          "between": 3,
+          "closed": 48,
+          "heading_error_abs_median_deg": 5.259465139499227,
+          "heading_error_abs_p75_deg": 11.33541161269202,
+          "mode0": 0,
+          "mode180": 45,
+          "successes": 4,
+          "trials": 48
+        }
+      },
+      "condition_success": {
+        "mean_rate": 0.07,
+        "sample_sd_rate_ddof1": 0.0282842712474619,
+        "seed_success_counts": [
+          9,
+          5
+        ]
+      },
+      "dataset_convention": {
+        "convention_fraction": 0.9461966604823747,
+        "demos_with_close": 539,
+        "path": "datasets/toy2box_agibot_e4_mimic500_corr40.hdf5",
+        "signed_yaw_bins": {
+          "[-135,-90)": {
+            "convention_fraction": 1.0,
+            "mode0": 0,
+            "mode180": 54,
+            "n": 54
+          },
+          "[-180,-135)": {
+            "convention_fraction": 1.0,
+            "mode0": 0,
+            "mode180": 90,
+            "n": 90
+          },
+          "[-45,0)": {
+            "convention_fraction": 1.0,
+            "mode0": 103,
+            "mode180": 0,
+            "n": 103
+          },
+          "[-90,-45)": {
+            "convention_fraction": 0.5952380952380952,
+            "mode0": 15,
+            "mode180": 27,
+            "n": 42
+          },
+          "[0,45)": {
+            "convention_fraction": 1.0,
+            "mode0": 67,
+            "mode180": 0,
+            "n": 67
+          },
+          "[135,180)": {
+            "convention_fraction": 1.0,
+            "mode0": 0,
+            "mode180": 101,
+            "n": 101
+          },
+          "[45,90)": {
+            "convention_fraction": 0.6571428571428571,
+            "mode0": 17,
+            "mode180": 18,
+            "n": 35
+          },
+          "[90,135)": {
+            "convention_fraction": 1.0,
+            "mode0": 0,
+            "mode180": 47,
+            "n": 47
+          }
+        },
+        "tool_contract": "dataset_convention.py; first close; (-90,90] +/-5deg",
+        "total_demos": 540
+      },
+      "models": {
+        "101": {
+          "close_by_abs_yaw": {
+            "[0,45)": {
+              "between": 1,
+              "closed": 20,
+              "heading_error_abs_median_deg": 3.210571882677641,
+              "heading_error_abs_p75_deg": 5.511682016638442,
+              "mode0": 19,
+              "mode180": 0,
+              "successes": 1,
+              "trials": 22
+            },
+            "[135,181)": {
+              "between": 0,
+              "closed": 24,
+              "heading_error_abs_median_deg": 1.8517067292856524,
+              "heading_error_abs_p75_deg": 4.254057274839674,
+              "mode0": 0,
+              "mode180": 24,
+              "successes": 3,
+              "trials": 24
+            },
+            "[45,90)": {
+              "between": 11,
+              "closed": 31,
+              "heading_error_abs_median_deg": 27.03040139230646,
+              "heading_error_abs_p75_deg": 32.60912475325492,
+              "mode0": 6,
+              "mode180": 14,
+              "successes": 2,
+              "trials": 31
+            },
+            "[90,135)": {
+              "between": 2,
+              "closed": 23,
+              "heading_error_abs_median_deg": 3.5784407167721497,
+              "heading_error_abs_p75_deg": 7.210538484745527,
+              "mode0": 0,
+              "mode180": 21,
+              "successes": 3,
+              "trials": 23
+            }
+          },
+          "observer_verification": {
+            "npz_count": 100,
+            "results_json": "artifacts/experiments/e4/seed101/results.json",
+            "vector_match": true
+          },
+          "rate": 0.09,
+          "recovery": {
+            "first_failed": 58,
+            "first_failed_later_secured": 2,
+            "first_failed_retried_near": 5,
+            "first_secured": 19,
+            "never_near": 23,
+            "recoveries": 1,
+            "secured_then_failed": 11,
+            "secured_then_failed_regrasped_near": 1,
+            "success_given_first_secured": 8,
+            "success_given_never_near": 0,
+            "trials": 100
+          },
+          "successes": 9,
+          "trials": 100,
+          "v3_1_stages": {
+            "approach": 21,
+            "grasp": 58,
+            "placement": 1,
+            "success": 9,
+            "transport": 11
+          },
+          "wilson95": {
+            "high": 0.1622621285271631,
+            "low": 0.04807254000256516
+          }
+        },
+        "111": {
+          "close_by_abs_yaw": {
+            "[0,45)": {
+              "between": 3,
+              "closed": 22,
+              "heading_error_abs_median_deg": 6.447902284774813,
+              "heading_error_abs_p75_deg": 14.768801905697106,
+              "mode0": 19,
+              "mode180": 0,
+              "successes": 2,
+              "trials": 22
+            },
+            "[135,181)": {
+              "between": 1,
+              "closed": 25,
+              "heading_error_abs_median_deg": 3.3972252255111357,
+              "heading_error_abs_p75_deg": 6.716170833547608,
+              "mode0": 0,
+              "mode180": 24,
+              "successes": 2,
+              "trials": 25
+            },
+            "[45,90)": {
+              "between": 16,
+              "closed": 28,
+              "heading_error_abs_median_deg": 32.569707768814794,
+              "heading_error_abs_p75_deg": 56.113702024420334,
+              "mode0": 4,
+              "mode180": 8,
+              "successes": 0,
+              "trials": 28
+            },
+            "[90,135)": {
+              "between": 1,
+              "closed": 25,
+              "heading_error_abs_median_deg": 6.149810217814149,
+              "heading_error_abs_p75_deg": 14.917837997383685,
+              "mode0": 0,
+              "mode180": 24,
+              "successes": 1,
+              "trials": 25
+            }
+          },
+          "observer_verification": {
+            "npz_count": 100,
+            "results_json": "artifacts/experiments/e4/seed111/results.json",
+            "vector_match": true
+          },
+          "rate": 0.05,
+          "recovery": {
+            "first_failed": 45,
+            "first_failed_later_secured": 6,
+            "first_failed_retried_near": 31,
+            "first_secured": 9,
+            "never_near": 46,
+            "recoveries": 1,
+            "secured_then_failed": 5,
+            "secured_then_failed_regrasped_near": 4,
+            "success_given_first_secured": 4,
+            "success_given_never_near": 0,
+            "trials": 100
+          },
+          "successes": 5,
+          "trials": 100,
+          "v3_1_stages": {
+            "approach": 41,
+            "grasp": 44,
+            "placement": 0,
+            "success": 5,
+            "transport": 10
+          },
+          "wilson95": {
+            "high": 0.11175046923191913,
+            "low": 0.02154367915436796
+          }
+        }
+      },
+      "pooled_successes": 14,
+      "pooled_trials": 200,
+      "provenance": {
+        "combined_dataset": "datasets/toy2box_agibot_e4_mimic500_corr40.hdf5"
+      },
+      "recovery_pooled": {
+        "first_failed": 103,
+        "first_failed_later_secured": 8,
+        "first_failed_retried_near": 36,
+        "first_secured": 28,
+        "never_near": 69,
+        "recoveries": 2,
+        "secured_then_failed": 16,
+        "secured_then_failed_regrasped_near": 5,
+        "success_given_first_secured": 12,
+        "success_given_never_near": 0,
+        "trials": 200
+      },
+      "v3_1_pooled_stages": {
+        "approach": 62,
+        "grasp": 102,
+        "placement": 1,
+        "success": 14,
+        "transport": 21
+      }
+    }
+  },
+  "created_utc": "2026-10-28T10:28:54.091001+00:00",
+  "input_manifest": "local-only/cde3/resume_20261028/inputs_for_analysis.json",
+  "preregistered_decisions": {
+    "H1_double_prime": {
+      "E2_specificity": {
+        "E1_pooled": 31,
+        "E2_pooled": 40,
+        "reason": "Preregistration uses 'similar' without a numeric tolerance.",
+        "verdict": "not_mechanically_adjudicable"
+      },
+      "prediction_2_observed": {
+        "between": 9,
+        "between_fraction": 0.16981132075471697,
+        "closed": 53,
+        "half_baseline_fraction_limit": 0.22727272727272727,
+        "heading_error_lt_10_deg": true,
+        "heading_error_median_deg": 8.06369319317281,
+        "registered_baseline_fraction": 0.45454545454545453
+      },
+      "rules": {
+        "abs_yaw_le_90_p_one_sided_lt_0_05": false,
+        "abs_yaw_le_90_success_above_E0_7_of_99": true,
+        "both_seeds_whole_strictly_improve": false,
+        "prediction_2": true
+      },
+      "verdict": "inconclusive"
+    },
+    "H3": {
+      "recovery_test_vs_E0_5_of_102": {
+        "alternative": "first_rate_greater_than_second_rate",
+        "first": {
+          "successes": 2,
+          "trials": 103
+        },
+        "p_one_sided": 0.8783764486105003,
+        "second": {
+          "successes": 5,
+          "trials": 102
+        },
+        "z": -1.1669090450114308
+      },
+      "rules": {
+        "both_seeds_whole_strictly_improve": false,
+        "mean_above_E0_19_5pct": false,
+        "recovery_p_one_sided_lt_0_05": false,
+        "recovery_rate_above_E0_5_of_102": false,
+        "whole_p_one_sided_lt_0_05": false
+      },
+      "verdict": "rejected"
+    }
+  },
+  "schema_version": 3,
+  "statistical_contract": {
+    "E0_abs_yaw_le_90": "7/99",
+    "E0_recovery": "5/102",
+    "E0_whole": "39/200",
+    "condition_sd_ddof": 1,
+    "tests": "unpaired one-sided pooled two-proportion z; first > second"
+  }
+}

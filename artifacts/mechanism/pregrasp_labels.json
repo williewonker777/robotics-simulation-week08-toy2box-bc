@@ -1,0 +1,48 @@
+{
+ "corrections40": {
+  "zone_steps": 2475,
+  "rise_open": 251,
+  "descend_open": 569,
+  "closed": 1655,
+  "episodes": 40
+ },
+ "source40": {
+  "zone_steps": 2239,
+  "rise_open": 0,
+  "descend_open": 576,
+  "closed": 1663,
+  "episodes": 40
+ },
+ "E0": {
+  "zone_steps": 12950,
+  "rise_open": 21,
+  "descend_open": 3009,
+  "closed": 9890,
+  "trials": 200,
+  "trials_with_5plus_rise_open": 1
+ },
+ "E1": {
+  "zone_steps": 17979,
+  "rise_open": 213,
+  "descend_open": 3921,
+  "closed": 13454,
+  "trials": 200,
+  "trials_with_5plus_rise_open": 7
+ },
+ "E2": {
+  "zone_steps": 10595,
+  "rise_open": 40,
+  "descend_open": 2837,
+  "closed": 7623,
+  "trials": 200,
+  "trials_with_5plus_rise_open": 3
+ },
+ "E4": {
+  "zone_steps": 6908,
+  "rise_open": 156,
+  "descend_open": 2156,
+  "closed": 4592,
+  "trials": 200,
+  "trials_with_5plus_rise_open": 6
+ }
+}

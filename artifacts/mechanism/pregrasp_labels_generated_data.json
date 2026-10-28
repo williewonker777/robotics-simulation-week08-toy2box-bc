@@ -1,0 +1,30 @@
+{
+ "mimic_e0_500": {
+  "zone_steps": 27919,
+  "rise_open": 0,
+  "descend_open": 7198,
+  "closed": 20715,
+  "episodes": 500
+ },
+ "mimic_e1_500": {
+  "zone_steps": 28073,
+  "rise_open": 4,
+  "descend_open": 7284,
+  "closed": 20752,
+  "episodes": 500
+ },
+ "mimic_e2_500": {
+  "zone_steps": 27932,
+  "rise_open": 0,
+  "descend_open": 7213,
+  "closed": 20712,
+  "episodes": 500
+ },
+ "mimic_e4_540": {
+  "zone_steps": 30394,
+  "rise_open": 251,
+  "descend_open": 7767,
+  "closed": 22370,
+  "episodes": 540
+ }
+}

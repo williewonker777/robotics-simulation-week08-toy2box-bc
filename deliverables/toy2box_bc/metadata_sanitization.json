@@ -1,0 +1,203 @@
+{
+  "schema_version": 1,
+  "models": {
+    "101": {
+      "original_sha256": "ba8e8412080ea42857a9c26d18746292f90f079ecaae4060cac30f7667162e92",
+      "sanitized_sha256": "f0369c5c46f1cb557b564be1bd59c7224c82e467cc3f64607baa3d05771cfe1c",
+      "changed_key_paths": [
+        "train.data",
+        "train.output_dir"
+      ],
+      "decoded_non_config_equal": true,
+      "decoded_config_equal_except_changed_paths": true,
+      "torch_load_supported": true,
+      "zip_non_pickle_members_identical": true,
+      "tensor_storage_members_identical": true,
+      "tensor_storage_members": [
+        "model_epoch_2000/data/0",
+        "model_epoch_2000/data/1",
+        "model_epoch_2000/data/2",
+        "model_epoch_2000/data/3",
+        "model_epoch_2000/data/4",
+        "model_epoch_2000/data/5",
+        "model_epoch_2000/data/6"
+      ],
+      "unchanged_member_proofs": [
+        {
+          "member": "model_epoch_2000/.format_version",
+          "sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+          "bytes": 1
+        },
+        {
+          "member": "model_epoch_2000/.storage_alignment",
+          "sha256": "a68b412c4282555f15546cf6e1fc42893b7e07f271557ceb021821098dd66c1b",
+          "bytes": 2
+        },
+        {
+          "member": "model_epoch_2000/byteorder",
+          "sha256": "180ca01b95f0dfdd36fbb600e51cf6e46c8ef468de56b017847886fefaf7b6f9",
+          "bytes": 6
+        },
+        {
+          "member": "model_epoch_2000/data/0",
+          "sha256": "403fa00cca917bda371617118e5211f6a784d3ff9b68c782c5cd06bdf1699348",
+          "bytes": 56000
+        },
+        {
+          "member": "model_epoch_2000/data/1",
+          "sha256": "8d3b4106ba94e1177917f0fa5675f10998a995f46f0eb3d9c3ad4fbf8b0263e7",
+          "bytes": 140
+        },
+        {
+          "member": "model_epoch_2000/data/2",
+          "sha256": "db4671362d746faabec48ad25f1a561c9b9ae43e9121647aa2d07942866882f2",
+          "bytes": 56000
+        },
+        {
+          "member": "model_epoch_2000/data/3",
+          "sha256": "346667fa76836e5f97feee8d6cd73964725c737d1bddd78a2d10a50f0e38b309",
+          "bytes": 140
+        },
+        {
+          "member": "model_epoch_2000/data/4",
+          "sha256": "1d5341737d08b05d0d41af2f16c87ca3e47f9edf2c33d22c167d4d802ed37f15",
+          "bytes": 8000
+        },
+        {
+          "member": "model_epoch_2000/data/5",
+          "sha256": "9322419495a5e3a6200e5252530869b1e82077d7c5943d93dd6695acce520119",
+          "bytes": 20
+        },
+        {
+          "member": "model_epoch_2000/data/6",
+          "sha256": "d7e09e28057ec5b4f4c98179a4e3fe4ec28989bdc2897b8bff06e1e43a3ac868",
+          "bytes": 7852800
+        },
+        {
+          "member": "model_epoch_2000/version",
+          "sha256": "1121cfccd5913f0a63fec40a6ffd44ea64f9dc135c66634ba001d10bcf4302a2",
+          "bytes": 2
+        },
+        {
+          "member": "model_epoch_2000/.data/serialization_id",
+          "sha256": "5a042ab34aa97e308acd9600d5fcc9853d3c4a99ec8db99d57bb6315a025d405",
+          "bytes": 40
+        }
+      ],
+      "metadata_forbidden_strings_absent": true,
+      "source_artifact": "seed101/model_epoch_2000.pth",
+      "sanitized_artifact": "seed101/model_epoch_2000.pth",
+      "robomimic_policy_load_supported": true,
+      "replacements": [
+        {
+          "key_path": "train.data",
+          "public": "datasets/toy2box_agibot_mimic_e2_natural_500.hdf5"
+        },
+        {
+          "key_path": "train.output_dir",
+          "public": "logs/robomimic/Isaac-Place-Toy2Box-Agibot-Right-Arm-RmpFlow-v0"
+        }
+      ],
+      "original_unchanged": true
+    },
+    "111": {
+      "original_sha256": "65a57ab17fa062dce45625578f974d248c065b52e11ac1cb7fad206a2f716e13",
+      "sanitized_sha256": "6103aa6b8b95099078319a40bd3c0254c6c6ec9ce319f162dd0c74aa111eb4eb",
+      "changed_key_paths": [
+        "train.data",
+        "train.output_dir"
+      ],
+      "decoded_non_config_equal": true,
+      "decoded_config_equal_except_changed_paths": true,
+      "torch_load_supported": true,
+      "zip_non_pickle_members_identical": true,
+      "tensor_storage_members_identical": true,
+      "tensor_storage_members": [
+        "model_epoch_2000/data/0",
+        "model_epoch_2000/data/1",
+        "model_epoch_2000/data/2",
+        "model_epoch_2000/data/3",
+        "model_epoch_2000/data/4",
+        "model_epoch_2000/data/5",
+        "model_epoch_2000/data/6"
+      ],
+      "unchanged_member_proofs": [
+        {
+          "member": "model_epoch_2000/.format_version",
+          "sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+          "bytes": 1
+        },
+        {
+          "member": "model_epoch_2000/.storage_alignment",
+          "sha256": "a68b412c4282555f15546cf6e1fc42893b7e07f271557ceb021821098dd66c1b",
+          "bytes": 2
+        },
+        {
+          "member": "model_epoch_2000/byteorder",
+          "sha256": "180ca01b95f0dfdd36fbb600e51cf6e46c8ef468de56b017847886fefaf7b6f9",
+          "bytes": 6
+        },
+        {
+          "member": "model_epoch_2000/data/0",
+          "sha256": "87d5b6a8ea67860bc717a9220eadac628f93316556d1da109e5d78feffc85eed",
+          "bytes": 56000
+        },
+        {
+          "member": "model_epoch_2000/data/1",
+          "sha256": "d4617815cc38dcf2f27435e959999854491c1bf9f20967737e10d27dca374a1c",
+          "bytes": 140
+        },
+        {
+          "member": "model_epoch_2000/data/2",
+          "sha256": "1d80ae698ee5c30777ac70e53572866a35c60e90d5d0e455d71164da27f2cffa",
+          "bytes": 56000
+        },
+        {
+          "member": "model_epoch_2000/data/3",
+          "sha256": "331c604c144c5a2b402203f069a53205a0cedb8f54a1ecc187e1136ccf80e177",
+          "bytes": 140
+        },
+        {
+          "member": "model_epoch_2000/data/4",
+          "sha256": "e01af2ceb7d78188cf6c665425b88378a5f0e95372ecd31865a35cc0b94e1b0c",
+          "bytes": 8000
+        },
+        {
+          "member": "model_epoch_2000/data/5",
+          "sha256": "6c15ff8dd75448f8983ba54141fe3e8ac142bb09b432efb8f599193359ed73cf",
+          "bytes": 20
+        },
+        {
+          "member": "model_epoch_2000/data/6",
+          "sha256": "e13a9cafa47221e7197cfdac8d5496365056184f9588d2111e017ee24b7aeed5",
+          "bytes": 7852800
+        },
+        {
+          "member": "model_epoch_2000/version",
+          "sha256": "1121cfccd5913f0a63fec40a6ffd44ea64f9dc135c66634ba001d10bcf4302a2",
+          "bytes": 2
+        },
+        {
+          "member": "model_epoch_2000/.data/serialization_id",
+          "sha256": "db056b147b0685841371f8b4a69402006fdafb528aed1af0bf2c5a224d78b0e0",
+          "bytes": 40
+        }
+      ],
+      "metadata_forbidden_strings_absent": true,
+      "source_artifact": "seed111/model_epoch_2000.pth",
+      "sanitized_artifact": "seed111/model_epoch_2000.pth",
+      "robomimic_policy_load_supported": true,
+      "replacements": [
+        {
+          "key_path": "train.data",
+          "public": "datasets/toy2box_agibot_mimic_e2_natural_500.hdf5"
+        },
+        {
+          "key_path": "train.output_dir",
+          "public": "logs/robomimic/Isaac-Place-Toy2Box-Agibot-Right-Arm-RmpFlow-v0"
+        }
+      ],
+      "original_unchanged": true
+    }
+  }
+}

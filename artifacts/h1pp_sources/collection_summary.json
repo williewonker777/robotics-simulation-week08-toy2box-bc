@@ -1,0 +1,299 @@
+{
+ "amendment": {
+  "by": "Claude",
+  "utc_decided": "2026-10-27T07:50:00+00:00",
+  "reason": "T20 hit the 2-hour operational cap with 8/20 eligible; collector success is 4-5% in the +/-(45-90) bins and Mimic auto-annotation replay fails for about half of the |yaw|<=90 candidates.",
+  "changed": {
+   "t20_actual_attempt_cap": [
+    400,
+    1000
+   ],
+   "t20_wall_cap_seconds": [
+    7200,
+    "7200 (spent) + 14400 from resume"
+   ],
+   "rng_skip_schedule_extended_to": 2750000
+  },
+  "unchanged": [
+   "seed 3611",
+   "quota 5 per bin",
+   "collector settings",
+   "annotation",
+   "quality contract",
+   "selection and merge rules",
+   "N20 definition"
+  ]
+ },
+ "controller": "re-entrant collect/curate controller (round logic unchanged)",
+ "targeted": {
+  "rounds": [
+   {
+    "round": 0,
+    "rng_skip_draws": 0,
+    "actual_attempts": 230,
+    "candidates": 20,
+    "eligible_pairs": 8,
+    "collector_stop": null
+   },
+   {
+    "round": 1,
+    "rng_skip_draws": 250000,
+    "actual_attempts": 95,
+    "candidates": 8,
+    "eligible_pairs": 3,
+    "collector_stop": "bounded_pilot_timeout"
+   },
+   {
+    "round": 2,
+    "rng_skip_draws": 500000,
+    "actual_attempts": 12,
+    "candidates": 2,
+    "eligible_pairs": 0,
+    "collector_stop": "available_ram_below_3_gib"
+   },
+   {
+    "round": 3,
+    "rng_skip_draws": 750000,
+    "actual_attempts": 117,
+    "candidates": 9,
+    "eligible_pairs": 6,
+    "collector_stop": null
+   },
+   {
+    "round": 4,
+    "rng_skip_draws": 1000000,
+    "actual_attempts": 41,
+    "candidates": 3,
+    "eligible_pairs": 1,
+    "collector_stop": null
+   },
+   {
+    "round": 5,
+    "rng_skip_draws": 125000,
+    "actual_attempts": 30,
+    "candidates": 2,
+    "eligible_pairs": 0,
+    "collector_stop": "ok"
+   },
+   {
+    "round": 6,
+    "rng_skip_draws": 375000,
+    "actual_attempts": 29,
+    "candidates": 2,
+    "eligible_pairs": 1,
+    "collector_stop": "ok"
+   },
+   {
+    "round": 7,
+    "rng_skip_draws": 625000,
+    "actual_attempts": 3,
+    "candidates": 1,
+    "eligible_pairs": 0,
+    "collector_stop": "ok"
+   },
+   {
+    "round": 8,
+    "rng_skip_draws": 875000,
+    "actual_attempts": 4,
+    "candidates": 1,
+    "eligible_pairs": 1,
+    "collector_stop": "ok"
+   }
+  ],
+  "attempt_yaw_table": {
+   "bins": [
+    {
+     "range_deg": [
+      -180.0,
+      -135.0
+     ],
+     "attempts": 0,
+     "collector_successes": 0,
+     "success_rate": null
+    },
+    {
+     "range_deg": [
+      -135.0,
+      -90.0
+     ],
+     "attempts": 0,
+     "collector_successes": 0,
+     "success_rate": null
+    },
+    {
+     "range_deg": [
+      -90.0,
+      -45.0
+     ],
+     "attempts": 137,
+     "collector_successes": 8,
+     "success_rate": 0.058394160583941604
+    },
+    {
+     "range_deg": [
+      -45.0,
+      0.0
+     ],
+     "attempts": 50,
+     "collector_successes": 15,
+     "success_rate": 0.3
+    },
+    {
+     "range_deg": [
+      0.0,
+      45.0
+     ],
+     "attempts": 48,
+     "collector_successes": 13,
+     "success_rate": 0.2708333333333333
+    },
+    {
+     "range_deg": [
+      45.0,
+      90.0
+     ],
+     "attempts": 326,
+     "collector_successes": 12,
+     "success_rate": 0.03680981595092025
+    },
+    {
+     "range_deg": [
+      90.0,
+      135.0
+     ],
+     "attempts": 0,
+     "collector_successes": 0,
+     "success_rate": null
+    },
+    {
+     "range_deg": [
+      135.0,
+      180.0
+     ],
+     "attempts": 0,
+     "collector_successes": 0,
+     "success_rate": null
+    }
+   ],
+   "total_attempts": 561,
+   "collector_successes": 48,
+   "skipped_layouts": 2073,
+   "unbinned_unsettled_attempts": 0
+  },
+  "selected_target_bin_counts": [
+   5,
+   5,
+   5,
+   5
+  ]
+ },
+ "natural": {
+  "rounds": [
+   {
+    "round": 0,
+    "rng_skip_draws": 0,
+    "actual_attempts": 85,
+    "candidates": 20,
+    "eligible_pairs": 14,
+    "collector_stop": "ok"
+   },
+   {
+    "round": 1,
+    "rng_skip_draws": 250000,
+    "actual_attempts": 17,
+    "candidates": 6,
+    "eligible_pairs": 4,
+    "collector_stop": "ok"
+   },
+   {
+    "round": 2,
+    "rng_skip_draws": 500000,
+    "actual_attempts": 6,
+    "candidates": 2,
+    "eligible_pairs": 2,
+    "collector_stop": "ok"
+   }
+  ],
+  "attempt_yaw_table": {
+   "bins": [
+    {
+     "range_deg": [
+      -180.0,
+      -135.0
+     ],
+     "attempts": 9,
+     "collector_successes": 3,
+     "success_rate": 0.3333333333333333
+    },
+    {
+     "range_deg": [
+      -135.0,
+      -90.0
+     ],
+     "attempts": 13,
+     "collector_successes": 5,
+     "success_rate": 0.38461538461538464
+    },
+    {
+     "range_deg": [
+      -90.0,
+      -45.0
+     ],
+     "attempts": 19,
+     "collector_successes": 1,
+     "success_rate": 0.05263157894736842
+    },
+    {
+     "range_deg": [
+      -45.0,
+      0.0
+     ],
+     "attempts": 17,
+     "collector_successes": 1,
+     "success_rate": 0.058823529411764705
+    },
+    {
+     "range_deg": [
+      0.0,
+      45.0
+     ],
+     "attempts": 11,
+     "collector_successes": 2,
+     "success_rate": 0.18181818181818182
+    },
+    {
+     "range_deg": [
+      45.0,
+      90.0
+     ],
+     "attempts": 10,
+     "collector_successes": 0,
+     "success_rate": 0.0
+    },
+    {
+     "range_deg": [
+      90.0,
+      135.0
+     ],
+     "attempts": 19,
+     "collector_successes": 9,
+     "success_rate": 0.47368421052631576
+    },
+    {
+     "range_deg": [
+      135.0,
+      180.0
+     ],
+     "attempts": 10,
+     "collector_successes": 7,
+     "success_rate": 0.7
+    }
+   ],
+   "total_attempts": 108,
+   "collector_successes": 28,
+   "skipped_layouts": 0,
+   "unbinned_unsettled_attempts": 0
+  },
+  "selected_target_bin_counts": null
+ }
+}

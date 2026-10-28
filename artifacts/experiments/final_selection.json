@@ -1,0 +1,20 @@
+{
+ "rule": "preregistration 3, final-model rule with supplement 3",
+ "selection": {
+  "H1_double_prime": "inconclusive",
+  "H3": "rejected",
+  "condition": "E2",
+  "requires_E5": false,
+  "scores": {
+   "E0": 39,
+   "E1": 31,
+   "E2": 40,
+   "E4": 14
+  }
+ },
+ "e5_executed": false,
+ "deliverable_sha256": {
+  "101": "ba8e8412080ea42857a9c26d18746292f90f079ecaae4060cac30f7667162e92",
+  "111": "65a57ab17fa062dce45625578f974d248c065b52e11ac1cb7fad206a2f716e13"
+ }
+}

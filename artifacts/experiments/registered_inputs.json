@@ -1,0 +1,152 @@
+{
+  "conditions": {
+    "E0": {
+      "dataset": {
+        "combined": "datasets/toy2box_agibot_mimic_v1_500.hdf5",
+        "expected_demos": 500,
+        "source": "datasets/toy2box_agibot_codex_smooth_annotated.hdf5"
+      },
+      "generation": {
+        "failed_files": [
+          "local-only/e0-generation/chunks/D3_production/d3_seed001_goal050_failed.hdf5",
+          "local-only/e0-generation/chunks/D3_production/d3_seed003_goal050_failed.hdf5",
+          "local-only/e0-generation/chunks/D3_scope6/reconciled_seed004/d3_seed004_goal050_failed.hdf5",
+          "local-only/e0-generation/chunks/D3_scope6/d3_seed005_goal050_failed.hdf5",
+          "local-only/e0-generation/chunks/D3_scope6/d3_seed006_goal050_failed.hdf5",
+          "local-only/e0-generation/chunks/D3_scope6/d3_seed007_goal050_failed.hdf5",
+          "local-only/e0-generation/chunks/D3_scope6/d3_seed008_goal050_failed.hdf5",
+          "local-only/e0-generation/chunks/D3_scope6/d3_seed009_goal050_failed.hdf5",
+          "local-only/e0-generation/chunks/D3_scope6/d3_seed010_goal050_failed.hdf5",
+          "local-only/e0-generation/chunks/D3_scope6/d3_seed011_goal048_failed.hdf5"
+        ],
+        "success_files": [
+          "local-only/e0-generation/chunks/D3_production/d3_seed001_goal050.hdf5",
+          "local-only/e0-generation/chunks/D3_production/d3_seed003_goal050.hdf5",
+          "local-only/e0-generation/chunks/D3_scope6/reconciled_seed004/d3_seed004_goal050.hdf5",
+          "local-only/e0-generation/chunks/D3_scope6/d3_seed005_goal050.hdf5",
+          "local-only/e0-generation/chunks/D3_scope6/d3_seed006_goal050.hdf5",
+          "local-only/e0-generation/chunks/D3_scope6/d3_seed007_goal050.hdf5",
+          "local-only/e0-generation/chunks/D3_scope6/d3_seed008_goal050.hdf5",
+          "local-only/e0-generation/chunks/D3_scope6/d3_seed009_goal050.hdf5",
+          "local-only/e0-generation/chunks/D3_scope6/d3_seed010_goal050.hdf5",
+          "local-only/e0-generation/chunks/D3_scope6/d3_seed011_goal048.hdf5"
+        ]
+      },
+      "models": {
+        "101": {
+          "results_json": "local-only/e0_observer101_100.results.json",
+          "trajectory_dir": "artifacts/e0_baseline/rollouts/seed101"
+        },
+        "111": {
+          "results_json": "local-only/e0_observer111_100.results.json",
+          "trajectory_dir": "artifacts/e0_baseline/rollouts/seed111"
+        }
+      }
+    },
+    "E1": {
+      "dataset": {
+        "combined": "datasets/toy2box_agibot_mimic_e1_targeted_500.hdf5",
+        "expected_demos": 500,
+        "source": "datasets/toy2box_agibot_sources_e1_targeted60_annotated.hdf5"
+      },
+      "generation": {
+        "failed_files": [
+          "local-only/cde3/e1/generation/chunks/e1_seed001_goal050_failed.hdf5",
+          "local-only/cde3/e1/generation/chunks/e1_seed003_goal050_failed.hdf5",
+          "local-only/cde3/e1/generation/chunks/e1_seed004_goal050_failed.hdf5",
+          "local-only/cde3/e1/generation/chunks/e1_seed005_goal050_failed.hdf5",
+          "local-only/cde3/e1/generation/chunks/e1_seed006_goal050_failed.hdf5",
+          "local-only/cde3/e1/generation/chunks/e1_seed007_goal050_failed.hdf5",
+          "local-only/cde3/e1/generation/chunks/e1_seed008_goal050_failed.hdf5",
+          "local-only/cde3/e1/generation/chunks/e1_seed009_goal050_failed.hdf5",
+          "local-only/cde3/e1/generation/chunks/e1_seed010_goal050_failed.hdf5",
+          "local-only/cde3/e1/generation/chunks/e1_seed011_goal049_failed.hdf5"
+        ],
+        "success_files": [
+          "local-only/cde3/e1/generation/chunks/e1_seed001_goal050.hdf5",
+          "local-only/cde3/e1/generation/chunks/e1_seed003_goal050.hdf5",
+          "local-only/cde3/e1/generation/chunks/e1_seed004_goal050.hdf5",
+          "local-only/cde3/e1/generation/chunks/e1_seed005_goal050.hdf5",
+          "local-only/cde3/e1/generation/chunks/e1_seed006_goal050.hdf5",
+          "local-only/cde3/e1/generation/chunks/e1_seed007_goal050.hdf5",
+          "local-only/cde3/e1/generation/chunks/e1_seed008_goal050.hdf5",
+          "local-only/cde3/e1/generation/chunks/e1_seed009_goal050.hdf5",
+          "local-only/cde3/e1/generation/chunks/e1_seed010_goal050.hdf5",
+          "local-only/cde3/e1/generation/chunks/e1_seed011_goal049.hdf5"
+        ]
+      },
+      "models": {
+        "101": {
+          "results_json": "artifacts/experiments/e1/seed101/results.json",
+          "trajectory_dir": "artifacts/experiments/e1/seed101/rollouts"
+        },
+        "111": {
+          "results_json": "artifacts/experiments/e1/seed111/results.json",
+          "trajectory_dir": "artifacts/experiments/e1/seed111/rollouts"
+        }
+      }
+    },
+    "E2": {
+      "dataset": {
+        "combined": "datasets/toy2box_agibot_mimic_e2_natural_500.hdf5",
+        "expected_demos": 500,
+        "source": "datasets/toy2box_agibot_sources_e2_natural60_annotated.hdf5"
+      },
+      "generation": {
+        "failed_files": [
+          "local-only/cde3/e2/generation/chunks/e2_seed001_goal050_failed.hdf5",
+          "local-only/cde3/e2/generation/chunks/e2_seed003_goal050_failed.hdf5",
+          "local-only/cde3/e2/generation/chunks/e2_seed004_goal050_failed.hdf5",
+          "local-only/cde3/e2/generation/chunks/e2_seed005_goal050_failed.hdf5",
+          "local-only/cde3/e2/generation/chunks/e2_seed006_goal050_failed.hdf5",
+          "local-only/cde3/e2/generation/chunks/e2_seed007_goal050_failed.hdf5",
+          "local-only/cde3/e2/generation/chunks/e2_seed008_goal050_failed.hdf5",
+          "local-only/cde3/e2/generation/chunks/e2_seed009_goal050_failed.hdf5",
+          "local-only/cde3/e2/generation/chunks/e2_seed010_goal050_failed.hdf5",
+          "local-only/cde3/e2/generation/chunks/e2_seed011_goal049_failed.hdf5",
+          "local-only/cde3/resume_20261028/e2_supplement/generation/chunks/e2_seed012_goal050_failed.hdf5"
+        ],
+        "success_files": [
+          "local-only/cde3/e2/generation/chunks/e2_seed001_goal050.hdf5",
+          "local-only/cde3/e2/generation/chunks/e2_seed003_goal050.hdf5",
+          "local-only/cde3/e2/generation/chunks/e2_seed004_goal050.hdf5",
+          "local-only/cde3/e2/generation/chunks/e2_seed005_goal050.hdf5",
+          "local-only/cde3/e2/generation/chunks/e2_seed006_goal050.hdf5",
+          "local-only/cde3/e2/generation/chunks/e2_seed007_goal050.hdf5",
+          "local-only/cde3/e2/generation/chunks/e2_seed008_goal050.hdf5",
+          "local-only/cde3/e2/generation/chunks/e2_seed009_goal050.hdf5",
+          "local-only/cde3/e2/generation/chunks/e2_seed010_goal050.hdf5",
+          "local-only/cde3/e2/generation/chunks/e2_seed011_goal049.hdf5",
+          "local-only/cde3/resume_20261028/e2_supplement/generation/chunks/e2_seed012_goal050.hdf5"
+        ]
+      },
+      "models": {
+        "101": {
+          "results_json": "artifacts/experiments/e2/seed101/results.json",
+          "trajectory_dir": "artifacts/experiments/e2/seed101/rollouts"
+        },
+        "111": {
+          "results_json": "artifacts/experiments/e2/seed111/results.json",
+          "trajectory_dir": "artifacts/experiments/e2/seed111/rollouts"
+        }
+      }
+    },
+    "E4": {
+      "dataset": {
+        "combined": "datasets/toy2box_agibot_e4_mimic500_corr40.hdf5",
+        "expected_demos": 540
+      },
+      "models": {
+        "101": {
+          "results_json": "artifacts/experiments/e4/seed101/results.json",
+          "trajectory_dir": "artifacts/experiments/e4/seed101/rollouts"
+        },
+        "111": {
+          "results_json": "artifacts/experiments/e4/seed111/results.json",
+          "trajectory_dir": "artifacts/experiments/e4/seed111/rollouts"
+        }
+      }
+    }
+  },
+  "schema_version": 3
+}

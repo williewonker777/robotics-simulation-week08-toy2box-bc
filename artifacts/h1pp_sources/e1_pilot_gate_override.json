@@ -1,0 +1,16 @@
+{
+ "decided_by": "Claude",
+ "decided_utc": "2026-10-27T11:03:46.026154+00:00",
+ "pilot_gate": "local-only/cde2/pilot_e1/pilot_gate.json",
+ "pilot_gate_sha256": "a8cb9927482aadd6acd5b3c25581670fa0645b5ec25f203ef0dedf8f0b748853",
+ "overridden_conditions": [
+  "c_convention_if_target_bins_present"
+ ],
+ "observed": {
+  "[-90,-45)": "2/4 conforming (mode0 1, mode180 3)",
+  "[45,90)": "7/7 conforming",
+  "yield": "50/83 = 60.2%"
+ },
+ "reason": "Gate (c) is preregistration-2 prediction 1 itself; failing it on n=4 in the boundary bin is reported, not a reason to leave H1'' untested. (a) and (b) passed. E2/E4 do not depend on it. Verdicts keep the preregistered support criteria.",
+ "task_record": "report/PREREGISTRATION.md, supplement 4"
+}

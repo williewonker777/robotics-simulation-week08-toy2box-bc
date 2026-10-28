@@ -1,0 +1,410 @@
+{
+  "attempts": 910,
+  "chunks": [
+    {
+      "cumulative_retry_ratio_completed_attempts": 0.0,
+      "cumulative_retry_ratio_logical_starts": 0.0,
+      "elapsed_seconds": 233.20397326606326,
+      "excluded_discarded_layouts": [],
+      "failed_file": "local-only/cde3/e1/generation/chunks/e1_seed001_goal050_failed.hdf5",
+      "failures": 33,
+      "goal": 50,
+      "label": "e1_seed001_goal050",
+      "logical_initial_settling_starts": 183,
+      "raw_capped_cycles": 0,
+      "recovered_logical_attempts": 0,
+      "retry_operations": 0,
+      "scope6_gate": "local-only/cde3/e1/generation/chunks/e1_seed001_goal050.gate.json",
+      "seed": 1,
+      "settling_log": "local-only/cde3/e1/generation/chunks/e1_seed001_goal050.settling.jsonl",
+      "source_file": "datasets/toy2box_agibot_sources_e1_targeted60_annotated.hdf5",
+      "status": "local-only/cde3/e1/generation/chunks/e1_seed001_goal050.status.json",
+      "success_file": "local-only/cde3/e1/generation/chunks/e1_seed001_goal050.hdf5",
+      "successes": 50
+    },
+    {
+      "cumulative_retry_ratio_completed_attempts": 0.0,
+      "cumulative_retry_ratio_logical_starts": 0.0,
+      "elapsed_seconds": 258.18362200597767,
+      "excluded_discarded_layouts": [],
+      "failed_file": "local-only/cde3/e1/generation/chunks/e1_seed003_goal050_failed.hdf5",
+      "failures": 50,
+      "goal": 50,
+      "label": "e1_seed003_goal050",
+      "logical_initial_settling_starts": 200,
+      "raw_capped_cycles": 0,
+      "recovered_logical_attempts": 0,
+      "retry_operations": 0,
+      "scope6_gate": "local-only/cde3/e1/generation/chunks/e1_seed003_goal050.gate.json",
+      "seed": 3,
+      "settling_log": "local-only/cde3/e1/generation/chunks/e1_seed003_goal050.settling.jsonl",
+      "source_file": "datasets/toy2box_agibot_sources_e1_targeted60_annotated.hdf5",
+      "status": "local-only/cde3/e1/generation/chunks/e1_seed003_goal050.status.json",
+      "success_file": "local-only/cde3/e1/generation/chunks/e1_seed003_goal050.hdf5",
+      "successes": 50
+    },
+    {
+      "cumulative_retry_ratio_completed_attempts": 0.0035587188612099642,
+      "cumulative_retry_ratio_logical_starts": 0.0017211703958691911,
+      "elapsed_seconds": 245.68013337498996,
+      "excluded_discarded_layouts": [
+        {
+          "attempt": 1,
+          "discarded_layout": {
+            "box": {
+              "position_env": [
+                0.2690262794494629,
+                0.0047359466552734375,
+                -0.5595746040344238
+              ],
+              "position_world": [
+                -4.230973720550537,
+                13.504735946655273,
+                -0.5595746040344238
+              ],
+              "quaternion_wxyz": [
+                0.33629316091537476,
+                0.0028805772308260202,
+                0.004192775581032038,
+                -0.9417436718940735
+              ]
+            },
+            "frame_semantics": {
+              "position_env": "environment-local frame (world minus env origin)",
+              "position_world": "simulation world frame",
+              "quaternion_wxyz": "world-frame orientation, scalar first"
+            },
+            "toy_truck": {
+              "position_env": [
+                0.16698741912841797,
+                -0.171661376953125,
+                -0.668938934803009
+              ],
+              "position_world": [
+                -4.333012580871582,
+                13.328338623046875,
+                -0.668938934803009
+              ],
+              "quaternion_wxyz": [
+                0.635294497013092,
+                -0.00123981898650527,
+                -0.0015351022593677044,
+                0.7722675800323486
+              ]
+            }
+          },
+          "env_id": 69,
+          "original_layout": {
+            "box": {
+              "position_env": [
+                0.2691807746887207,
+                0.005780220031738281,
+                -0.550000011920929
+              ],
+              "position_world": [
+                -4.230819225311279,
+                13.505780220031738,
+                -0.550000011920929
+              ],
+              "quaternion_wxyz": [
+                0.33638840913772583,
+                0.0,
+                0.0,
+                -0.9417233467102051
+              ]
+            },
+            "frame_semantics": {
+              "position_env": "environment-local frame (world minus env origin)",
+              "position_world": "simulation world frame",
+              "quaternion_wxyz": "world-frame orientation, scalar first"
+            },
+            "toy_truck": {
+              "position_env": [
+                0.1673755645751953,
+                -0.1711406707763672,
+                -0.6499999761581421
+              ],
+              "position_world": [
+                -4.332624435424805,
+                13.328859329223633,
+                -0.6499999761581421
+              ],
+              "quaternion_wxyz": [
+                0.6404274106025696,
+                0.0,
+                0.0,
+                0.7680187225341797
+              ]
+            }
+          },
+          "retry_count": 1
+        }
+      ],
+      "failed_file": "local-only/cde3/e1/generation/chunks/e1_seed004_goal050_failed.hdf5",
+      "failures": 48,
+      "goal": 50,
+      "label": "e1_seed004_goal050",
+      "logical_initial_settling_starts": 198,
+      "raw_capped_cycles": 1,
+      "recovered_logical_attempts": 1,
+      "retry_operations": 1,
+      "scope6_gate": "local-only/cde3/e1/generation/chunks/e1_seed004_goal050.gate.json",
+      "seed": 4,
+      "settling_log": "local-only/cde3/e1/generation/chunks/e1_seed004_goal050.settling.jsonl",
+      "source_file": "datasets/toy2box_agibot_sources_e1_targeted60_annotated.hdf5",
+      "status": "local-only/cde3/e1/generation/chunks/e1_seed004_goal050.status.json",
+      "success_file": "local-only/cde3/e1/generation/chunks/e1_seed004_goal050.hdf5",
+      "successes": 50
+    },
+    {
+      "cumulative_retry_ratio_completed_attempts": 0.002680965147453083,
+      "cumulative_retry_ratio_logical_starts": 0.00129366106080207,
+      "elapsed_seconds": 239.39795918704476,
+      "excluded_discarded_layouts": [],
+      "failed_file": "local-only/cde3/e1/generation/chunks/e1_seed005_goal050_failed.hdf5",
+      "failures": 42,
+      "goal": 50,
+      "label": "e1_seed005_goal050",
+      "logical_initial_settling_starts": 192,
+      "raw_capped_cycles": 0,
+      "recovered_logical_attempts": 0,
+      "retry_operations": 0,
+      "scope6_gate": "local-only/cde3/e1/generation/chunks/e1_seed005_goal050.gate.json",
+      "seed": 5,
+      "settling_log": "local-only/cde3/e1/generation/chunks/e1_seed005_goal050.settling.jsonl",
+      "source_file": "datasets/toy2box_agibot_sources_e1_targeted60_annotated.hdf5",
+      "status": "local-only/cde3/e1/generation/chunks/e1_seed005_goal050.status.json",
+      "success_file": "local-only/cde3/e1/generation/chunks/e1_seed005_goal050.hdf5",
+      "successes": 50
+    },
+    {
+      "cumulative_retry_ratio_completed_attempts": 0.0021321961620469083,
+      "cumulative_retry_ratio_logical_starts": 0.0010319917440660474,
+      "elapsed_seconds": 240.5661475720117,
+      "excluded_discarded_layouts": [],
+      "failed_file": "local-only/cde3/e1/generation/chunks/e1_seed006_goal050_failed.hdf5",
+      "failures": 46,
+      "goal": 50,
+      "label": "e1_seed006_goal050",
+      "logical_initial_settling_starts": 196,
+      "raw_capped_cycles": 0,
+      "recovered_logical_attempts": 0,
+      "retry_operations": 0,
+      "scope6_gate": "local-only/cde3/e1/generation/chunks/e1_seed006_goal050.gate.json",
+      "seed": 6,
+      "settling_log": "local-only/cde3/e1/generation/chunks/e1_seed006_goal050.settling.jsonl",
+      "source_file": "datasets/toy2box_agibot_sources_e1_targeted60_annotated.hdf5",
+      "status": "local-only/cde3/e1/generation/chunks/e1_seed006_goal050.status.json",
+      "success_file": "local-only/cde3/e1/generation/chunks/e1_seed006_goal050.hdf5",
+      "successes": 50
+    },
+    {
+      "cumulative_retry_ratio_completed_attempts": 0.0017985611510791368,
+      "cumulative_retry_ratio_logical_starts": 0.0008650519031141869,
+      "elapsed_seconds": 241.58678470295854,
+      "excluded_discarded_layouts": [],
+      "failed_file": "local-only/cde3/e1/generation/chunks/e1_seed007_goal050_failed.hdf5",
+      "failures": 37,
+      "goal": 50,
+      "label": "e1_seed007_goal050",
+      "logical_initial_settling_starts": 187,
+      "raw_capped_cycles": 0,
+      "recovered_logical_attempts": 0,
+      "retry_operations": 0,
+      "scope6_gate": "local-only/cde3/e1/generation/chunks/e1_seed007_goal050.gate.json",
+      "seed": 7,
+      "settling_log": "local-only/cde3/e1/generation/chunks/e1_seed007_goal050.settling.jsonl",
+      "source_file": "datasets/toy2box_agibot_sources_e1_targeted60_annotated.hdf5",
+      "status": "local-only/cde3/e1/generation/chunks/e1_seed007_goal050.status.json",
+      "success_file": "local-only/cde3/e1/generation/chunks/e1_seed007_goal050.hdf5",
+      "successes": 50
+    },
+    {
+      "cumulative_retry_ratio_completed_attempts": 0.0015432098765432098,
+      "cumulative_retry_ratio_logical_starts": 0.000741839762611276,
+      "elapsed_seconds": 240.5299487330485,
+      "excluded_discarded_layouts": [],
+      "failed_file": "local-only/cde3/e1/generation/chunks/e1_seed008_goal050_failed.hdf5",
+      "failures": 42,
+      "goal": 50,
+      "label": "e1_seed008_goal050",
+      "logical_initial_settling_starts": 192,
+      "raw_capped_cycles": 0,
+      "recovered_logical_attempts": 0,
+      "retry_operations": 0,
+      "scope6_gate": "local-only/cde3/e1/generation/chunks/e1_seed008_goal050.gate.json",
+      "seed": 8,
+      "settling_log": "local-only/cde3/e1/generation/chunks/e1_seed008_goal050.settling.jsonl",
+      "source_file": "datasets/toy2box_agibot_sources_e1_targeted60_annotated.hdf5",
+      "status": "local-only/cde3/e1/generation/chunks/e1_seed008_goal050.status.json",
+      "success_file": "local-only/cde3/e1/generation/chunks/e1_seed008_goal050.hdf5",
+      "successes": 50
+    },
+    {
+      "cumulative_retry_ratio_completed_attempts": 0.001336898395721925,
+      "cumulative_retry_ratio_logical_starts": 0.0006459948320413437,
+      "elapsed_seconds": 255.0557571860263,
+      "excluded_discarded_layouts": [],
+      "failed_file": "local-only/cde3/e1/generation/chunks/e1_seed009_goal050_failed.hdf5",
+      "failures": 50,
+      "goal": 50,
+      "label": "e1_seed009_goal050",
+      "logical_initial_settling_starts": 200,
+      "raw_capped_cycles": 0,
+      "recovered_logical_attempts": 0,
+      "retry_operations": 0,
+      "scope6_gate": "local-only/cde3/e1/generation/chunks/e1_seed009_goal050.gate.json",
+      "seed": 9,
+      "settling_log": "local-only/cde3/e1/generation/chunks/e1_seed009_goal050.settling.jsonl",
+      "source_file": "datasets/toy2box_agibot_sources_e1_targeted60_annotated.hdf5",
+      "status": "local-only/cde3/e1/generation/chunks/e1_seed009_goal050.status.json",
+      "success_file": "local-only/cde3/e1/generation/chunks/e1_seed009_goal050.hdf5",
+      "successes": 50
+    },
+    {
+      "cumulative_retry_ratio_completed_attempts": 0.0024096385542168677,
+      "cumulative_retry_ratio_logical_starts": 0.0011560693641618498,
+      "elapsed_seconds": 230.17777932691388,
+      "excluded_discarded_layouts": [
+        {
+          "attempt": 1,
+          "discarded_layout": {
+            "box": {
+              "position_env": [
+                0.290158748626709,
+                0.012111663818359375,
+                -0.5595743656158447
+              ],
+              "position_world": [
+                7.790158748626709,
+                -7.487888336181641,
+                -0.5595743656158447
+              ],
+              "quaternion_wxyz": [
+                0.7481470108032227,
+                0.000501242175232619,
+                0.005065804813057184,
+                -0.6635134816169739
+              ]
+            },
+            "frame_semantics": {
+              "position_env": "environment-local frame (world minus env origin)",
+              "position_world": "simulation world frame",
+              "quaternion_wxyz": "world-frame orientation, scalar first"
+            },
+            "toy_truck": {
+              "position_env": [
+                0.1974477767944336,
+                -0.18149423599243164,
+                -0.6610406637191772
+              ],
+              "position_world": [
+                7.697447776794434,
+                -7.681494235992432,
+                -0.6610406637191772
+              ],
+              "quaternion_wxyz": [
+                0.1127442792057991,
+                -0.023676248267292976,
+                0.20415937900543213,
+                -0.9721354246139526
+              ]
+            }
+          },
+          "env_id": 22,
+          "original_layout": {
+            "box": {
+              "position_env": [
+                0.28963470458984375,
+                0.0024394989013671875,
+                -0.550000011920929
+              ],
+              "position_world": [
+                7.789634704589844,
+                -7.497560501098633,
+                -0.550000011920929
+              ],
+              "quaternion_wxyz": [
+                0.762819230556488,
+                0.0,
+                0.0,
+                -0.6466118097305298
+              ]
+            },
+            "frame_semantics": {
+              "position_env": "environment-local frame (world minus env origin)",
+              "position_world": "simulation world frame",
+              "quaternion_wxyz": "world-frame orientation, scalar first"
+            },
+            "toy_truck": {
+              "position_env": [
+                0.19248199462890625,
+                -0.16625261306762695,
+                -0.6499999761581421
+              ],
+              "position_world": [
+                7.692481994628906,
+                -7.666252613067627,
+                -0.6499999761581421
+              ],
+              "quaternion_wxyz": [
+                0.014991870149970055,
+                0.0,
+                0.0,
+                -0.9998876452445984
+              ]
+            }
+          },
+          "retry_count": 1
+        }
+      ],
+      "failed_file": "local-only/cde3/e1/generation/chunks/e1_seed010_goal050_failed.hdf5",
+      "failures": 31,
+      "goal": 50,
+      "label": "e1_seed010_goal050",
+      "logical_initial_settling_starts": 182,
+      "raw_capped_cycles": 1,
+      "recovered_logical_attempts": 1,
+      "retry_operations": 1,
+      "scope6_gate": "local-only/cde3/e1/generation/chunks/e1_seed010_goal050.gate.json",
+      "seed": 10,
+      "settling_log": "local-only/cde3/e1/generation/chunks/e1_seed010_goal050.settling.jsonl",
+      "source_file": "datasets/toy2box_agibot_sources_e1_targeted60_annotated.hdf5",
+      "status": "local-only/cde3/e1/generation/chunks/e1_seed010_goal050.status.json",
+      "success_file": "local-only/cde3/e1/generation/chunks/e1_seed010_goal050.hdf5",
+      "successes": 51
+    },
+    {
+      "cumulative_retry_ratio_completed_attempts": 0.002197802197802198,
+      "cumulative_retry_ratio_logical_starts": 0.0010471204188481676,
+      "elapsed_seconds": 232.4149769200012,
+      "excluded_discarded_layouts": [],
+      "failed_file": "local-only/cde3/e1/generation/chunks/e1_seed011_goal049_failed.hdf5",
+      "failures": 31,
+      "goal": 49,
+      "label": "e1_seed011_goal049",
+      "logical_initial_settling_starts": 180,
+      "raw_capped_cycles": 0,
+      "recovered_logical_attempts": 0,
+      "retry_operations": 0,
+      "scope6_gate": "local-only/cde3/e1/generation/chunks/e1_seed011_goal049.gate.json",
+      "seed": 11,
+      "settling_log": "local-only/cde3/e1/generation/chunks/e1_seed011_goal049.settling.jsonl",
+      "source_file": "datasets/toy2box_agibot_sources_e1_targeted60_annotated.hdf5",
+      "status": "local-only/cde3/e1/generation/chunks/e1_seed011_goal049.status.json",
+      "success_file": "local-only/cde3/e1/generation/chunks/e1_seed011_goal049.hdf5",
+      "successes": 49
+    }
+  ],
+  "condition": "e1",
+  "failures": 410,
+  "finished_utc": "2026-10-27T14:45:22.903966+00:00",
+  "fixed_plan": null,
+  "logical_initial_settling_starts": 1910,
+  "retry_operations": 2,
+  "retry_ratio_completed_attempts": 0.002197802197802198,
+  "retry_ratio_logical_starts": 0.0010471204188481676,
+  "source_file": "datasets/toy2box_agibot_sources_e1_targeted60_annotated.hdf5",
+  "state": "generated",
+  "successes": 500
+}

@@ -1,0 +1,21 @@
+condition  s101  s111  pooled  mean±sd(ddof1)      v3.1 stages a/g/t/p/s   success by |yaw| bin [0,45)/[45,90)/[90,135)/[135,181)
+E0           19    20   39/200   19.5% ± 0.71%p   39/93/27/2/39           6/44 1/55 13/51 19/50
+E1           21    10   31/200   15.5% ± 7.78%p   23/104/35/7/31          5/43 6/53 6/56 14/48
+E2           18    22   40/200   20.0% ± 2.83%p   27/75/53/5/40           6/47 5/57 13/48 16/48
+E4            9     5   14/200    7.0% ± 2.83%p   62/102/21/1/14          3/44 2/59 4/48 5/49
+
+condition  [45,90) closed mode0/mode180/between  herr median   recovery: first failed -> recovered (retried, later secured); first secured -> success; never near
+E0          55  14/16/25                  27.6°   102 -> 5 (35, 13); 55 -> 34; 43
+E1          53  39/5/9                    8.1°   123 -> 7 (53, 19); 54 -> 24; 23
+E2          57  26/18/13                  15.3°   89 -> 3 (34, 19); 78 -> 37; 33
+E4          59  10/22/27                  28.0°   103 -> 2 (36, 8); 28 -> 12; 69
+
+E1_vs_E0: whole 31/200 vs 39/200 p=0.8538; |yaw|<=90 11/96 vs 7/99 p=0.1450
+E2_vs_E0: whole 40/200 vs 39/200 p=0.4500; |yaw|<=90 11/104 vs 7/99 p=0.1899
+E4_vs_E0: whole 14/200 vs 39/200 p=0.9999; |yaw|<=90 5/103 vs 7/99 p=0.7473
+
+H1_double_prime: inconclusive  rules={"abs_yaw_le_90_p_one_sided_lt_0_05": false, "abs_yaw_le_90_success_above_E0_7_of_99": true, "both_seeds_whole_strictly_improve": false, "prediction_2": true}
+   prediction 2: between 9/53 = 0.170 (limit 0.227), herr median 8.06369319317281
+   E2 specificity: E1 31 vs E2 40 (not_mechanically_adjudicable)
+H3: rejected  rules={"both_seeds_whole_strictly_improve": false, "mean_above_E0_19_5pct": false, "recovery_p_one_sided_lt_0_05": false, "recovery_rate_above_E0_5_of_102": false, "whole_p_one_sided_lt_0_05": false}
+   recovery test: 2/103 vs 5/102 p=0.8784

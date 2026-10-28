@@ -1,0 +1,7 @@
+E0: seed101 19/100, seed111 20/100, pooled 39/200, mean 19.5% +/- 0.71%p (sample SD)
+E1: seed101 21/100, seed111 10/100, pooled 31/200, mean 15.5% +/- 7.78%p (sample SD)
+E2: seed101 18/100, seed111 22/100, pooled 40/200, mean 20.0% +/- 2.83%p (sample SD)
+E4: seed101 9/100, seed111 5/100, pooled 14/200, mean 7.0% +/- 2.83%p (sample SD)
+H1'': inconclusive  (both seeds improve False; |yaw|<=90 [11, 96] vs [7, 99] p=0.145; prediction 2 True: between 0.170 <= 0.227, heading error median 8.1 deg < 10)
+H3: rejected  (both seeds improve False; whole p=1.000; recovery [2, 103] vs [5, 102] p=0.878)
+final condition: E2

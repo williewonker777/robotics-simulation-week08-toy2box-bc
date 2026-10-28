@@ -1,0 +1,139 @@
+{
+  "utc": "2026-10-27T10:28:28.693283+00:00",
+  "gate_passed": false,
+  "conditions": {
+    "a_normal_no_cap_or_error": true,
+    "b_success_rate_at_least_40pct": true,
+    "c_convention_if_target_bins_present": false
+  },
+  "error": null,
+  "successes": 50,
+  "failures": 33,
+  "success_rate": 0.6024096385542169,
+  "scope6_raw_capped_cycles": 0,
+  "scope6_retry_operations": 0,
+  "elapsed_seconds": 241.33787330798805,
+  "minimum_ram_gib": 13.502079010009766,
+  "convention": {
+    "episodes": 50,
+    "without_close": [],
+    "tolerance_deg": 5.0,
+    "bins": [
+      {
+        "range_deg": [
+          -180,
+          -135
+        ],
+        "count": 11,
+        "conforming": 11,
+        "mode0": 0,
+        "mode180": 11,
+        "fraction": 1.0
+      },
+      {
+        "range_deg": [
+          -135,
+          -90
+        ],
+        "count": 5,
+        "conforming": 5,
+        "mode0": 0,
+        "mode180": 5,
+        "fraction": 1.0
+      },
+      {
+        "range_deg": [
+          -90,
+          -45
+        ],
+        "count": 4,
+        "conforming": 2,
+        "mode0": 1,
+        "mode180": 3,
+        "fraction": 0.5
+      },
+      {
+        "range_deg": [
+          -45,
+          0
+        ],
+        "count": 4,
+        "conforming": 4,
+        "mode0": 4,
+        "mode180": 0,
+        "fraction": 1.0
+      },
+      {
+        "range_deg": [
+          0,
+          45
+        ],
+        "count": 10,
+        "conforming": 10,
+        "mode0": 10,
+        "mode180": 0,
+        "fraction": 1.0
+      },
+      {
+        "range_deg": [
+          45,
+          90
+        ],
+        "count": 7,
+        "conforming": 7,
+        "mode0": 7,
+        "mode180": 0,
+        "fraction": 1.0
+      },
+      {
+        "range_deg": [
+          90,
+          135
+        ],
+        "count": 3,
+        "conforming": 3,
+        "mode0": 0,
+        "mode180": 3,
+        "fraction": 1.0
+      },
+      {
+        "range_deg": [
+          135,
+          180
+        ],
+        "count": 6,
+        "conforming": 6,
+        "mode0": 0,
+        "mode180": 6,
+        "fraction": 1.0
+      }
+    ]
+  },
+  "targeted_bins": [
+    {
+      "range_deg": [
+        -90,
+        -45
+      ],
+      "count": 4,
+      "conforming": 2,
+      "mode0": 1,
+      "mode180": 3,
+      "fraction": 0.5
+    },
+    {
+      "range_deg": [
+        45,
+        90
+      ],
+      "count": 7,
+      "conforming": 7,
+      "mode0": 7,
+      "mode180": 0,
+      "fraction": 1.0
+    }
+  ],
+  "targeted_bins_unobserved": [],
+  "input_source": "datasets/toy2box_agibot_sources_e1_targeted60_annotated.hdf5",
+  "input_source_sha256": "da91c6a20f3f6963b31e9089a3dee51e989071a5d4bd8f521e4a91e3b8478122"
+}

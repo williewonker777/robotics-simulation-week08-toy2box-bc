@@ -1,0 +1,106 @@
+{
+ "E0": {
+  "secured_first": 55,
+  "slipped": 23,
+  "grasp_height_median_cm": 1.0654516880311906
+ },
+ "E1": {
+  "secured_first": 54,
+  "slipped": 21,
+  "grasp_height_median_cm": 1.1691206613282625
+ },
+ "E2": {
+  "secured_first": 78,
+  "slipped": 42,
+  "grasp_height_median_cm": 1.1314895937803802
+ },
+ "E4": {
+  "secured_first": 28,
+  "slipped": 14,
+  "grasp_height_median_cm": 1.0997953776775606
+ },
+ "pooled_by_grasp_height_cm": [
+  {
+   "bin": [
+    -9.0,
+    0.8
+   ],
+   "n": 50,
+   "slipped": 5
+  },
+  {
+   "bin": [
+    0.8,
+    1.1
+   ],
+   "n": 57,
+   "slipped": 24
+  },
+  {
+   "bin": [
+    1.1,
+    1.3
+   ],
+   "n": 33,
+   "slipped": 17
+  },
+  {
+   "bin": [
+    1.3,
+    1.5
+   ],
+   "n": 37,
+   "slipped": 26
+  },
+  {
+   "bin": [
+    1.5,
+    9.0
+   ],
+   "n": 38,
+   "slipped": 28
+  }
+ ],
+ "pooled_by_lift_delay_steps": [
+  {
+   "bin": [
+    0,
+    15
+   ],
+   "n": 75,
+   "slipped": 32
+  },
+  {
+   "bin": [
+    15,
+    25
+   ],
+   "n": 39,
+   "slipped": 26
+  },
+  {
+   "bin": [
+    25,
+    35
+   ],
+   "n": 32,
+   "slipped": 16
+  },
+  {
+   "bin": [
+    35,
+    45
+   ],
+   "n": 17,
+   "slipped": 5
+  },
+  {
+   "bin": [
+    45,
+    10000
+   ],
+   "n": 52,
+   "slipped": 21
+  }
+ ]
+}

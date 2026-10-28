@@ -1,0 +1,6 @@
+corrections40: zone steps 2475, rise+open 251 (10.1%), descend+open 569, closed 1655
+source40: zone steps 2239, rise+open 0 (0.0%), descend+open 576, closed 1663
+E0: zone steps 12950, rise+open 21 (0.2%), descend+open 3009, closed 9890
+E1: zone steps 17979, rise+open 213 (1.2%), descend+open 3921, closed 13454
+E2: zone steps 10595, rise+open 40 (0.4%), descend+open 2837, closed 7623
+E4: zone steps 6908, rise+open 156 (2.3%), descend+open 2156, closed 4592
