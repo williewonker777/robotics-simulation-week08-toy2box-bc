@@ -1,0 +1,457 @@
+{
+  "attempts": 846,
+  "chunks": [
+    {
+      "artifacts": {
+        "local-only/h4-run/e6/generation/chunks/e6_seed001_goal050.hdf5": {
+          "bytes": 24020789,
+          "sha256": "613281ec55ba3b91d06ce63698853b48cba158f2fe0ab07fb1a6692da527c2d5"
+        },
+        "local-only/h4-run/e6/generation/chunks/e6_seed001_goal050.scope6_gate.json": {
+          "bytes": 41544,
+          "sha256": "d9a748bb639b46800cbe16147d6e193cc2c8a613cd2ac600efbabf5a5cd9ca87"
+        },
+        "local-only/h4-run/e6/generation/chunks/e6_seed001_goal050.settling.jsonl": {
+          "bytes": 1466541,
+          "sha256": "24544a823b2b6c4cca70330665759cdcad51d3b157439235a8086ae157a16f90"
+        },
+        "local-only/h4-run/e6/generation/chunks/e6_seed001_goal050_failed.hdf5": {
+          "bytes": 8045646,
+          "sha256": "a8a95266b0a8a93335648202327ae27c87453b963547efe2383e71b2754eb887"
+        }
+      },
+      "attempts": 67,
+      "elapsed_seconds": 235.36000042501837,
+      "failed_file": "local-only/h4-run/e6/generation/chunks/e6_seed001_goal050_failed.hdf5",
+      "failures": 17,
+      "goal": 50,
+      "label": "e6_seed001_goal050",
+      "logical_initial_settling_starts": 167,
+      "raw_capped_cycles": 0,
+      "recovered_logical_attempts": 0,
+      "retry_operations": 0,
+      "scope6_gate": "local-only/h4-run/e6/generation/chunks/e6_seed001_goal050.scope6_gate.json",
+      "seed": 1,
+      "settling_log": "local-only/h4-run/e6/generation/chunks/e6_seed001_goal050.settling.jsonl",
+      "success_file": "local-only/h4-run/e6/generation/chunks/e6_seed001_goal050.hdf5",
+      "successes": 50,
+      "unrecovered_caps": 0
+    },
+    {
+      "artifacts": {
+        "local-only/h4-run/e6/generation/chunks/e6_seed003_goal050.hdf5": {
+          "bytes": 24206086,
+          "sha256": "b3983df74846010debea4861a85dc52aae0367269015af7660f8c27fa3c02869"
+        },
+        "local-only/h4-run/e6/generation/chunks/e6_seed003_goal050.scope6_gate.json": {
+          "bytes": 44135,
+          "sha256": "b32c588550cca61728309988e9c3d7cab2f2ed154a1c9b21a6014b727bf92a70"
+        },
+        "local-only/h4-run/e6/generation/chunks/e6_seed003_goal050.settling.jsonl": {
+          "bytes": 1568853,
+          "sha256": "324d3da68ea803f29884acf6205b5006d1237b6389bc678d74656013db5eec5a"
+        },
+        "local-only/h4-run/e6/generation/chunks/e6_seed003_goal050_failed.hdf5": {
+          "bytes": 11837546,
+          "sha256": "66be11170ddda514e904c8c950f9350c6445fde199f4a14ce963c68255a70676"
+        }
+      },
+      "attempts": 75,
+      "elapsed_seconds": 256.5392448629718,
+      "failed_file": "local-only/h4-run/e6/generation/chunks/e6_seed003_goal050_failed.hdf5",
+      "failures": 25,
+      "goal": 50,
+      "label": "e6_seed003_goal050",
+      "logical_initial_settling_starts": 175,
+      "raw_capped_cycles": 0,
+      "recovered_logical_attempts": 0,
+      "retry_operations": 0,
+      "scope6_gate": "local-only/h4-run/e6/generation/chunks/e6_seed003_goal050.scope6_gate.json",
+      "seed": 3,
+      "settling_log": "local-only/h4-run/e6/generation/chunks/e6_seed003_goal050.settling.jsonl",
+      "success_file": "local-only/h4-run/e6/generation/chunks/e6_seed003_goal050.hdf5",
+      "successes": 50,
+      "unrecovered_caps": 0
+    },
+    {
+      "artifacts": {
+        "local-only/h4-run/e6/generation/chunks/e6_seed004_goal050.hdf5": {
+          "bytes": 24547551,
+          "sha256": "64cfb1b788e4a34764dd783363b4b17fdc87aceaeb6a73a58695b71c4ed18716"
+        },
+        "local-only/h4-run/e6/generation/chunks/e6_seed004_goal050.scope6_gate.json": {
+          "bytes": 48096,
+          "sha256": "4f5c80252bc82452cff0804032413e9b060f1a384774ee189f476642c2f3077f"
+        },
+        "local-only/h4-run/e6/generation/chunks/e6_seed004_goal050.settling.jsonl": {
+          "bytes": 1627011,
+          "sha256": "63b60ea86d3e720cd075213314ae51bd24ff591818bd9dcd2d44ec453bce96d1"
+        },
+        "local-only/h4-run/e6/generation/chunks/e6_seed004_goal050_failed.hdf5": {
+          "bytes": 13782169,
+          "sha256": "2f98c3127ba5f7e9cd6f53522104e3b22432508198fda7bc5ecd446c48ebd1ec"
+        }
+      },
+      "attempts": 79,
+      "elapsed_seconds": 276.4798727290472,
+      "failed_file": "local-only/h4-run/e6/generation/chunks/e6_seed004_goal050_failed.hdf5",
+      "failures": 29,
+      "goal": 50,
+      "label": "e6_seed004_goal050",
+      "logical_initial_settling_starts": 179,
+      "raw_capped_cycles": 1,
+      "recovered_logical_attempts": 1,
+      "retry_operations": 1,
+      "scope6_gate": "local-only/h4-run/e6/generation/chunks/e6_seed004_goal050.scope6_gate.json",
+      "seed": 4,
+      "settling_log": "local-only/h4-run/e6/generation/chunks/e6_seed004_goal050.settling.jsonl",
+      "success_file": "local-only/h4-run/e6/generation/chunks/e6_seed004_goal050.hdf5",
+      "successes": 50,
+      "unrecovered_caps": 0
+    },
+    {
+      "artifacts": {
+        "local-only/h4-run/e6/generation/chunks/e6_seed005_goal050.hdf5": {
+          "bytes": 24196818,
+          "sha256": "24f5484398bf0b0e4b8ef43f183df4f4d32af6b34e562ebd9b05c373aceb8972"
+        },
+        "local-only/h4-run/e6/generation/chunks/e6_seed005_goal050.scope6_gate.json": {
+          "bytes": 45445,
+          "sha256": "0e7594509c664d989bf584b98fd64c66069dff864a8ac0c2bd2073357fd48638"
+        },
+        "local-only/h4-run/e6/generation/chunks/e6_seed005_goal050.settling.jsonl": {
+          "bytes": 1610383,
+          "sha256": "878671e4ea51bbe3df22326c5201159c73980eecc7498bc7d4daeaec11e07a9b"
+        },
+        "local-only/h4-run/e6/generation/chunks/e6_seed005_goal050_failed.hdf5": {
+          "bytes": 13903396,
+          "sha256": "fe384ff4c4991c9f54865df8063161cb5434f9857c10dfc9bae6853a574f6125"
+        }
+      },
+      "attempts": 79,
+      "elapsed_seconds": 260.9972288990393,
+      "failed_file": "local-only/h4-run/e6/generation/chunks/e6_seed005_goal050_failed.hdf5",
+      "failures": 29,
+      "goal": 50,
+      "label": "e6_seed005_goal050",
+      "logical_initial_settling_starts": 179,
+      "raw_capped_cycles": 0,
+      "recovered_logical_attempts": 0,
+      "retry_operations": 0,
+      "scope6_gate": "local-only/h4-run/e6/generation/chunks/e6_seed005_goal050.scope6_gate.json",
+      "seed": 5,
+      "settling_log": "local-only/h4-run/e6/generation/chunks/e6_seed005_goal050.settling.jsonl",
+      "success_file": "local-only/h4-run/e6/generation/chunks/e6_seed005_goal050.hdf5",
+      "successes": 50,
+      "unrecovered_caps": 0
+    },
+    {
+      "artifacts": {
+        "local-only/h4-run/e6/generation/chunks/e6_seed006_goal050.hdf5": {
+          "bytes": 24300509,
+          "sha256": "0fe4f9269d57c69df4c334deb8801147871beda2bc44562419cf690b950cf2ed"
+        },
+        "local-only/h4-run/e6/generation/chunks/e6_seed006_goal050.scope6_gate.json": {
+          "bytes": 46120,
+          "sha256": "23c5c9afe2bb50a430a7f636e7c6b5f31c0c1f306148ed16519442107679fe01"
+        },
+        "local-only/h4-run/e6/generation/chunks/e6_seed006_goal050.settling.jsonl": {
+          "bytes": 1621380,
+          "sha256": "318533d064eb2e43d51b5d71b6b4527516ba99a81c92951daeba97ab5c56d8fa"
+        },
+        "local-only/h4-run/e6/generation/chunks/e6_seed006_goal050_failed.hdf5": {
+          "bytes": 14835320,
+          "sha256": "309eeca074f24dccb46af6de36e0369335a2c089bd112c311c8fc4153bd69213"
+        }
+      },
+      "attempts": 81,
+      "elapsed_seconds": 261.9746683569392,
+      "failed_file": "local-only/h4-run/e6/generation/chunks/e6_seed006_goal050_failed.hdf5",
+      "failures": 31,
+      "goal": 50,
+      "label": "e6_seed006_goal050",
+      "logical_initial_settling_starts": 181,
+      "raw_capped_cycles": 0,
+      "recovered_logical_attempts": 0,
+      "retry_operations": 0,
+      "scope6_gate": "local-only/h4-run/e6/generation/chunks/e6_seed006_goal050.scope6_gate.json",
+      "seed": 6,
+      "settling_log": "local-only/h4-run/e6/generation/chunks/e6_seed006_goal050.settling.jsonl",
+      "success_file": "local-only/h4-run/e6/generation/chunks/e6_seed006_goal050.hdf5",
+      "successes": 50,
+      "unrecovered_caps": 0
+    },
+    {
+      "artifacts": {
+        "local-only/h4-run/e6/generation/chunks/e6_seed007_goal050.hdf5": {
+          "bytes": 24436727,
+          "sha256": "ce46b0df98dee631ec249fa8a91ef4a7ab0326f0874a871f2c0fc44b4056f488"
+        },
+        "local-only/h4-run/e6/generation/chunks/e6_seed007_goal050.scope6_gate.json": {
+          "bytes": 44499,
+          "sha256": "ac76656d0af873f8c50a103ea73ba52e1b3229222a52920798d055e4cf9eb449"
+        },
+        "local-only/h4-run/e6/generation/chunks/e6_seed007_goal050.settling.jsonl": {
+          "bytes": 1571208,
+          "sha256": "26373e52a2343e606fdd536b90bafe7c02197cb5bf537ddb95384ea9b963bb38"
+        },
+        "local-only/h4-run/e6/generation/chunks/e6_seed007_goal050_failed.hdf5": {
+          "bytes": 12500397,
+          "sha256": "150f111cc176076df865f9181d3a37e2082c1f526732d5c49774a915195e041b"
+        }
+      },
+      "attempts": 76,
+      "elapsed_seconds": 246.21069808397442,
+      "failed_file": "local-only/h4-run/e6/generation/chunks/e6_seed007_goal050_failed.hdf5",
+      "failures": 26,
+      "goal": 50,
+      "label": "e6_seed007_goal050",
+      "logical_initial_settling_starts": 176,
+      "raw_capped_cycles": 0,
+      "recovered_logical_attempts": 0,
+      "retry_operations": 0,
+      "scope6_gate": "local-only/h4-run/e6/generation/chunks/e6_seed007_goal050.scope6_gate.json",
+      "seed": 7,
+      "settling_log": "local-only/h4-run/e6/generation/chunks/e6_seed007_goal050.settling.jsonl",
+      "success_file": "local-only/h4-run/e6/generation/chunks/e6_seed007_goal050.hdf5",
+      "successes": 50,
+      "unrecovered_caps": 0
+    },
+    {
+      "artifacts": {
+        "local-only/h4-run/e6/generation/chunks/e6_seed008_goal050.hdf5": {
+          "bytes": 24320674,
+          "sha256": "c28b8a97f600e24324fbaf46658d5d9a92f0b59f3f12109b67b590155ac37ec7"
+        },
+        "local-only/h4-run/e6/generation/chunks/e6_seed008_goal050.scope6_gate.json": {
+          "bytes": 43169,
+          "sha256": "7ff3ed46c18ce358b37a616a04f3895b6168c614162fddce7284b8cf622e5396"
+        },
+        "local-only/h4-run/e6/generation/chunks/e6_seed008_goal050.settling.jsonl": {
+          "bytes": 1529673,
+          "sha256": "340013de67b5ee0bc26c43dfc593b28d532ea3b11e7f6c10190e55488eba72ee"
+        },
+        "local-only/h4-run/e6/generation/chunks/e6_seed008_goal050_failed.hdf5": {
+          "bytes": 10701358,
+          "sha256": "70b663915192d91b0ee2e0a264aecf88b75b8ee866bc2e396a4ea4415aa659a7"
+        }
+      },
+      "attempts": 72,
+      "elapsed_seconds": 282.812623905018,
+      "failed_file": "local-only/h4-run/e6/generation/chunks/e6_seed008_goal050_failed.hdf5",
+      "failures": 22,
+      "goal": 50,
+      "label": "e6_seed008_goal050",
+      "logical_initial_settling_starts": 172,
+      "raw_capped_cycles": 0,
+      "recovered_logical_attempts": 0,
+      "retry_operations": 0,
+      "scope6_gate": "local-only/h4-run/e6/generation/chunks/e6_seed008_goal050.scope6_gate.json",
+      "seed": 8,
+      "settling_log": "local-only/h4-run/e6/generation/chunks/e6_seed008_goal050.settling.jsonl",
+      "success_file": "local-only/h4-run/e6/generation/chunks/e6_seed008_goal050.hdf5",
+      "successes": 50,
+      "unrecovered_caps": 0
+    },
+    {
+      "artifacts": {
+        "local-only/h4-run/e6/generation/chunks/e6_seed009_goal050.hdf5": {
+          "bytes": 24839181,
+          "sha256": "3f11b0afa8881cfd5ea4981dfb6fde298c6150d7764d35149d895f82067b4fb0"
+        },
+        "local-only/h4-run/e6/generation/chunks/e6_seed009_goal050.scope6_gate.json": {
+          "bytes": 48728,
+          "sha256": "bfd83e25831d7b3fe2071a0223e3c1d5a24d64b2a9cbc658fc15c2b04e178ccd"
+        },
+        "local-only/h4-run/e6/generation/chunks/e6_seed009_goal050.settling.jsonl": {
+          "bytes": 1697758,
+          "sha256": "1d3cf9dd691f3c6a28cbdf0a9bebeb66a9fcb1828306a55ab0762018271f95ec"
+        },
+        "local-only/h4-run/e6/generation/chunks/e6_seed009_goal050_failed.hdf5": {
+          "bytes": 18697492,
+          "sha256": "a09a66faca87ab9274f18ee0a9dea5e988c1996340c2df33312355bd3aaa8fa3"
+        }
+      },
+      "attempts": 89,
+      "elapsed_seconds": 261.8395723809954,
+      "failed_file": "local-only/h4-run/e6/generation/chunks/e6_seed009_goal050_failed.hdf5",
+      "failures": 39,
+      "goal": 50,
+      "label": "e6_seed009_goal050",
+      "logical_initial_settling_starts": 189,
+      "raw_capped_cycles": 0,
+      "recovered_logical_attempts": 0,
+      "retry_operations": 0,
+      "scope6_gate": "local-only/h4-run/e6/generation/chunks/e6_seed009_goal050.scope6_gate.json",
+      "seed": 9,
+      "settling_log": "local-only/h4-run/e6/generation/chunks/e6_seed009_goal050.settling.jsonl",
+      "success_file": "local-only/h4-run/e6/generation/chunks/e6_seed009_goal050.hdf5",
+      "successes": 50,
+      "unrecovered_caps": 0
+    },
+    {
+      "artifacts": {
+        "local-only/h4-run/e6/generation/chunks/e6_seed010_goal050.hdf5": {
+          "bytes": 24525048,
+          "sha256": "790f7d71f9d4185e84d130ec07bc8271619438ed0104f2d1c000285da273e260"
+        },
+        "local-only/h4-run/e6/generation/chunks/e6_seed010_goal050.scope6_gate.json": {
+          "bytes": 46199,
+          "sha256": "59c21d6c4b1bb7c1f9c2598d0222ace4020010a758ad8dcd560ea9c44267bf45"
+        },
+        "local-only/h4-run/e6/generation/chunks/e6_seed010_goal050.settling.jsonl": {
+          "bytes": 1555220,
+          "sha256": "1a1bef6f0e05b1ea99ba261f9b9f2b700ddaa70871f6e6634b1a0c2919a4dc38"
+        },
+        "local-only/h4-run/e6/generation/chunks/e6_seed010_goal050_failed.hdf5": {
+          "bytes": 10418547,
+          "sha256": "d09dfee80978395c76e757911b883272ed43865220b4b60dc7626ea9c998da48"
+        }
+      },
+      "attempts": 73,
+      "elapsed_seconds": 224.25793666299433,
+      "failed_file": "local-only/h4-run/e6/generation/chunks/e6_seed010_goal050_failed.hdf5",
+      "failures": 22,
+      "goal": 50,
+      "label": "e6_seed010_goal050",
+      "logical_initial_settling_starts": 173,
+      "raw_capped_cycles": 1,
+      "recovered_logical_attempts": 1,
+      "retry_operations": 1,
+      "scope6_gate": "local-only/h4-run/e6/generation/chunks/e6_seed010_goal050.scope6_gate.json",
+      "seed": 10,
+      "settling_log": "local-only/h4-run/e6/generation/chunks/e6_seed010_goal050.settling.jsonl",
+      "success_file": "local-only/h4-run/e6/generation/chunks/e6_seed010_goal050.hdf5",
+      "successes": 51,
+      "unrecovered_caps": 0
+    },
+    {
+      "artifacts": {
+        "local-only/h4-run/e6/generation/chunks/e6_seed011_goal049.hdf5": {
+          "bytes": 24223854,
+          "sha256": "a4799c39c340e972bb0eaf70874da9a9f854e466b7754033e2a019fa632fec45"
+        },
+        "local-only/h4-run/e6/generation/chunks/e6_seed011_goal049.scope6_gate.json": {
+          "bytes": 46108,
+          "sha256": "48c3072f423068a9f3a27e9a3b04f67504ede12d0c7ce5f86ac530607ff5f305"
+        },
+        "local-only/h4-run/e6/generation/chunks/e6_seed011_goal049.settling.jsonl": {
+          "bytes": 1615270,
+          "sha256": "09ac0a2fac54e90c35ac456941f4b497f17a8d9bd58424cb491554606a98aef4"
+        },
+        "local-only/h4-run/e6/generation/chunks/e6_seed011_goal049_failed.hdf5": {
+          "bytes": 15219295,
+          "sha256": "3e29df6a8fb31a720323a7af83e5b0ece8f4457188049a10869e500f068fe014"
+        }
+      },
+      "attempts": 81,
+      "elapsed_seconds": 241.87933175405487,
+      "failed_file": "local-only/h4-run/e6/generation/chunks/e6_seed011_goal049_failed.hdf5",
+      "failures": 32,
+      "goal": 49,
+      "label": "e6_seed011_goal049",
+      "logical_initial_settling_starts": 181,
+      "raw_capped_cycles": 0,
+      "recovered_logical_attempts": 0,
+      "retry_operations": 0,
+      "scope6_gate": "local-only/h4-run/e6/generation/chunks/e6_seed011_goal049.scope6_gate.json",
+      "seed": 11,
+      "settling_log": "local-only/h4-run/e6/generation/chunks/e6_seed011_goal049.settling.jsonl",
+      "success_file": "local-only/h4-run/e6/generation/chunks/e6_seed011_goal049.hdf5",
+      "successes": 49,
+      "unrecovered_caps": 0
+    },
+    {
+      "artifacts": {
+        "local-only/h4-run/e6/generation/chunks/e6_seed012_goal050.hdf5": {
+          "bytes": 24504844,
+          "sha256": "4303e371c595c3970b2129509e31dda9968775e8d390a0ecb253bc32fb0e156f"
+        },
+        "local-only/h4-run/e6/generation/chunks/e6_seed012_goal050.scope6_gate.json": {
+          "bytes": 43815,
+          "sha256": "296fb46b6e1e5747c948be1fe022ae40eb420b0724fc153d7afa55551485ba9a"
+        },
+        "local-only/h4-run/e6/generation/chunks/e6_seed012_goal050.settling.jsonl": {
+          "bytes": 1566658,
+          "sha256": "463b17fa9acf58f7a355c753a13bb199fb885c63a4fa34d6dab11d6c9b1d62ec"
+        },
+        "local-only/h4-run/e6/generation/chunks/e6_seed012_goal050_failed.hdf5": {
+          "bytes": 11455466,
+          "sha256": "dae37eb802a3da3f812a572766951985e3fd226863854bff1d76ae145e53fc50"
+        }
+      },
+      "attempts": 74,
+      "elapsed_seconds": 248.07657238899264,
+      "failed_file": "local-only/h4-run/e6/generation/chunks/e6_seed012_goal050_failed.hdf5",
+      "failures": 24,
+      "goal": 50,
+      "label": "e6_seed012_goal050",
+      "logical_initial_settling_starts": 174,
+      "raw_capped_cycles": 0,
+      "recovered_logical_attempts": 0,
+      "retry_operations": 0,
+      "scope6_gate": "local-only/h4-run/e6/generation/chunks/e6_seed012_goal050.scope6_gate.json",
+      "seed": 12,
+      "settling_log": "local-only/h4-run/e6/generation/chunks/e6_seed012_goal050.settling.jsonl",
+      "success_file": "local-only/h4-run/e6/generation/chunks/e6_seed012_goal050.hdf5",
+      "successes": 50,
+      "unrecovered_caps": 0
+    }
+  ],
+  "condition": "e6",
+  "failures": 296,
+  "finished_utc": "2026-10-28T13:40:42.325095+00:00",
+  "logical_initial_settling_starts": 1946,
+  "registered_plan": [
+    [
+      1,
+      50
+    ],
+    [
+      3,
+      50
+    ],
+    [
+      4,
+      50
+    ],
+    [
+      5,
+      50
+    ],
+    [
+      6,
+      50
+    ],
+    [
+      7,
+      50
+    ],
+    [
+      8,
+      50
+    ],
+    [
+      9,
+      50
+    ],
+    [
+      10,
+      50
+    ],
+    [
+      11,
+      49
+    ],
+    [
+      12,
+      50
+    ]
+  ],
+  "retry_operations": 2,
+  "retry_ratio_completed_attempts": 0.002364066193853428,
+  "retry_ratio_logical_starts": 0.0010277492291880781,
+  "source_file": "datasets/toy2box_agibot_sources_e2_natural60_annotated.hdf5",
+  "state": "generated",
+  "successes": 550
+}

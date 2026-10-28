@@ -125,12 +125,14 @@ python scripts/tools/merge_hdf5_datasets.py \
 ```bash
 gen_chunk () {
   input=$1; seed=$2; goal=$3; stem=$4
+  shift 4
   ./isaaclab.sh -p scripts/tools/generate_toy2box_settled.py \
     --settle_reset_retries 2 --settling_log "${stem}.settling.jsonl" \
     --box_robot_distance --enable_box_reselection --zero_action_noise \
     --box_interpolation_steps 30 --settle_arm_motion \
     --settle_arm_joint_velocity 0.15 --settle_max_steps 20 \
     --grasp_offset_range 50 60 --per_env_rmp_reset --chunk_seed "$seed" \
+    "$@" \
     --task Isaac-Place-Toy2Box-Agibot-Right-Arm-RmpFlow-Rel-Mimic-v0 \
     --headless --num_envs 100 --generation_num_trials "$goal" \
     --input_file "$input" --output_file "${stem}.hdf5"
@@ -203,6 +205,64 @@ PY
 
 실제 생성 수율과 chunk 계획은 `artifacts/experiments/generation/{e1,e2}_manifest.json`에 있습니다. E1은 500/910, E2는 보충 chunk 전체를 포함해 550/1073입니다.
 
+### H4 / E6: 파지 목표를 world Z −5 mm 이동
+
+H4는 E2의 annotated source60, D3 scope6, stock 원본 선택을 그대로 사용하고 한 요인만 바꿉니다. `agibot/subtask0/toy_truck`의 생성된 waypoint 목표 pose를 복제한 뒤 world Z를 `−0.005 m` 평행이동합니다. XY·회전·그리퍼·noise·waypoint 개수·대기시간·구간 경계·상자 subtask는 바꾸지 않습니다. `--truck_yaw_fold`는 사용하지 않습니다.
+
+```bash
+for seed in 1 3 4 5 6 7 8 9 10; do
+  gen_chunk ./datasets/toy2box_agibot_sources_e2_natural60_annotated.hdf5 \
+    "$seed" 50 "./work/generation/e6_seed$(printf '%03d' "$seed")" \
+    --truck_pick_z_offset_m -0.005
+done
+gen_chunk ./datasets/toy2box_agibot_sources_e2_natural60_annotated.hdf5 \
+  11 49 ./work/generation/e6_seed011 --truck_pick_z_offset_m -0.005
+gen_chunk ./datasets/toy2box_agibot_sources_e2_natural60_annotated.hdf5 \
+  12 50 ./work/generation/e6_seed012 --truck_pick_z_offset_m -0.005
+
+python scripts/tools/merge_hdf5_datasets.py \
+  --input_files ./work/generation/e6_seed{001,003,004,005,006,007,008,009,010,011,012}.hdf5 \
+  --output_file ./work/e6_merged_550.hdf5
+
+python - <<'PY'
+from pathlib import Path
+import h5py
+
+src = Path("work/e6_merged_550.hdf5")
+dst = Path("work/toy2box_agibot_mimic_e6_lowpick_500.hdf5")
+if dst.exists():
+    raise FileExistsError(dst)
+with h5py.File(src, "r") as source, h5py.File(dst, "x") as target:
+    source.copy("data", target)
+    data = target["data"]
+    for index in range(500, len(data)):
+        del data[f"demo_{index}"]
+    data.attrs["total"] = sum(int(data[name].attrs["num_samples"]) for name in data)
+with h5py.File(dst, "r") as check:
+    assert len(check["data"]) == 500
+PY
+```
+
+고정 계획 전체를 실행한 생성 결과는 성공 550/846이며, 위 결정적 순서의 앞 500개만 E6 학습에 사용합니다. BC는 기존 설정에서 학습 seed만 101·111로 바꾸고 각각 2000 epoch를 실행합니다.
+
+```bash
+DATASET=./work/toy2box_agibot_mimic_e6_lowpick_500.hdf5
+./isaaclab.sh -p scripts/imitation_learning/robomimic/train.py \
+  --task Isaac-Place-Toy2Box-Agibot-Right-Arm-RmpFlow-v0 \
+  --algo bc --dataset "$DATASET"
+
+# 각 학습 seed의 체크포인트를 같은 고정 조건으로 관측 평가합니다.
+CHECKPOINT="${CHECKPOINT:?set CHECKPOINT to the E6 seed 101 checkpoint}"
+./isaaclab.sh -p scripts/tools/evaluate_toy2box_bc.py \
+  --layout_log ./work/analysis/e6_seed101.jsonl \
+  --trajectory_dir ./work/analysis/e6_seed101_npz \
+  --task Isaac-Place-Toy2Box-Agibot-Right-Arm-RmpFlow-v0 \
+  --checkpoint "$CHECKPOINT" \
+  --num_rollouts 100 --horizon 800 --seed 42 --headless
+```
+
+학습 JSON은 실행마다 seed만 변경하고 각 학습 뒤 원래 seed 101 바이트로 복원합니다. seed 111도 같은 평가 명령을 사용합니다. 평가 seed 42, seed별 100회, horizon 800, headless는 고정입니다. 성능 선택 기준을 통과해 E6가 최종 조건이 될 때만 두 모델을 stock `play.py --video`로 다시 확인합니다. H4 결과가 확정되기 전까지 E2는 기존 최종 선택으로 유지하며, 여기서는 E6 성공률이나 최종 선택을 예측하지 않습니다. 고정 가설·판정·선택 규칙은 [`PREREGISTRATION.md`](PREREGISTRATION.md)에 있습니다.
+
 ## 5. E4 데이터와 BC 학습
 
 E4는 E0 Mimic 500개 뒤에 교정 40개를 한 번씩 붙인 540개입니다.
@@ -224,7 +284,7 @@ DATASET=./work/toy2box_agibot_mimic_e2_natural_500.hdf5
   --algo bc --dataset "$DATASET"
 ```
 
-각 학습 뒤 JSON을 원래 seed 101 바이트로 복원했습니다. 최종 선택은 E2이며 공개 가중치는 `deliverables/toy2box_bc/`에 있습니다.
+각 학습 뒤 JSON을 원래 seed 101 바이트로 복원했습니다. 공개 가중치는 H4 전 사전 등록 규칙으로 선택한 E2 모델입니다. H4는 별도로 고정된 성능 선택 기준을 평가 중이며, 결과가 확정되기 전에는 이 선택을 바꾸지 않습니다.
 
 공개 체크포인트는 학습 머신 경로를 제거한 **metadata-sanitized derivative**입니다. 원본에서 `train.data`와 `train.output_dir` 두 config 값만 저장소 상대 경로로 바꿨습니다. tensor storage bytes와 그 밖의 decoded 구조는 원본과 같고, `torch.load`와 robomimic policy load를 확인했습니다. 공개 파일 자체의 SHA-256은 seed 101이 `f0369c5c46f1cb557b564be1bd59c7224c82e467cc3f64607baa3d05771cfe1c`, seed 111이 `6103aa6b8b95099078319a40bd3c0254c6c6ec9ce319f162dd0c74aa111eb4eb`입니다. 원본·공개 SHA와 tensor member 증명은 [`metadata_sanitization.json`](../deliverables/toy2box_bc/metadata_sanitization.json)에 있습니다.
 

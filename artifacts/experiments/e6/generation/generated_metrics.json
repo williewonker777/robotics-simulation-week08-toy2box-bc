@@ -1,0 +1,15 @@
+{
+  "cohort_median_eef_acceleration_norm_p95": 0.40443734522062036,
+  "cohort_median_eef_jerk_norm_p95": 5.875586791184871,
+  "episodes": 500,
+  "first_close_height_mm_median": 7.56538433540095,
+  "lift_delay_median_steps": 40.0,
+  "lift_delay_minmax": [
+    39,
+    42
+  ],
+  "one_close_onset_each": true,
+  "per_episode_filter_applied": false,
+  "quality_dt": 0.05,
+  "quality_skip": 0
+}

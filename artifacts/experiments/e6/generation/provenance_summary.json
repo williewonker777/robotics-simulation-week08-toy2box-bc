@@ -1,0 +1,51 @@
+{
+  "candidate_sha256": {
+    "failed": "25cbd58b3e92cc4fc10fd06375ce6abffa7b696624fdd31d4c77cc0f1253f779",
+    "success": "940eb1e86cc8c3a6430a800e3af590e905a2b0e0317c2c4efbbdd594c393f4a9"
+  },
+  "deterministic_order": "stock h5py list(data) order per explicit CLI chunk order",
+  "excluded_candidate_groups_count": 50,
+  "failed_bootstrap_used": false,
+  "failed_count": 296,
+  "final_audit": {
+    "combined": {
+      "episodes": 796,
+      "total_steps": 488650
+    },
+    "failed": {
+      "episodes": 296,
+      "expected_success": false,
+      "total_steps": 181255
+    },
+    "ok": true,
+    "success": {
+      "episodes": 500,
+      "expected_success": true,
+      "total_steps": 307395
+    }
+  },
+  "generated_dataset_published": false,
+  "goal": 500,
+  "metadata_restoration": {
+    "failed_total": 181255,
+    "success_total": 307395
+  },
+  "omission_reason": "The generated HDF5 is omitted; reproduce it from the published 60-episode source dataset, registered generation settings, and repository commands.",
+  "published": {
+    "failed": "local-only/generated-data/toy2box_agibot_mimic_e6_lowpick_500_failed.hdf5",
+    "success": "local-only/generated-data/toy2box_agibot_mimic_e6_lowpick_500.hdf5"
+  },
+  "published_sha256": {
+    "failed": "25cbd58b3e92cc4fc10fd06375ce6abffa7b696624fdd31d4c77cc0f1253f779",
+    "success": "940eb1e86cc8c3a6430a800e3af590e905a2b0e0317c2c4efbbdd594c393f4a9"
+  },
+  "schema_version": 1,
+  "source": "local-only/h4-run/e6/finalize_500/provenance.json",
+  "source_chunks": 22,
+  "source_chunks_unchanged": true,
+  "source_sha256": "7927bdae1894056599b349645f3405b8749b8a0f0194e121980bac024b9e833f",
+  "status": "published",
+  "stock_merger": "scripts/tools/merge_hdf5_datasets.py",
+  "success_excluded_count": 50,
+  "success_kept_count": 500
+}

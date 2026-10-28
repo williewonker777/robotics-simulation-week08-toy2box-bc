@@ -1,0 +1,14 @@
+{
+  "frozen_and_published_byte_equal": true,
+  "frozen_published_recomputed_numeric_and_structural_equality": true,
+  "frozen_result_sha256": "bc15cdd163c0a394c387398c1a972f0fb5e30dd38cdbdbec8307fc14fdeb6ebc",
+  "published_recorded_result_sha256": "bc15cdd163c0a394c387398c1a972f0fb5e30dd38cdbdbec8307fc14fdeb6ebc",
+  "recomputed_result_sha256": "bc15cdd163c0a394c387398c1a972f0fb5e30dd38cdbdbec8307fc14fdeb6ebc",
+  "registration_inputs": {
+    "baseline_metrics": "artifacts/h4_registration/baseline_metrics.json",
+    "preregistration": "artifacts/h4_registration/preregistration.json"
+  },
+  "schema_version": 1,
+  "selected_condition": "E2",
+  "verdict": "rejected"
+}

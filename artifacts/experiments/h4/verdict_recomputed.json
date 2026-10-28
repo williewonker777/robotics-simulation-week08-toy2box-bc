@@ -1,0 +1,72 @@
+{
+  "condition": "E6",
+  "generated": {
+    "cohort_median_eef_acceleration_norm_p95": 0.40443734522062036,
+    "cohort_median_eef_jerk_norm_p95": 5.875586791184871,
+    "episodes": 500,
+    "first_close_height_mm_median": 7.56538433540095,
+    "lift_delay_median_steps": 40.0,
+    "lift_delay_minmax": [
+      39,
+      42
+    ],
+    "one_close_onset_each": true,
+    "per_episode_filter_applied": false,
+    "quality_dt": 0.05,
+    "quality_skip": 0
+  },
+  "hypothesis": "H4",
+  "mechanism": {
+    "M1": true,
+    "M2": false,
+    "M3": true,
+    "baseline_generated_close_height_mm": 12.547045802109217,
+    "baseline_policy_close_height_mm": 13.630639760921525,
+    "baseline_slip": [
+      42,
+      78
+    ],
+    "measurement_unavailable": [],
+    "slip_p_one_sided": 0.03720304508096575
+  },
+  "performance": {
+    "passes": false,
+    "pooled_comparisons": {
+      "E0": {
+        "baseline": [
+          39,
+          200
+        ],
+        "p_one_sided": 0.9470029860449207,
+        "passes": false
+      },
+      "E2": {
+        "baseline": [
+          40,
+          200
+        ],
+        "p_one_sided": 0.959128361136881,
+        "passes": false
+      }
+    },
+    "seed_thresholds_pass": {
+      "101": false,
+      "111": false
+    },
+    "selected_condition": "E2"
+  },
+  "pooled_successes": 27,
+  "rollouts": {
+    "first_near_close_count": 176,
+    "first_near_close_height_mm_median": 14.3513875358954,
+    "no_near_close_count": 24,
+    "secured_first": 48,
+    "slipped": 18,
+    "trials": 200
+  },
+  "successes_by_seed": {
+    "101": 11,
+    "111": 16
+  },
+  "verdict": "rejected"
+}

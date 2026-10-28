@@ -1,0 +1,70 @@
+{
+  "chunk": {
+    "artifacts": {
+      "local-only/h4-run/e6/generation/chunks/e6_seed001_goal050.hdf5": {
+        "bytes": 24020789,
+        "sha256": "613281ec55ba3b91d06ce63698853b48cba158f2fe0ab07fb1a6692da527c2d5"
+      },
+      "local-only/h4-run/e6/generation/chunks/e6_seed001_goal050.scope6_gate.json": {
+        "bytes": 41544,
+        "sha256": "d9a748bb639b46800cbe16147d6e193cc2c8a613cd2ac600efbabf5a5cd9ca87"
+      },
+      "local-only/h4-run/e6/generation/chunks/e6_seed001_goal050.settling.jsonl": {
+        "bytes": 1466541,
+        "sha256": "24544a823b2b6c4cca70330665759cdcad51d3b157439235a8086ae157a16f90"
+      },
+      "local-only/h4-run/e6/generation/chunks/e6_seed001_goal050_failed.hdf5": {
+        "bytes": 8045646,
+        "sha256": "a8a95266b0a8a93335648202327ae27c87453b963547efe2383e71b2754eb887"
+      }
+    },
+    "attempts": 67,
+    "elapsed_seconds": 235.36000042501837,
+    "failed_file": "local-only/h4-run/e6/generation/chunks/e6_seed001_goal050_failed.hdf5",
+    "failures": 17,
+    "goal": 50,
+    "label": "e6_seed001_goal050",
+    "logical_initial_settling_starts": 167,
+    "raw_capped_cycles": 0,
+    "recovered_logical_attempts": 0,
+    "retry_operations": 0,
+    "scope6_gate": "local-only/h4-run/e6/generation/chunks/e6_seed001_goal050.scope6_gate.json",
+    "seed": 1,
+    "settling_log": "local-only/h4-run/e6/generation/chunks/e6_seed001_goal050.settling.jsonl",
+    "success_file": "local-only/h4-run/e6/generation/chunks/e6_seed001_goal050.hdf5",
+    "successes": 50,
+    "unrecovered_caps": 0
+  },
+  "conditions": {
+    "acceleration_quality": true,
+    "close_height_range": true,
+    "height_reduction": true,
+    "jerk_quality": true,
+    "lift_delay": true,
+    "no_per_episode_quality_filter": true,
+    "normal_completion": true,
+    "retry_ratio": true,
+    "success_rate": true,
+    "unrecovered_caps": true
+  },
+  "gate_passed": true,
+  "metrics": {
+    "cohort_median_eef_acceleration_norm_p95": 0.3862359473258822,
+    "cohort_median_eef_jerk_norm_p95": 5.658185166039621,
+    "episodes": 50,
+    "first_close_height_mm_median": 7.600213353908368,
+    "lift_delay_median_steps": 40.0,
+    "lift_delay_minmax": [
+      40,
+      41
+    ],
+    "one_close_onset_each": true,
+    "per_episode_filter_applied": false,
+    "quality_dt": 0.05,
+    "quality_skip": 0
+  },
+  "retry_ratio": 0.0,
+  "reused_as_first_production_chunk": true,
+  "success_rate": 0.746268656716418,
+  "unrecovered_caps": 0
+}

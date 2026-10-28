@@ -1,0 +1,654 @@
+{
+  "durations": {
+    "accepted_generation_chunk_sim_seconds": 2796.4277504490456,
+    "finished_utc": "2026-10-28T16:04:26.566578+00:00",
+    "observer_seconds": {
+      "101": 2027.9195226139855,
+      "111": 2023.6982991780387
+    },
+    "pipeline_stage": "decision_complete",
+    "pipeline_state": "complete",
+    "started_utc": "2026-10-28T12:49:20.118015+00:00",
+    "training_guard_seconds": {
+      "101": 1841.4874084339244,
+      "111": 1848.0755742600886
+    },
+    "wall_seconds": 11706.448563
+  },
+  "frozen_h4_result": {
+    "condition": "E6",
+    "generated": {
+      "cohort_median_eef_acceleration_norm_p95": 0.40443734522062036,
+      "cohort_median_eef_jerk_norm_p95": 5.875586791184871,
+      "episodes": 500,
+      "first_close_height_mm_median": 7.56538433540095,
+      "lift_delay_median_steps": 40.0,
+      "lift_delay_minmax": [
+        39,
+        42
+      ],
+      "one_close_onset_each": true,
+      "per_episode_filter_applied": false,
+      "quality_dt": 0.05,
+      "quality_skip": 0
+    },
+    "hypothesis": "H4",
+    "mechanism": {
+      "M1": true,
+      "M2": false,
+      "M3": true,
+      "baseline_generated_close_height_mm": 12.547045802109217,
+      "baseline_policy_close_height_mm": 13.630639760921525,
+      "baseline_slip": [
+        42,
+        78
+      ],
+      "measurement_unavailable": [],
+      "slip_p_one_sided": 0.03720304508096575
+    },
+    "performance": {
+      "passes": false,
+      "pooled_comparisons": {
+        "E0": {
+          "baseline": [
+            39,
+            200
+          ],
+          "p_one_sided": 0.9470029860449207,
+          "passes": false
+        },
+        "E2": {
+          "baseline": [
+            40,
+            200
+          ],
+          "p_one_sided": 0.959128361136881,
+          "passes": false
+        }
+      },
+      "seed_thresholds_pass": {
+        "101": false,
+        "111": false
+      },
+      "selected_condition": "E2"
+    },
+    "pooled_successes": 27,
+    "rollouts": {
+      "first_near_close_count": 176,
+      "first_near_close_height_mm_median": 14.3513875358954,
+      "no_near_close_count": 24,
+      "secured_first": 48,
+      "slipped": 18,
+      "trials": 200
+    },
+    "successes_by_seed": {
+      "101": 11,
+      "111": 16
+    },
+    "verdict": "rejected"
+  },
+  "generated_diagnostics": {
+    "convention": {
+      "convention_fraction": 0.918,
+      "demos_with_close": 500,
+      "path": "local-only/generated-data/toy2box_agibot_mimic_e6_lowpick_500.hdf5",
+      "signed_yaw_bins": {
+        "[-135,-90)": {
+          "convention_fraction": 1.0,
+          "mode0": 0,
+          "mode180": 69,
+          "n": 69
+        },
+        "[-180,-135)": {
+          "convention_fraction": 1.0,
+          "mode0": 0,
+          "mode180": 110,
+          "n": 110
+        },
+        "[-45,0)": {
+          "convention_fraction": 1.0,
+          "mode0": 70,
+          "mode180": 0,
+          "n": 70
+        },
+        "[-90,-45)": {
+          "convention_fraction": 0.359375,
+          "mode0": 10,
+          "mode180": 54,
+          "n": 64
+        },
+        "[0,45)": {
+          "convention_fraction": 1.0,
+          "mode0": 66,
+          "mode180": 0,
+          "n": 66
+        },
+        "[135,180)": {
+          "convention_fraction": 1.0,
+          "mode0": 0,
+          "mode180": 88,
+          "n": 88
+        },
+        "[45,90)": {
+          "convention_fraction": 1.0,
+          "mode0": 14,
+          "mode180": 1,
+          "n": 15
+        },
+        "[90,135)": {
+          "convention_fraction": 1.0,
+          "mode0": 0,
+          "mode180": 18,
+          "n": 18
+        }
+      },
+      "tool_contract": "scripts/tools/toy2box_analysis/dataset_convention.py; first close; (-90,90] +/-5deg",
+      "total_demos": 500
+    },
+    "dataset": {
+      "episodes": 500,
+      "path": "local-only/generated-data/toy2box_agibot_mimic_e6_lowpick_500.hdf5",
+      "sha256": "940eb1e86cc8c3a6430a800e3af590e905a2b0e0317c2c4efbbdd594c393f4a9"
+    },
+    "full_episode_quality_peaks": {
+      "acceleration_norm_max": {
+        "difference_index": 15,
+        "ending_observation_index": 17,
+        "episode": "demo_148",
+        "value_m_s2": 26.33194089891387
+      },
+      "dt_seconds": 0.05,
+      "jerk_norm_max": {
+        "difference_index": 385,
+        "ending_observation_index": 388,
+        "episode": "demo_154",
+        "value_m_s3": 735.6999968593759
+      },
+      "scope": "all observations in every finalized generated episode; no skipped samples"
+    },
+    "generation": {
+      "finalized_first_successes": 500,
+      "fixed_plan": [
+        [
+          1,
+          50
+        ],
+        [
+          3,
+          50
+        ],
+        [
+          4,
+          50
+        ],
+        [
+          5,
+          50
+        ],
+        [
+          6,
+          50
+        ],
+        [
+          7,
+          50
+        ],
+        [
+          8,
+          50
+        ],
+        [
+          9,
+          50
+        ],
+        [
+          10,
+          50
+        ],
+        [
+          11,
+          49
+        ],
+        [
+          12,
+          50
+        ]
+      ],
+      "manifest": "local-only/h4-run/e6/generation/manifest.json",
+      "yield": {
+        "attempts": 846,
+        "denominator": "completed success+failed demos; settling-reset discarded layouts excluded",
+        "failures": 296,
+        "signed_yaw_bins": [
+          {
+            "attempts": 140,
+            "failures": 21,
+            "successes": 119,
+            "yaw_bin": "[-180,-135)",
+            "yield": 0.85
+          },
+          {
+            "attempts": 114,
+            "failures": 32,
+            "successes": 82,
+            "yaw_bin": "[-135,-90)",
+            "yield": 0.7192982456140351
+          },
+          {
+            "attempts": 134,
+            "failures": 61,
+            "successes": 73,
+            "yaw_bin": "[-90,-45)",
+            "yield": 0.5447761194029851
+          },
+          {
+            "attempts": 145,
+            "failures": 68,
+            "successes": 77,
+            "yaw_bin": "[-45,0)",
+            "yield": 0.5310344827586206
+          },
+          {
+            "attempts": 138,
+            "failures": 70,
+            "successes": 68,
+            "yaw_bin": "[0,45)",
+            "yield": 0.4927536231884058
+          },
+          {
+            "attempts": 32,
+            "failures": 15,
+            "successes": 17,
+            "yaw_bin": "[45,90)",
+            "yield": 0.53125
+          },
+          {
+            "attempts": 27,
+            "failures": 7,
+            "successes": 20,
+            "yaw_bin": "[90,135)",
+            "yield": 0.7407407407407407
+          },
+          {
+            "attempts": 116,
+            "failures": 22,
+            "successes": 94,
+            "yaw_bin": "[135,180)",
+            "yield": 0.8103448275862069
+          }
+        ],
+        "successes": 550,
+        "yield": 0.6501182033096927
+      }
+    },
+    "preregistration_sha256": "128d710bf2a50094b5e16580e3df39daec3eef97141af8fdc406fb9b4890d4f5",
+    "registered_generated_metrics": {
+      "cohort_median_eef_acceleration_norm_p95": 0.40443734522062036,
+      "cohort_median_eef_jerk_norm_p95": 5.875586791184871,
+      "episodes": 500,
+      "first_close_height_mm_median": 7.56538433540095,
+      "lift_delay_median_steps": 40.0,
+      "lift_delay_minmax": [
+        39,
+        42
+      ],
+      "one_close_onset_each": true,
+      "per_episode_filter_applied": false,
+      "quality_dt": 0.05,
+      "quality_skip": 0
+    },
+    "schema_version": 1,
+    "source_sha256": "14f6838ba5e68e54297a46b36ca41796addf4c1d85a006be0aeaf33a21e0862a",
+    "yaw_histogram": {
+      "[-135,-90)": 69,
+      "[-180,-135)": 110,
+      "[-45,0)": 70,
+      "[-90,-45)": 64,
+      "[0,45)": 66,
+      "[135,180)": 88,
+      "[45,90)": 15,
+      "[90,135)": 18
+    }
+  },
+  "mechanism_measurements": {
+    "first_secured": 48,
+    "generated_first_close_height_mm_median": 7.56538433540095,
+    "mechanism_verdict_fields": {
+      "M1": true,
+      "M2": false,
+      "M3": true,
+      "baseline_generated_close_height_mm": 12.547045802109217,
+      "baseline_policy_close_height_mm": 13.630639760921525,
+      "baseline_slip": [
+        42,
+        78
+      ],
+      "measurement_unavailable": [],
+      "slip_p_one_sided": 0.03720304508096575
+    },
+    "rollout_first_near_close_count": 176,
+    "rollout_first_near_close_height_mm_median": 14.3513875358954,
+    "rollout_no_near_close_count": 24,
+    "slipped": 18
+  },
+  "preregistration_sha256": "128d710bf2a50094b5e16580e3df39daec3eef97141af8fdc406fb9b4890d4f5",
+  "rollout_distributions": {
+    "per_seed": {
+      "101": {
+        "close_by_abs_yaw": {
+          "[0,45)": {
+            "between": 5,
+            "closed": 24,
+            "heading_error_abs_median_deg": 6.72132240422917,
+            "heading_error_abs_p75_deg": 12.919079438829442,
+            "mode0": 19,
+            "mode180": 0,
+            "successes": 1,
+            "trials": 24
+          },
+          "[135,181)": {
+            "between": 5,
+            "closed": 24,
+            "heading_error_abs_median_deg": 5.193257427232453,
+            "heading_error_abs_p75_deg": 28.23744656025709,
+            "mode0": 0,
+            "mode180": 19,
+            "successes": 2,
+            "trials": 24
+          },
+          "[45,90)": {
+            "between": 11,
+            "closed": 27,
+            "heading_error_abs_median_deg": 23.270669033935363,
+            "heading_error_abs_p75_deg": 44.094959422666975,
+            "mode0": 14,
+            "mode180": 2,
+            "successes": 2,
+            "trials": 27
+          },
+          "[90,135)": {
+            "between": 1,
+            "closed": 25,
+            "heading_error_abs_median_deg": 4.875755194829026,
+            "heading_error_abs_p75_deg": 13.585378293355717,
+            "mode0": 0,
+            "mode180": 24,
+            "successes": 6,
+            "trials": 25
+          }
+        },
+        "observer_verification": {
+          "npz_count": 100,
+          "results_json": "artifacts/experiments/e6/observers/seed101/results.json",
+          "vector_match": true
+        },
+        "stage_by_abs_yaw": {
+          "[0,45)": {
+            "stages": {
+              "approach": 4,
+              "grasp": 18,
+              "placement": 0,
+              "success": 1,
+              "transport": 1
+            },
+            "trials": 24
+          },
+          "[135,181)": {
+            "stages": {
+              "approach": 0,
+              "grasp": 17,
+              "placement": 0,
+              "success": 2,
+              "transport": 5
+            },
+            "trials": 24
+          },
+          "[45,90)": {
+            "stages": {
+              "approach": 1,
+              "grasp": 23,
+              "placement": 0,
+              "success": 2,
+              "transport": 1
+            },
+            "trials": 27
+          },
+          "[90,135)": {
+            "stages": {
+              "approach": 1,
+              "grasp": 13,
+              "placement": 1,
+              "success": 6,
+              "transport": 4
+            },
+            "trials": 25
+          }
+        },
+        "v3_1_stages": {
+          "approach": 6,
+          "grasp": 71,
+          "placement": 1,
+          "success": 11,
+          "transport": 11
+        }
+      },
+      "111": {
+        "close_by_abs_yaw": {
+          "[0,45)": {
+            "between": 4,
+            "closed": 22,
+            "heading_error_abs_median_deg": 8.679449941953663,
+            "heading_error_abs_p75_deg": 14.814976115613938,
+            "mode0": 18,
+            "mode180": 0,
+            "successes": 2,
+            "trials": 22
+          },
+          "[135,181)": {
+            "between": 0,
+            "closed": 24,
+            "heading_error_abs_median_deg": 3.9217936678104337,
+            "heading_error_abs_p75_deg": 8.601747585792182,
+            "mode0": 0,
+            "mode180": 24,
+            "successes": 4,
+            "trials": 24
+          },
+          "[45,90)": {
+            "between": 9,
+            "closed": 28,
+            "heading_error_abs_median_deg": 21.96005193518812,
+            "heading_error_abs_p75_deg": 34.694579578204575,
+            "mode0": 15,
+            "mode180": 4,
+            "successes": 4,
+            "trials": 28
+          },
+          "[90,135)": {
+            "between": 1,
+            "closed": 26,
+            "heading_error_abs_median_deg": 5.528313583716397,
+            "heading_error_abs_p75_deg": 9.72415659861678,
+            "mode0": 0,
+            "mode180": 25,
+            "successes": 6,
+            "trials": 26
+          }
+        },
+        "observer_verification": {
+          "npz_count": 100,
+          "results_json": "artifacts/experiments/e6/observers/seed111/results.json",
+          "vector_match": true
+        },
+        "stage_by_abs_yaw": {
+          "[0,45)": {
+            "stages": {
+              "approach": 3,
+              "grasp": 13,
+              "placement": 0,
+              "success": 2,
+              "transport": 4
+            },
+            "trials": 22
+          },
+          "[135,181)": {
+            "stages": {
+              "approach": 3,
+              "grasp": 12,
+              "placement": 0,
+              "success": 4,
+              "transport": 5
+            },
+            "trials": 24
+          },
+          "[45,90)": {
+            "stages": {
+              "approach": 3,
+              "grasp": 15,
+              "placement": 1,
+              "success": 4,
+              "transport": 5
+            },
+            "trials": 28
+          },
+          "[90,135)": {
+            "stages": {
+              "approach": 5,
+              "grasp": 9,
+              "placement": 0,
+              "success": 6,
+              "transport": 6
+            },
+            "trials": 26
+          }
+        },
+        "v3_1_stages": {
+          "approach": 14,
+          "grasp": 49,
+          "placement": 1,
+          "success": 16,
+          "transport": 20
+        }
+      }
+    },
+    "pooled_close_by_abs_yaw": {
+      "[0,45)": {
+        "between": 9,
+        "closed": 46,
+        "heading_error_abs_median_deg": 7.274079234530021,
+        "heading_error_abs_p75_deg": 14.826964354925565,
+        "mode0": 37,
+        "mode180": 0,
+        "successes": 3,
+        "trials": 46
+      },
+      "[135,181)": {
+        "between": 5,
+        "closed": 48,
+        "heading_error_abs_median_deg": 4.78426374467368,
+        "heading_error_abs_p75_deg": 10.37158914160478,
+        "mode0": 0,
+        "mode180": 43,
+        "successes": 6,
+        "trials": 48
+      },
+      "[45,90)": {
+        "between": 20,
+        "closed": 55,
+        "heading_error_abs_median_deg": 23.270669033935363,
+        "heading_error_abs_p75_deg": 35.11978217277188,
+        "mode0": 29,
+        "mode180": 6,
+        "successes": 6,
+        "trials": 55
+      },
+      "[90,135)": {
+        "between": 2,
+        "closed": 51,
+        "heading_error_abs_median_deg": 4.916614316114305,
+        "heading_error_abs_p75_deg": 10.66710531583054,
+        "mode0": 0,
+        "mode180": 49,
+        "successes": 12,
+        "trials": 51
+      }
+    },
+    "pooled_stage_by_abs_yaw": {
+      "[0,45)": {
+        "stages": {
+          "approach": 7,
+          "grasp": 31,
+          "placement": 0,
+          "success": 3,
+          "transport": 5
+        },
+        "trials": 46
+      },
+      "[135,181)": {
+        "stages": {
+          "approach": 3,
+          "grasp": 29,
+          "placement": 0,
+          "success": 6,
+          "transport": 10
+        },
+        "trials": 48
+      },
+      "[45,90)": {
+        "stages": {
+          "approach": 4,
+          "grasp": 38,
+          "placement": 1,
+          "success": 6,
+          "transport": 6
+        },
+        "trials": 55
+      },
+      "[90,135)": {
+        "stages": {
+          "approach": 6,
+          "grasp": 22,
+          "placement": 1,
+          "success": 12,
+          "transport": 10
+        },
+        "trials": 51
+      }
+    },
+    "pooled_v3_1_stages": {
+      "approach": 20,
+      "grasp": 120,
+      "placement": 2,
+      "success": 27,
+      "transport": 31
+    }
+  },
+  "schema_version": 1,
+  "source_sha256": "14f6838ba5e68e54297a46b36ca41796addf4c1d85a006be0aeaf33a21e0862a",
+  "success": {
+    "mean_rate": 0.135,
+    "per_seed": {
+      "101": {
+        "rate": 0.11,
+        "successes": 11,
+        "trials": 100,
+        "wilson95": {
+          "high": 0.18631296503080313,
+          "low": 0.06254196357064568
+        }
+      },
+      "111": {
+        "rate": 0.16,
+        "successes": 16,
+        "trials": 100,
+        "wilson95": {
+          "high": 0.24420269389270244,
+          "low": 0.10095288488804782
+        }
+      }
+    },
+    "pooled_successes": 27,
+    "pooled_trials": 200,
+    "sample_sd_rate_ddof1": 0.035355339059327376
+  }
+}
