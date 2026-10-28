@@ -1,0 +1,567 @@
+{
+  "attempts": 1042,
+  "chunks": [
+    {
+      "artifacts": {
+        "local-only/h5-run/e7/generation/chunks/e7_seed001_goal050.hdf5": {
+          "bytes": 24671029,
+          "sha256": "24caf6a3004e19c2433786e5e6f23a10eb8d6428637764f0887c086eeb343488"
+        },
+        "local-only/h5-run/e7/generation/chunks/e7_seed001_goal050.scope6_gate.json": {
+          "bytes": 47806,
+          "sha256": "849eedc126a56a67b95e205438303d7c243d39155672de873c041dc0b62863c9"
+        },
+        "local-only/h5-run/e7/generation/chunks/e7_seed001_goal050.settling.jsonl": {
+          "bytes": 3132265,
+          "sha256": "39467864b2bb93d836d8e59698c52ed0c60fb6bc8eb909a8e72c32d91b58fe18"
+        },
+        "local-only/h5-run/e7/generation/chunks/e7_seed001_goal050_failed.hdf5": {
+          "bytes": 17694407,
+          "sha256": "54154dc0b8ef1742ad55bac18300db79bc82fb7727eda9ce0a6294e9bc344b40"
+        }
+      },
+      "attempts": 86,
+      "elapsed_seconds": 255.42982337402645,
+      "failed_file": "local-only/h5-run/e7/generation/chunks/e7_seed001_goal050_failed.hdf5",
+      "failures": 36,
+      "goal": 50,
+      "label": "e7_seed001_goal050",
+      "logical_initial_settling_starts": 186,
+      "raw_capped_cycles": 0,
+      "recovered_logical_attempts": 0,
+      "retry_operations": 0,
+      "scope6_gate": "local-only/h5-run/e7/generation/chunks/e7_seed001_goal050.scope6_gate.json",
+      "seed": 1,
+      "settling_log": "local-only/h5-run/e7/generation/chunks/e7_seed001_goal050.settling.jsonl",
+      "success_file": "local-only/h5-run/e7/generation/chunks/e7_seed001_goal050.hdf5",
+      "successes": 50,
+      "unrecovered_caps": 0,
+      "waypoint_audit": {
+        "all_invariants_pass": true,
+        "event_count": 183,
+        "inserted_waypoint_count_minmax": [
+          9,
+          9
+        ],
+        "minimum_expanded_translation_interval_m_min": 0.00029405823443084955,
+        "original_waypoint_geometry_order_invariant": true
+      }
+    },
+    {
+      "artifacts": {
+        "local-only/h5-run/e7/generation/chunks/e7_seed003_goal050.hdf5": {
+          "bytes": 25388555,
+          "sha256": "901443deebeafa174f64d57a1b79029eb4ebcfa45d606d50bcf8611ff8eabb17"
+        },
+        "local-only/h5-run/e7/generation/chunks/e7_seed003_goal050.scope6_gate.json": {
+          "bytes": 50747,
+          "sha256": "53cdb96dfff340d4ad07c0cbeb005b6eda6cb55eb48c753d3ebf1163109eed50"
+        },
+        "local-only/h5-run/e7/generation/chunks/e7_seed003_goal050.settling.jsonl": {
+          "bytes": 3299190,
+          "sha256": "d7415350b308b287a4ad92f132e0d9e6956f081cc2672d14970ebc560b85c290"
+        },
+        "local-only/h5-run/e7/generation/chunks/e7_seed003_goal050_failed.hdf5": {
+          "bytes": 22004143,
+          "sha256": "5592626f5ab4a9e7187d5b2076244d7ec97b3281f9fbc4835c056836b4bc12d3"
+        }
+      },
+      "attempts": 95,
+      "elapsed_seconds": 270.9284021690255,
+      "failed_file": "local-only/h5-run/e7/generation/chunks/e7_seed003_goal050_failed.hdf5",
+      "failures": 45,
+      "goal": 50,
+      "label": "e7_seed003_goal050",
+      "logical_initial_settling_starts": 195,
+      "raw_capped_cycles": 0,
+      "recovered_logical_attempts": 0,
+      "retry_operations": 0,
+      "scope6_gate": "local-only/h5-run/e7/generation/chunks/e7_seed003_goal050.scope6_gate.json",
+      "seed": 3,
+      "settling_log": "local-only/h5-run/e7/generation/chunks/e7_seed003_goal050.settling.jsonl",
+      "success_file": "local-only/h5-run/e7/generation/chunks/e7_seed003_goal050.hdf5",
+      "successes": 50,
+      "unrecovered_caps": 0,
+      "waypoint_audit": {
+        "all_invariants_pass": true,
+        "event_count": 193,
+        "inserted_waypoint_count_minmax": [
+          9,
+          9
+        ],
+        "minimum_expanded_translation_interval_m_min": 0.00016051606507971883,
+        "original_waypoint_geometry_order_invariant": true
+      }
+    },
+    {
+      "artifacts": {
+        "local-only/h5-run/e7/generation/chunks/e7_seed004_goal050.hdf5": {
+          "bytes": 25492436,
+          "sha256": "9cd80b7131729e78026c625223b9f327f15b29863751dead8d0221b6df59897e"
+        },
+        "local-only/h5-run/e7/generation/chunks/e7_seed004_goal050.scope6_gate.json": {
+          "bytes": 57362,
+          "sha256": "8b6ae170f21b67e5ad3f229b4b7487005062035f84545141555428fe9efb37b4"
+        },
+        "local-only/h5-run/e7/generation/chunks/e7_seed004_goal050.settling.jsonl": {
+          "bytes": 3553281,
+          "sha256": "9c412babf0d8a09ec1762f7dcd1d5bee2c7d084620b168ebbeba6dcf3292b438"
+        },
+        "local-only/h5-run/e7/generation/chunks/e7_seed004_goal050_failed.hdf5": {
+          "bytes": 28316566,
+          "sha256": "242a9cc8b75a84843a3206f0f7636ff06dd114bf9b0b1120cdabc4b22e59686b"
+        }
+      },
+      "attempts": 107,
+      "elapsed_seconds": 398.4315025929827,
+      "failed_file": "local-only/h5-run/e7/generation/chunks/e7_seed004_goal050_failed.hdf5",
+      "failures": 57,
+      "goal": 50,
+      "label": "e7_seed004_goal050",
+      "logical_initial_settling_starts": 207,
+      "raw_capped_cycles": 1,
+      "recovered_logical_attempts": 1,
+      "retry_operations": 1,
+      "scope6_gate": "local-only/h5-run/e7/generation/chunks/e7_seed004_goal050.scope6_gate.json",
+      "seed": 4,
+      "settling_log": "local-only/h5-run/e7/generation/chunks/e7_seed004_goal050.settling.jsonl",
+      "success_file": "local-only/h5-run/e7/generation/chunks/e7_seed004_goal050.hdf5",
+      "successes": 50,
+      "unrecovered_caps": 0,
+      "waypoint_audit": {
+        "all_invariants_pass": true,
+        "event_count": 204,
+        "inserted_waypoint_count_minmax": [
+          9,
+          9
+        ],
+        "minimum_expanded_translation_interval_m_min": 0.00016050013073254377,
+        "original_waypoint_geometry_order_invariant": true
+      }
+    },
+    {
+      "artifacts": {
+        "local-only/h5-run/e7/generation/chunks/e7_seed005_goal050.hdf5": {
+          "bytes": 25173309,
+          "sha256": "0658907a26d50cf5e1b9e6a1c18a9039b6d345c1d0233fb08196d0ec0a6ea346"
+        },
+        "local-only/h5-run/e7/generation/chunks/e7_seed005_goal050.scope6_gate.json": {
+          "bytes": 51069,
+          "sha256": "4b52cd4e7b14897657bb7895f429edd94fb0c1c3b814b52312d7473a8064d051"
+        },
+        "local-only/h5-run/e7/generation/chunks/e7_seed005_goal050.settling.jsonl": {
+          "bytes": 3328924,
+          "sha256": "78e1aab9964c60bdd236cb456f68cd3646b0c72aec36bfd252ffe693e3a043fc"
+        },
+        "local-only/h5-run/e7/generation/chunks/e7_seed005_goal050_failed.hdf5": {
+          "bytes": 22671142,
+          "sha256": "eebe68de30f7f7a5b61c713b489984a23d117bbe8dd046e4f98d7e53d9523069"
+        }
+      },
+      "attempts": 96,
+      "elapsed_seconds": 291.5967885500286,
+      "failed_file": "local-only/h5-run/e7/generation/chunks/e7_seed005_goal050_failed.hdf5",
+      "failures": 46,
+      "goal": 50,
+      "label": "e7_seed005_goal050",
+      "logical_initial_settling_starts": 196,
+      "raw_capped_cycles": 0,
+      "recovered_logical_attempts": 0,
+      "retry_operations": 0,
+      "scope6_gate": "local-only/h5-run/e7/generation/chunks/e7_seed005_goal050.scope6_gate.json",
+      "seed": 5,
+      "settling_log": "local-only/h5-run/e7/generation/chunks/e7_seed005_goal050.settling.jsonl",
+      "success_file": "local-only/h5-run/e7/generation/chunks/e7_seed005_goal050.hdf5",
+      "successes": 50,
+      "unrecovered_caps": 0,
+      "waypoint_audit": {
+        "all_invariants_pass": true,
+        "event_count": 195,
+        "inserted_waypoint_count_minmax": [
+          9,
+          9
+        ],
+        "minimum_expanded_translation_interval_m_min": 0.00016050161502789706,
+        "original_waypoint_geometry_order_invariant": true
+      }
+    },
+    {
+      "artifacts": {
+        "local-only/h5-run/e7/generation/chunks/e7_seed006_goal050.hdf5": {
+          "bytes": 25481771,
+          "sha256": "144023dddcbc5d4402f0bb2219b975923f0ac5d4844c78ce82a63a09b860ca0d"
+        },
+        "local-only/h5-run/e7/generation/chunks/e7_seed006_goal050.scope6_gate.json": {
+          "bytes": 50413,
+          "sha256": "a6abbb566ceaf24735dbef6848ba3e1433371dc49ca071ae29c168aabb0a23f5"
+        },
+        "local-only/h5-run/e7/generation/chunks/e7_seed006_goal050.settling.jsonl": {
+          "bytes": 3296381,
+          "sha256": "52de49fc68f779f48a09d23480ffe995e66fc8ba5230a79da3412b202e04ae57"
+        },
+        "local-only/h5-run/e7/generation/chunks/e7_seed006_goal050_failed.hdf5": {
+          "bytes": 21495029,
+          "sha256": "5e1b91064433a51f53e633cd7f3db1bc7e40fbdc20e30ea17ed31cfce1d6763c"
+        }
+      },
+      "attempts": 94,
+      "elapsed_seconds": 297.96230181504507,
+      "failed_file": "local-only/h5-run/e7/generation/chunks/e7_seed006_goal050_failed.hdf5",
+      "failures": 44,
+      "goal": 50,
+      "label": "e7_seed006_goal050",
+      "logical_initial_settling_starts": 194,
+      "raw_capped_cycles": 0,
+      "recovered_logical_attempts": 0,
+      "retry_operations": 0,
+      "scope6_gate": "local-only/h5-run/e7/generation/chunks/e7_seed006_goal050.scope6_gate.json",
+      "seed": 6,
+      "settling_log": "local-only/h5-run/e7/generation/chunks/e7_seed006_goal050.settling.jsonl",
+      "success_file": "local-only/h5-run/e7/generation/chunks/e7_seed006_goal050.hdf5",
+      "successes": 50,
+      "unrecovered_caps": 0,
+      "waypoint_audit": {
+        "all_invariants_pass": true,
+        "event_count": 193,
+        "inserted_waypoint_count_minmax": [
+          9,
+          9
+        ],
+        "minimum_expanded_translation_interval_m_min": 0.000160506198881194,
+        "original_waypoint_geometry_order_invariant": true
+      }
+    },
+    {
+      "artifacts": {
+        "local-only/h5-run/e7/generation/chunks/e7_seed007_goal050.hdf5": {
+          "bytes": 25014345,
+          "sha256": "b6ad714b8cd9d77cfd47a4f5b43130c9f19be1ad6047438aec7ec9d340fb65ed"
+        },
+        "local-only/h5-run/e7/generation/chunks/e7_seed007_goal050.scope6_gate.json": {
+          "bytes": 47475,
+          "sha256": "5d0935975af9a4fcb8cc79c60758d708a32980347068798452b236fbf8b1f42b"
+        },
+        "local-only/h5-run/e7/generation/chunks/e7_seed007_goal050.settling.jsonl": {
+          "bytes": 3073427,
+          "sha256": "618134adfd1530d045d76e03606f079b1c9ee39a7eafb1b98afbf14185162e86"
+        },
+        "local-only/h5-run/e7/generation/chunks/e7_seed007_goal050_failed.hdf5": {
+          "bytes": 17199706,
+          "sha256": "9ece285460a49e7ad174936d1bfe85b11af98e1d001cc420b23636ea49e62d5e"
+        }
+      },
+      "attempts": 85,
+      "elapsed_seconds": 254.29664000694174,
+      "failed_file": "local-only/h5-run/e7/generation/chunks/e7_seed007_goal050_failed.hdf5",
+      "failures": 35,
+      "goal": 50,
+      "label": "e7_seed007_goal050",
+      "logical_initial_settling_starts": 185,
+      "raw_capped_cycles": 0,
+      "recovered_logical_attempts": 0,
+      "retry_operations": 0,
+      "scope6_gate": "local-only/h5-run/e7/generation/chunks/e7_seed007_goal050.scope6_gate.json",
+      "seed": 7,
+      "settling_log": "local-only/h5-run/e7/generation/chunks/e7_seed007_goal050.settling.jsonl",
+      "success_file": "local-only/h5-run/e7/generation/chunks/e7_seed007_goal050.hdf5",
+      "successes": 50,
+      "unrecovered_caps": 0,
+      "waypoint_audit": {
+        "all_invariants_pass": true,
+        "event_count": 179,
+        "inserted_waypoint_count_minmax": [
+          9,
+          9
+        ],
+        "minimum_expanded_translation_interval_m_min": 0.00016050832346081734,
+        "original_waypoint_geometry_order_invariant": true
+      }
+    },
+    {
+      "artifacts": {
+        "local-only/h5-run/e7/generation/chunks/e7_seed008_goal050.hdf5": {
+          "bytes": 25844776,
+          "sha256": "8dba8dd601658dad9ab3bbb35e5805e0c5d39afead1a1d565483093b1c5867d8"
+        },
+        "local-only/h5-run/e7/generation/chunks/e7_seed008_goal050.scope6_gate.json": {
+          "bytes": 52334,
+          "sha256": "9386d77b74a217e5b4fac413bde0ba5279e902a831c27835989705a44f236628"
+        },
+        "local-only/h5-run/e7/generation/chunks/e7_seed008_goal050.settling.jsonl": {
+          "bytes": 3398221,
+          "sha256": "7a88ae4707ca5c60021537e06b91a971723580cffc3d9426a241d1599b618bdd"
+        },
+        "local-only/h5-run/e7/generation/chunks/e7_seed008_goal050_failed.hdf5": {
+          "bytes": 25408417,
+          "sha256": "42e93fe5911f806751fd3d4a6211ae4f1b9be44d74ce365f7c0aafdf311bd821"
+        }
+      },
+      "attempts": 100,
+      "elapsed_seconds": 303.0406750149559,
+      "failed_file": "local-only/h5-run/e7/generation/chunks/e7_seed008_goal050_failed.hdf5",
+      "failures": 50,
+      "goal": 50,
+      "label": "e7_seed008_goal050",
+      "logical_initial_settling_starts": 200,
+      "raw_capped_cycles": 0,
+      "recovered_logical_attempts": 0,
+      "retry_operations": 0,
+      "scope6_gate": "local-only/h5-run/e7/generation/chunks/e7_seed008_goal050.scope6_gate.json",
+      "seed": 8,
+      "settling_log": "local-only/h5-run/e7/generation/chunks/e7_seed008_goal050.settling.jsonl",
+      "success_file": "local-only/h5-run/e7/generation/chunks/e7_seed008_goal050.hdf5",
+      "successes": 50,
+      "unrecovered_caps": 0,
+      "waypoint_audit": {
+        "all_invariants_pass": true,
+        "event_count": 199,
+        "inserted_waypoint_count_minmax": [
+          9,
+          9
+        ],
+        "minimum_expanded_translation_interval_m_min": 0.0001605093275429681,
+        "original_waypoint_geometry_order_invariant": true
+      }
+    },
+    {
+      "artifacts": {
+        "local-only/h5-run/e7/generation/chunks/e7_seed009_goal050.hdf5": {
+          "bytes": 25370939,
+          "sha256": "3d7efb1e98c2fc4b1939d5848951527e2e8dc00ad6fb67d0df239c73b9f2020a"
+        },
+        "local-only/h5-run/e7/generation/chunks/e7_seed009_goal050.scope6_gate.json": {
+          "bytes": 50728,
+          "sha256": "acc3b0d2b38bda83ab64bcf1d9442fd64590b03890a2751778b6a9c00fc2f97a"
+        },
+        "local-only/h5-run/e7/generation/chunks/e7_seed009_goal050.settling.jsonl": {
+          "bytes": 3299504,
+          "sha256": "2d75fa5182fa335f3d66f05a9710634190ee8d87ba90b3932e2b7575472efc7f"
+        },
+        "local-only/h5-run/e7/generation/chunks/e7_seed009_goal050_failed.hdf5": {
+          "bytes": 22061288,
+          "sha256": "ae9e33033b91217ed9b9668b38cfac32ea580c5e683d40f5018fa4bc959a6481"
+        }
+      },
+      "attempts": 95,
+      "elapsed_seconds": 271.93567079794593,
+      "failed_file": "local-only/h5-run/e7/generation/chunks/e7_seed009_goal050_failed.hdf5",
+      "failures": 45,
+      "goal": 50,
+      "label": "e7_seed009_goal050",
+      "logical_initial_settling_starts": 195,
+      "raw_capped_cycles": 0,
+      "recovered_logical_attempts": 0,
+      "retry_operations": 0,
+      "scope6_gate": "local-only/h5-run/e7/generation/chunks/e7_seed009_goal050.scope6_gate.json",
+      "seed": 9,
+      "settling_log": "local-only/h5-run/e7/generation/chunks/e7_seed009_goal050.settling.jsonl",
+      "success_file": "local-only/h5-run/e7/generation/chunks/e7_seed009_goal050.hdf5",
+      "successes": 50,
+      "unrecovered_caps": 0,
+      "waypoint_audit": {
+        "all_invariants_pass": true,
+        "event_count": 193,
+        "inserted_waypoint_count_minmax": [
+          9,
+          9
+        ],
+        "minimum_expanded_translation_interval_m_min": 0.0002940611448138952,
+        "original_waypoint_geometry_order_invariant": true
+      }
+    },
+    {
+      "artifacts": {
+        "local-only/h5-run/e7/generation/chunks/e7_seed010_goal050.hdf5": {
+          "bytes": 24896107,
+          "sha256": "7adb4732f546712624cd3cb34b5b49214d2c86a8d39318ce14b30b59ad05cd32"
+        },
+        "local-only/h5-run/e7/generation/chunks/e7_seed010_goal050.scope6_gate.json": {
+          "bytes": 50814,
+          "sha256": "7fd418e6dcc37cc6492672f7ddd16d09b2a0c70231b91e232ea4b1ee59c1d160"
+        },
+        "local-only/h5-run/e7/generation/chunks/e7_seed010_goal050.settling.jsonl": {
+          "bytes": 3180917,
+          "sha256": "e50c408bf963c6bfdd0da32c85cd28e81b77dbc251523b8e90e731a68120dd5b"
+        },
+        "local-only/h5-run/e7/generation/chunks/e7_seed010_goal050_failed.hdf5": {
+          "bytes": 17760323,
+          "sha256": "4b98cf90ec2d7884fedbc6b4e2673c44cda2440e59df1d283fee5dac7b78443d"
+        }
+      },
+      "attempts": 87,
+      "elapsed_seconds": 252.1954854009673,
+      "failed_file": "local-only/h5-run/e7/generation/chunks/e7_seed010_goal050_failed.hdf5",
+      "failures": 37,
+      "goal": 50,
+      "label": "e7_seed010_goal050",
+      "logical_initial_settling_starts": 187,
+      "raw_capped_cycles": 1,
+      "recovered_logical_attempts": 1,
+      "retry_operations": 1,
+      "scope6_gate": "local-only/h5-run/e7/generation/chunks/e7_seed010_goal050.scope6_gate.json",
+      "seed": 10,
+      "settling_log": "local-only/h5-run/e7/generation/chunks/e7_seed010_goal050.settling.jsonl",
+      "success_file": "local-only/h5-run/e7/generation/chunks/e7_seed010_goal050.hdf5",
+      "successes": 50,
+      "unrecovered_caps": 0,
+      "waypoint_audit": {
+        "all_invariants_pass": true,
+        "event_count": 185,
+        "inserted_waypoint_count_minmax": [
+          9,
+          9
+        ],
+        "minimum_expanded_translation_interval_m_min": 0.00016051082639023662,
+        "original_waypoint_geometry_order_invariant": true
+      }
+    },
+    {
+      "artifacts": {
+        "local-only/h5-run/e7/generation/chunks/e7_seed011_goal049.hdf5": {
+          "bytes": 25367604,
+          "sha256": "a684da31ee2db30330cdbeeadc1978707c746761d98178bc74cc0280f4f1a459"
+        },
+        "local-only/h5-run/e7/generation/chunks/e7_seed011_goal049.scope6_gate.json": {
+          "bytes": 49773,
+          "sha256": "8daccddf883caf638781e0d9bafa6ede6ee246c4f7e0c89e53a11e040732b65d"
+        },
+        "local-only/h5-run/e7/generation/chunks/e7_seed011_goal049.settling.jsonl": {
+          "bytes": 3247916,
+          "sha256": "2c88c07c263be9cc86284540258d3bd7c8818e9ea2dafe73cca898c2e7328ad7"
+        },
+        "local-only/h5-run/e7/generation/chunks/e7_seed011_goal049_failed.hdf5": {
+          "bytes": 20528701,
+          "sha256": "dece07fd978117c0d30bdf2a3aab17288b7144a72f0a3daf069512b426d94c2a"
+        }
+      },
+      "attempts": 92,
+      "elapsed_seconds": 264.72209585807286,
+      "failed_file": "local-only/h5-run/e7/generation/chunks/e7_seed011_goal049_failed.hdf5",
+      "failures": 42,
+      "goal": 49,
+      "label": "e7_seed011_goal049",
+      "logical_initial_settling_starts": 192,
+      "raw_capped_cycles": 0,
+      "recovered_logical_attempts": 0,
+      "retry_operations": 0,
+      "scope6_gate": "local-only/h5-run/e7/generation/chunks/e7_seed011_goal049.scope6_gate.json",
+      "seed": 11,
+      "settling_log": "local-only/h5-run/e7/generation/chunks/e7_seed011_goal049.settling.jsonl",
+      "success_file": "local-only/h5-run/e7/generation/chunks/e7_seed011_goal049.hdf5",
+      "successes": 50,
+      "unrecovered_caps": 0,
+      "waypoint_audit": {
+        "all_invariants_pass": true,
+        "event_count": 190,
+        "inserted_waypoint_count_minmax": [
+          9,
+          9
+        ],
+        "minimum_expanded_translation_interval_m_min": 0.0001604994758963585,
+        "original_waypoint_geometry_order_invariant": true
+      }
+    },
+    {
+      "artifacts": {
+        "local-only/h5-run/e7/generation/chunks/e7_seed012_goal050.hdf5": {
+          "bytes": 25794304,
+          "sha256": "f5f0d1c73662024d007cf3ea3af3854429ee007e9203a2315826d7b8c52e1cda"
+        },
+        "local-only/h5-run/e7/generation/chunks/e7_seed012_goal050.scope6_gate.json": {
+          "bytes": 54025,
+          "sha256": "1a0c5ec3d9a8c1e0e4a9c37c9e4c781c196e34e6c7dbfd9ed96b2b4f64d81f63"
+        },
+        "local-only/h5-run/e7/generation/chunks/e7_seed012_goal050.settling.jsonl": {
+          "bytes": 3514593,
+          "sha256": "15aa7360c602c7df9ab1b113a20183884b705c1646d7a7af2e4f3958acdf310d"
+        },
+        "local-only/h5-run/e7/generation/chunks/e7_seed012_goal050_failed.hdf5": {
+          "bytes": 27992144,
+          "sha256": "c64a93970c1092af0b246d988970580fc934649ebde844d9c98b0c5cd0202a4f"
+        }
+      },
+      "attempts": 105,
+      "elapsed_seconds": 399.5382740179775,
+      "failed_file": "local-only/h5-run/e7/generation/chunks/e7_seed012_goal050_failed.hdf5",
+      "failures": 55,
+      "goal": 50,
+      "label": "e7_seed012_goal050",
+      "logical_initial_settling_starts": 205,
+      "raw_capped_cycles": 0,
+      "recovered_logical_attempts": 0,
+      "retry_operations": 0,
+      "scope6_gate": "local-only/h5-run/e7/generation/chunks/e7_seed012_goal050.scope6_gate.json",
+      "seed": 12,
+      "settling_log": "local-only/h5-run/e7/generation/chunks/e7_seed012_goal050.settling.jsonl",
+      "success_file": "local-only/h5-run/e7/generation/chunks/e7_seed012_goal050.hdf5",
+      "successes": 50,
+      "unrecovered_caps": 0,
+      "waypoint_audit": {
+        "all_invariants_pass": true,
+        "event_count": 203,
+        "inserted_waypoint_count_minmax": [
+          9,
+          9
+        ],
+        "minimum_expanded_translation_interval_m_min": 0.00016050797421485186,
+        "original_waypoint_geometry_order_invariant": true
+      }
+    }
+  ],
+  "condition": "e7",
+  "failures": 492,
+  "finished_utc": "2026-10-28T17:20:22.351785+00:00",
+  "logical_initial_settling_starts": 2142,
+  "registered_plan": [
+    [
+      1,
+      50
+    ],
+    [
+      3,
+      50
+    ],
+    [
+      4,
+      50
+    ],
+    [
+      5,
+      50
+    ],
+    [
+      6,
+      50
+    ],
+    [
+      7,
+      50
+    ],
+    [
+      8,
+      50
+    ],
+    [
+      9,
+      50
+    ],
+    [
+      10,
+      50
+    ],
+    [
+      11,
+      49
+    ],
+    [
+      12,
+      50
+    ]
+  ],
+  "retry_operations": 2,
+  "retry_ratio_completed_attempts": 0.0019193857965451055,
+  "retry_ratio_logical_starts": 0.0009337068160597573,
+  "source_file": "datasets/toy2box_agibot_sources_e2_natural60_annotated.hdf5",
+  "state": "generated",
+  "successes": 550
+}

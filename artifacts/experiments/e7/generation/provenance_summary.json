@@ -1,0 +1,109 @@
+{
+  "candidate_sha256": {
+    "failed": "093c2c6e1328e62af2f17ddfddc985560cf44a0e9a3fe6028ad9aa1976ec4f30",
+    "success": "204ce1d2e784b8ba4f8978890f1bd388df45b6eaf596e84b1a33870e667e8095"
+  },
+  "condition": "E7",
+  "deterministic_order": "stock h5py list(data) order per explicit CLI chunk order",
+  "excluded_candidate_groups_count": 50,
+  "failed_bootstrap_used": false,
+  "failed_count": 492,
+  "final_audit": {
+    "combined": {
+      "episodes": 992,
+      "total_steps": 637219
+    },
+    "failed": {
+      "episodes": 492,
+      "expected_success": false,
+      "total_steps": 314992
+    },
+    "ok": true,
+    "success": {
+      "episodes": 500,
+      "expected_success": true,
+      "total_steps": 322227
+    }
+  },
+  "generated_dataset_published": false,
+  "goal": 500,
+  "metadata_restoration": {
+    "failed_total": 314992,
+    "success_total": 322227
+  },
+  "omission_reason": "The generated HDF5 is omitted; reproduce it from the published 60-episode source dataset, registered fixed plan, and repository commands.",
+  "published": {
+    "failed": "local-only/generated-data/toy2box_agibot_mimic_e7_slowapproach_500_failed.hdf5",
+    "success": "local-only/generated-data/toy2box_agibot_mimic_e7_slowapproach_500.hdf5"
+  },
+  "published_sha256": {
+    "failed": "093c2c6e1328e62af2f17ddfddc985560cf44a0e9a3fe6028ad9aa1976ec4f30",
+    "success": "204ce1d2e784b8ba4f8978890f1bd388df45b6eaf596e84b1a33870e667e8095"
+  },
+  "registered_plan": [
+    [
+      1,
+      50
+    ],
+    [
+      3,
+      50
+    ],
+    [
+      4,
+      50
+    ],
+    [
+      5,
+      50
+    ],
+    [
+      6,
+      50
+    ],
+    [
+      7,
+      50
+    ],
+    [
+      8,
+      50
+    ],
+    [
+      9,
+      50
+    ],
+    [
+      10,
+      50
+    ],
+    [
+      11,
+      49
+    ],
+    [
+      12,
+      50
+    ]
+  ],
+  "registered_source": "datasets/toy2box_agibot_sources_e2_natural60_annotated.hdf5",
+  "schema_version": 1,
+  "source": "local-only/h5-run/e7/finalize_500/provenance.json",
+  "source_chunks": 22,
+  "source_chunks_unchanged": true,
+  "source_sha256": "87eb256231b529d94edd1cdb9b54ece8390a751cbbd173e1d11403740a7ed882",
+  "status": "published",
+  "stock_merger": "scripts/tools/merge_hdf5_datasets.py",
+  "success_excluded_count": 50,
+  "success_kept_count": 500,
+  "waypoint_audit": {
+    "all_invariants_pass": true,
+    "event_count": 2117,
+    "inserted_waypoint_count_minmax": [
+      9,
+      9
+    ],
+    "minimum_expanded_translation_interval_m_min": 0.0001604994758963585,
+    "original_waypoint_geometry_order_invariant": true
+  }
+}

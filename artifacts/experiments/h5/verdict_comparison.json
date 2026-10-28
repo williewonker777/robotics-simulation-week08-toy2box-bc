@@ -1,0 +1,14 @@
+{
+  "frozen_and_published_byte_equal": true,
+  "frozen_published_recomputed_numeric_and_structural_equality": true,
+  "frozen_result_sha256": "07f297f1a2cf56e100a072670601cb911527468890ee34141c120a1790c9397c",
+  "published_recorded_result_sha256": "07f297f1a2cf56e100a072670601cb911527468890ee34141c120a1790c9397c",
+  "recomputed_result_sha256": "07f297f1a2cf56e100a072670601cb911527468890ee34141c120a1790c9397c",
+  "registration_inputs": {
+    "baseline_metrics": "artifacts/h5_registration/baseline_metrics.json",
+    "preregistration": "artifacts/h5_registration/preregistration.json"
+  },
+  "schema_version": 1,
+  "selected_condition": "E2",
+  "verdict": "rejected"
+}

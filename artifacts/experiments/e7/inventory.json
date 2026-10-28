@@ -1,0 +1,18 @@
+{
+  "byte_identical_to_local_evaluation_outputs": true,
+  "npz_copy_sha256_list_digest": "3305cda0209cc7d8853b88c5566b941093148daa4ccb4fa5decfe62ab687f521",
+  "rollouts_per_seed": 100,
+  "schema_version": 1,
+  "seeds": {
+    "seed101": {
+      "bytes": 5782634,
+      "files": 100,
+      "successes": 15
+    },
+    "seed111": {
+      "bytes": 5617383,
+      "files": 100,
+      "successes": 25
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "figures_verified": 2,
+  "generated_hdf5_included": false,
+  "new_artifact_exposure_scan": {
+    "files_scanned": 224,
+    "issues": 0
+  },
+  "observer_vector_checks": {
+    "seed101": {
+      "results_jsonl_npz_vectors_equal": true,
+      "successes": 15,
+      "trials": 100
+    },
+    "seed111": {
+      "results_jsonl_npz_vectors_equal": true,
+      "successes": 25,
+      "trials": 100
+    }
+  },
+  "published_h5_matches_frozen_and_recomputed_verdict": true,
+  "schema_version": 1
+}

@@ -1,0 +1,98 @@
+{
+  "chunk": {
+    "artifacts": {
+      "local-only/h5-run/e7/generation/chunks/e7_seed001_goal050.hdf5": {
+        "bytes": 24671029,
+        "sha256": "24caf6a3004e19c2433786e5e6f23a10eb8d6428637764f0887c086eeb343488"
+      },
+      "local-only/h5-run/e7/generation/chunks/e7_seed001_goal050.scope6_gate.json": {
+        "bytes": 47806,
+        "sha256": "849eedc126a56a67b95e205438303d7c243d39155672de873c041dc0b62863c9"
+      },
+      "local-only/h5-run/e7/generation/chunks/e7_seed001_goal050.settling.jsonl": {
+        "bytes": 3132265,
+        "sha256": "39467864b2bb93d836d8e59698c52ed0c60fb6bc8eb909a8e72c32d91b58fe18"
+      },
+      "local-only/h5-run/e7/generation/chunks/e7_seed001_goal050_failed.hdf5": {
+        "bytes": 17694407,
+        "sha256": "54154dc0b8ef1742ad55bac18300db79bc82fb7727eda9ce0a6294e9bc344b40"
+      }
+    },
+    "attempts": 86,
+    "elapsed_seconds": 255.42982337402645,
+    "failed_file": "local-only/h5-run/e7/generation/chunks/e7_seed001_goal050_failed.hdf5",
+    "failures": 36,
+    "goal": 50,
+    "label": "e7_seed001_goal050",
+    "logical_initial_settling_starts": 186,
+    "raw_capped_cycles": 0,
+    "recovered_logical_attempts": 0,
+    "retry_operations": 0,
+    "scope6_gate": "local-only/h5-run/e7/generation/chunks/e7_seed001_goal050.scope6_gate.json",
+    "seed": 1,
+    "settling_log": "local-only/h5-run/e7/generation/chunks/e7_seed001_goal050.settling.jsonl",
+    "success_file": "local-only/h5-run/e7/generation/chunks/e7_seed001_goal050.hdf5",
+    "successes": 50,
+    "unrecovered_caps": 0,
+    "waypoint_audit": {
+      "all_invariants_pass": true,
+      "event_count": 183,
+      "inserted_waypoint_count_minmax": [
+        9,
+        9
+      ],
+      "minimum_expanded_translation_interval_m_min": 0.00029405823443084955,
+      "original_waypoint_geometry_order_invariant": true
+    }
+  },
+  "conditions": {
+    "acceleration_quality": true,
+    "close_heading": true,
+    "close_height_range": true,
+    "close_xy": true,
+    "expanded_translation_interval": true,
+    "inserted_waypoint_count": true,
+    "jerk_quality": true,
+    "lift_delay": true,
+    "no_per_episode_quality_filter": true,
+    "normal_completion": true,
+    "preclose_speed": true,
+    "retry_ratio": true,
+    "success_rate": true,
+    "unrecovered_caps": true,
+    "waypoint_audit": true
+  },
+  "gate_passed": true,
+  "metrics": {
+    "cohort_median_eef_acceleration_norm_p95": 0.4334399308040029,
+    "cohort_median_eef_jerk_norm_p95": 5.234722608626599,
+    "episodes": 50,
+    "first_close_heading_error_abs_deg_median": 0.7133289770763724,
+    "first_close_height_mm_median": 11.54559733831978,
+    "first_close_xy_offset_mm_median": 3.2922982537902383,
+    "lift_delay_median_steps": 40.0,
+    "lift_delay_minmax": [
+      39,
+      41
+    ],
+    "one_close_onset_each": true,
+    "per_episode_filter_applied": false,
+    "preclose10_mean_eef_speed_m_s_median": 0.012831523548811674,
+    "quality_dt": 0.05,
+    "quality_skip": 0,
+    "waypoint_audit": {
+      "all_invariants_pass": true,
+      "event_count": 183,
+      "inserted_waypoint_count_minmax": [
+        9,
+        9
+      ],
+      "minimum_expanded_translation_interval_m_min": 0.00029405823443084955,
+      "original_waypoint_geometry_order_invariant": true
+    }
+  },
+  "retry_ratio": 0.0,
+  "reused_as_first_production_chunk": true,
+  "success_rate": 0.5813953488372093,
+  "unrecovered_caps": 0
+}

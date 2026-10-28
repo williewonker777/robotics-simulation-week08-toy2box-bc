@@ -1,0 +1,1043 @@
+{
+  "analysis_kind": "posthoc_read_only_unpaired_diagnosis",
+  "conditions": {
+    "E2": {
+      "all_first_near_close": {
+        "acquisition_start_delay_steps": {
+          "median": 25.5,
+          "n": 78,
+          "p10": 10.0,
+          "p25": 16.25,
+          "p75": 42.5,
+          "p90": 77.3
+        },
+        "count": 167,
+        "first_near_close_step": {
+          "median": 312.0,
+          "n": 167,
+          "p10": 282.6,
+          "p25": 298.0,
+          "p75": 364.5,
+          "p90": 403.20000000000005
+        },
+        "gripper_abs_at_onset": {
+          "median": 0.5104849338531494,
+          "n": 167,
+          "p10": 0.5088340520858765,
+          "p25": 0.509486734867096,
+          "p75": 0.5186753273010254,
+          "p90": 0.6110068559646606
+        },
+        "gripper_to_abs_le_0_30_steps": {
+          "median": 1.0,
+          "n": 154,
+          "p10": 1.0,
+          "p25": 1.0,
+          "p75": 1.0,
+          "p90": 1.0
+        },
+        "heading_error_abs_deg": {
+          "median": 2.981504530403413,
+          "n": 167,
+          "p10": 0.44100679569120305,
+          "p25": 1.3607539677493747,
+          "p75": 8.615682087650896,
+          "p90": 16.224299073820244
+        },
+        "truck_frame_height_mm": {
+          "median": 13.630639760921525,
+          "n": 167,
+          "p10": 6.9527146388530445,
+          "p25": 10.370554754075197,
+          "p75": 17.778443550058526,
+          "p90": 24.064069474955033
+        },
+        "truck_frame_offset_x_mm": {
+          "median": 3.4418574539373705,
+          "n": 167,
+          "p10": -15.766698352755116,
+          "p25": -6.120651617302613,
+          "p75": 10.266723544157125,
+          "p90": 16.941887414017145
+        },
+        "truck_frame_offset_y_mm": {
+          "median": 0.015262721658192016,
+          "n": 167,
+          "p10": -11.445748793508523,
+          "p25": -5.6050453913904565,
+          "p75": 6.177282530378775,
+          "p90": 12.889554787228136
+        },
+        "xy_offset_mm": {
+          "median": 12.73923200167833,
+          "n": 167,
+          "p10": 4.761936569235021,
+          "p25": 7.378529081611324,
+          "p75": 21.116653473289208,
+          "p90": 33.67046009076396
+        }
+      },
+      "by_abs_initial_yaw": [
+        {
+          "abs_yaw_deg": [
+            0,
+            45
+          ],
+          "heading_error_abs_deg": {
+            "median": 5.225472575260717,
+            "n": 36,
+            "p10": 1.1638504711630517,
+            "p25": 2.721540033249866,
+            "p75": 8.595253518349097,
+            "p90": 13.407888900171223
+          },
+          "height_mm": {
+            "median": 12.402364581150955,
+            "n": 36,
+            "p10": 5.8557263204277366,
+            "p25": 10.65173154411762,
+            "p75": 18.18135848484408,
+            "p90": 22.764684460666906
+          },
+          "near": 36,
+          "secured": 12,
+          "trials": 47,
+          "xy_offset_mm": {
+            "median": 13.74851788184176,
+            "n": 36,
+            "p10": 5.44645548268317,
+            "p25": 8.774995374152063,
+            "p75": 23.04542136856456,
+            "p90": 35.06546637474658
+          }
+        },
+        {
+          "abs_yaw_deg": [
+            45,
+            90
+          ],
+          "heading_error_abs_deg": {
+            "median": 11.824610968024444,
+            "n": 40,
+            "p10": 2.3227311747706327,
+            "p25": 6.585770950431545,
+            "p75": 17.41462677507609,
+            "p90": 25.109498155971796
+          },
+          "height_mm": {
+            "median": 13.336721203570836,
+            "n": 40,
+            "p10": 6.429337947014764,
+            "p25": 10.247985501234561,
+            "p75": 15.874257072666618,
+            "p90": 19.967592245735702
+          },
+          "near": 40,
+          "secured": 18,
+          "trials": 57,
+          "xy_offset_mm": {
+            "median": 15.13162838229168,
+            "n": 40,
+            "p10": 7.669454599855058,
+            "p25": 10.514474439506015,
+            "p75": 21.078466968392405,
+            "p90": 25.3490258945242
+          }
+        },
+        {
+          "abs_yaw_deg": [
+            90,
+            135
+          ],
+          "heading_error_abs_deg": {
+            "median": 2.338429395077142,
+            "n": 44,
+            "p10": 0.36749677844338746,
+            "p25": 1.3784140274934487,
+            "p75": 5.792890116658768,
+            "p90": 9.978196565993834
+          },
+          "height_mm": {
+            "median": 14.979452028752483,
+            "n": 44,
+            "p10": 7.259649087411626,
+            "p25": 11.076114113957516,
+            "p75": 19.102615210035502,
+            "p90": 32.85825416238223
+          },
+          "near": 44,
+          "secured": 23,
+          "trials": 48,
+          "xy_offset_mm": {
+            "median": 13.523970778204426,
+            "n": 44,
+            "p10": 6.337713203461786,
+            "p25": 7.911945001831451,
+            "p75": 27.832006323212628,
+            "p90": 38.662994835218306
+          }
+        },
+        {
+          "abs_yaw_deg": [
+            135,
+            181
+          ],
+          "heading_error_abs_deg": {
+            "median": 1.3396386854676052,
+            "n": 47,
+            "p10": 0.28374690126659063,
+            "p25": 0.6097709509478193,
+            "p75": 2.7018449459595786,
+            "p90": 4.397552519479336
+          },
+          "height_mm": {
+            "median": 12.378551863250836,
+            "n": 47,
+            "p10": 8.014595217943931,
+            "p25": 9.989117037869272,
+            "p75": 15.606349073429248,
+            "p90": 26.935049590590147
+          },
+          "near": 47,
+          "secured": 25,
+          "trials": 48,
+          "xy_offset_mm": {
+            "median": 9.2700638490937,
+            "n": 47,
+            "p10": 3.846705847773707,
+            "p25": 5.123473959275447,
+            "p75": 16.15790770437104,
+            "p90": 21.019679149485736
+          }
+        }
+      ],
+      "first_failed": {
+        "acquisition_start_delay_steps": null,
+        "count": 89,
+        "first_near_close_step": {
+          "median": 310.0,
+          "n": 89,
+          "p10": 278.6,
+          "p25": 292.0,
+          "p75": 361.0,
+          "p90": 406.4
+        },
+        "gripper_abs_at_onset": {
+          "median": 0.5113095045089722,
+          "n": 89,
+          "p10": 0.5089641571044922,
+          "p25": 0.5097947120666504,
+          "p75": 0.5501202344894409,
+          "p90": 0.6806953430175782
+        },
+        "gripper_to_abs_le_0_30_steps": {
+          "median": 1.0,
+          "n": 76,
+          "p10": 1.0,
+          "p25": 1.0,
+          "p75": 1.0,
+          "p90": 1.0
+        },
+        "heading_error_abs_deg": {
+          "median": 4.1160083151483775,
+          "n": 89,
+          "p10": 0.6305622669533136,
+          "p25": 1.7706215040536222,
+          "p75": 9.443918514113207,
+          "p90": 23.680385614820064
+        },
+        "truck_frame_height_mm": {
+          "median": 15.680692497202147,
+          "n": 89,
+          "p10": 10.215941825955857,
+          "p25": 11.45553306740142,
+          "p75": 22.045918586375773,
+          "p90": 29.70574355852762
+        },
+        "truck_frame_offset_x_mm": {
+          "median": 3.548905430095057,
+          "n": 89,
+          "p10": -21.2551411823594,
+          "p25": -11.365868621026884,
+          "p75": 15.58885888001187,
+          "p90": 20.359432100557562
+        },
+        "truck_frame_offset_y_mm": {
+          "median": -0.8911704323353412,
+          "n": 89,
+          "p10": -13.940178855923783,
+          "p25": -7.494753370432169,
+          "p75": 5.9810473008318485,
+          "p90": 23.91282779219739
+        },
+        "xy_offset_mm": {
+          "median": 18.197207326970002,
+          "n": 89,
+          "p10": 6.1032103924433025,
+          "p25": 11.457126818981758,
+          "p75": 30.32173538213531,
+          "p90": 43.24665326772961
+        }
+      },
+      "first_failed_final_stage_counts": {
+        "grasp": 69,
+        "placement": 1,
+        "success": 3,
+        "transport": 16
+      },
+      "first_near_close_groups": {
+        "failed": 89,
+        "never": 33,
+        "secured": 78
+      },
+      "first_secured": {
+        "acquisition_start_delay_steps": {
+          "median": 25.5,
+          "n": 78,
+          "p10": 10.0,
+          "p25": 16.25,
+          "p75": 42.5,
+          "p90": 77.3
+        },
+        "count": 78,
+        "first_near_close_step": {
+          "median": 313.0,
+          "n": 78,
+          "p10": 284.7,
+          "p25": 302.0,
+          "p75": 365.5,
+          "p90": 394.3
+        },
+        "gripper_abs_at_onset": {
+          "median": 0.5097330212593079,
+          "n": 78,
+          "p10": 0.5087236344814301,
+          "p25": 0.509384036064148,
+          "p75": 0.5138314664363861,
+          "p90": 0.539486026763916
+        },
+        "gripper_to_abs_le_0_30_steps": {
+          "median": 1.0,
+          "n": 78,
+          "p10": 1.0,
+          "p25": 1.0,
+          "p75": 1.0,
+          "p90": 1.0
+        },
+        "heading_error_abs_deg": {
+          "median": 2.2295508306508367,
+          "n": 78,
+          "p10": 0.38271401140812034,
+          "p25": 0.8621872010385658,
+          "p75": 7.26778753722467,
+          "p90": 14.102554286224063
+        },
+        "truck_frame_height_mm": {
+          "median": 11.3148959378038,
+          "n": 78,
+          "p10": 6.605008364530746,
+          "p25": 9.18636747153152,
+          "p75": 13.963458515436646,
+          "p90": 15.877698867301179
+        },
+        "truck_frame_offset_x_mm": {
+          "median": 3.3334859405338095,
+          "n": 78,
+          "p10": -7.604043345046615,
+          "p25": -3.6927585951546367,
+          "p75": 7.1848897712602895,
+          "p90": 12.513487185999422
+        },
+        "truck_frame_offset_y_mm": {
+          "median": 0.5214351451976309,
+          "n": 78,
+          "p10": -9.306661063851163,
+          "p25": -4.086992523874945,
+          "p75": 6.195243260791235,
+          "p90": 9.056821328477737
+        },
+        "xy_offset_mm": {
+          "median": 9.283119816705181,
+          "n": 78,
+          "p10": 4.340508682063112,
+          "p25": 6.399367684245546,
+          "p75": 13.143922417604376,
+          "p90": 17.068261011138244
+        }
+      },
+      "initial_layout": {
+        "x_m": {
+          "median": 0.6375523805618286,
+          "n": 200,
+          "p10": 0.4852953672409058,
+          "p25": 0.550167977809906,
+          "p75": 0.7168787717819214,
+          "p90": 0.7577642202377319
+        },
+        "y_m": {
+          "median": -0.2290109246969223,
+          "n": 200,
+          "p10": -0.28771406412124634,
+          "p25": -0.2640583962202072,
+          "p75": -0.19223876297473907,
+          "p90": -0.16307564079761505
+        },
+        "yaw_deg": {
+          "median": 15.626897989487329,
+          "n": 200,
+          "p10": -145.83350109182072,
+          "p25": -92.11887987558762,
+          "p75": 79.4195798303299,
+          "p90": 144.40161972355673
+        }
+      },
+      "never_near_final_stage_counts": {
+        "approach": 27,
+        "grasp": 6
+      },
+      "stage_counts": {
+        "approach": 27,
+        "grasp": 75,
+        "placement": 5,
+        "success": 40,
+        "transport": 53
+      },
+      "successes": 40,
+      "trials": 200
+    },
+    "E6": {
+      "all_first_near_close": {
+        "acquisition_start_delay_steps": {
+          "median": 18.0,
+          "n": 48,
+          "p10": 10.7,
+          "p25": 13.75,
+          "p75": 26.75,
+          "p90": 36.300000000000004
+        },
+        "count": 176,
+        "first_near_close_step": {
+          "median": 294.0,
+          "n": 176,
+          "p10": 272.0,
+          "p25": 282.0,
+          "p75": 344.0,
+          "p90": 375.0
+        },
+        "gripper_abs_at_onset": {
+          "median": 0.5139300227165222,
+          "n": 176,
+          "p10": 0.5091286599636078,
+          "p25": 0.5098745077848434,
+          "p75": 0.6069262325763702,
+          "p90": 0.7370655536651611
+        },
+        "gripper_to_abs_le_0_30_steps": {
+          "median": 1.0,
+          "n": 144,
+          "p10": 1.0,
+          "p25": 1.0,
+          "p75": 1.0,
+          "p90": 1.0
+        },
+        "heading_error_abs_deg": {
+          "median": 8.158057269733014,
+          "n": 176,
+          "p10": 1.745568482170512,
+          "p25": 3.685566994358698,
+          "p75": 20.655283474072938,
+          "p90": 36.45879108241154
+        },
+        "truck_frame_height_mm": {
+          "median": 14.3513875358954,
+          "n": 176,
+          "p10": 6.9930198420819885,
+          "p25": 9.29725845308681,
+          "p75": 19.80733345691406,
+          "p90": 26.285095335218834
+        },
+        "truck_frame_offset_x_mm": {
+          "median": 2.525078782308771,
+          "n": 176,
+          "p10": -21.602723105371194,
+          "p25": -5.135713381042077,
+          "p75": 13.333643693865609,
+          "p90": 21.56758494988948
+        },
+        "truck_frame_offset_y_mm": {
+          "median": 2.005579496969598,
+          "n": 176,
+          "p10": -18.008413840528185,
+          "p25": -6.220384879264042,
+          "p75": 10.026209350091921,
+          "p90": 24.65669650330893
+        },
+        "xy_offset_mm": {
+          "median": 18.411946886118113,
+          "n": 176,
+          "p10": 6.1569917347816014,
+          "p25": 11.686893306365622,
+          "p75": 29.260266575220765,
+          "p90": 42.440540872809734
+        }
+      },
+      "by_abs_initial_yaw": [
+        {
+          "abs_yaw_deg": [
+            0,
+            45
+          ],
+          "heading_error_abs_deg": {
+            "median": 7.187654630750188,
+            "n": 37,
+            "p10": 1.8351267875773771,
+            "p25": 3.6996182441483683,
+            "p75": 11.96513698078138,
+            "p90": 40.05411816189465
+          },
+          "height_mm": {
+            "median": 13.98466350763615,
+            "n": 37,
+            "p10": 6.272703386692395,
+            "p25": 8.523802905946148,
+            "p75": 16.612634585630865,
+            "p90": 22.05407063761987
+          },
+          "near": 37,
+          "secured": 7,
+          "trials": 46,
+          "xy_offset_mm": {
+            "median": 23.68476501674799,
+            "n": 37,
+            "p10": 10.801879669280455,
+            "p25": 16.471605079412548,
+            "p75": 30.1690106913378,
+            "p90": 42.38681302088485
+          }
+        },
+        {
+          "abs_yaw_deg": [
+            45,
+            90
+          ],
+          "heading_error_abs_deg": {
+            "median": 24.289211241950525,
+            "n": 50,
+            "p10": 4.683741581968863,
+            "p25": 12.24432964502634,
+            "p75": 34.82450160914553,
+            "p90": 56.100508152525045
+          },
+          "height_mm": {
+            "median": 13.379078961561962,
+            "n": 50,
+            "p10": 6.008619558569029,
+            "p25": 8.890983808515305,
+            "p75": 21.150653098639744,
+            "p90": 32.85301358807827
+          },
+          "near": 50,
+          "secured": 9,
+          "trials": 55,
+          "xy_offset_mm": {
+            "median": 18.733704256394226,
+            "n": 50,
+            "p10": 7.4287409657877665,
+            "p25": 14.136838197014189,
+            "p75": 35.41816030056311,
+            "p90": 47.63923650156777
+          }
+        },
+        {
+          "abs_yaw_deg": [
+            90,
+            135
+          ],
+          "heading_error_abs_deg": {
+            "median": 4.8961847554716655,
+            "n": 44,
+            "p10": 1.6159875470432497,
+            "p25": 2.928792499185562,
+            "p75": 8.734507158910617,
+            "p90": 14.949166782711755
+          },
+          "height_mm": {
+            "median": 13.000406871822808,
+            "n": 44,
+            "p10": 7.071264345857232,
+            "p25": 9.077417877832477,
+            "p75": 16.21903301194535,
+            "p90": 24.225812275531197
+          },
+          "near": 44,
+          "secured": 20,
+          "trials": 51,
+          "xy_offset_mm": {
+            "median": 16.932406793972188,
+            "n": 44,
+            "p10": 6.573852623616681,
+            "p25": 8.83431528638931,
+            "p75": 25.57715299924451,
+            "p90": 32.298907214968
+          }
+        },
+        {
+          "abs_yaw_deg": [
+            135,
+            181
+          ],
+          "heading_error_abs_deg": {
+            "median": 5.817265873034103,
+            "n": 45,
+            "p10": 1.0876406447919067,
+            "p25": 2.518965386007551,
+            "p75": 12.175742127366533,
+            "p90": 31.51970022786532
+          },
+          "height_mm": {
+            "median": 17.20385089418869,
+            "n": 45,
+            "p10": 9.31520528972579,
+            "p25": 12.301923297970605,
+            "p75": 22.030346014343277,
+            "p90": 29.729307273623508
+          },
+          "near": 45,
+          "secured": 12,
+          "trials": 48,
+          "xy_offset_mm": {
+            "median": 14.649958024095127,
+            "n": 45,
+            "p10": 3.431332881259381,
+            "p25": 7.9058087636375225,
+            "p75": 25.127948272140685,
+            "p90": 33.65025535497466
+          }
+        }
+      ],
+      "first_failed": {
+        "acquisition_start_delay_steps": null,
+        "count": 128,
+        "first_near_close_step": {
+          "median": 292.0,
+          "n": 128,
+          "p10": 271.7,
+          "p25": 280.0,
+          "p75": 341.5,
+          "p90": 375.3
+        },
+        "gripper_abs_at_onset": {
+          "median": 0.5270882844924927,
+          "n": 128,
+          "p10": 0.5095109939575195,
+          "p25": 0.5104026347398758,
+          "p75": 0.638081967830658,
+          "p90": 0.8451679050922393
+        },
+        "gripper_to_abs_le_0_30_steps": {
+          "median": 1.0,
+          "n": 96,
+          "p10": 1.0,
+          "p25": 1.0,
+          "p75": 1.0,
+          "p90": 1.0
+        },
+        "heading_error_abs_deg": {
+          "median": 8.844912576915142,
+          "n": 128,
+          "p10": 1.874669832423794,
+          "p25": 4.395239277430843,
+          "p75": 27.002921095114097,
+          "p90": 41.441566897132326
+        },
+        "truck_frame_height_mm": {
+          "median": 15.887630329022475,
+          "n": 128,
+          "p10": 6.806790959182237,
+          "p25": 9.990034966426368,
+          "p75": 22.074811991698645,
+          "p90": 30.641990068045395
+        },
+        "truck_frame_offset_x_mm": {
+          "median": 2.763925656660324,
+          "n": 128,
+          "p10": -27.44482769887906,
+          "p25": -6.204813952919344,
+          "p75": 14.736544372194354,
+          "p90": 22.5165448840039
+        },
+        "truck_frame_offset_y_mm": {
+          "median": -1.05777231621614,
+          "n": 128,
+          "p10": -23.807874909104232,
+          "p25": -8.033673700513159,
+          "p75": 13.517623251874689,
+          "p90": 29.402613391700104
+        },
+        "xy_offset_mm": {
+          "median": 23.12367682435199,
+          "n": 128,
+          "p10": 6.608552396008712,
+          "p25": 14.992341788907467,
+          "p75": 32.85672535023269,
+          "p90": 46.451279784251525
+        }
+      },
+      "first_failed_final_stage_counts": {
+        "grasp": 116,
+        "success": 7,
+        "transport": 5
+      },
+      "first_near_close_groups": {
+        "failed": 128,
+        "never": 24,
+        "secured": 48
+      },
+      "first_secured": {
+        "acquisition_start_delay_steps": {
+          "median": 18.0,
+          "n": 48,
+          "p10": 10.7,
+          "p25": 13.75,
+          "p75": 26.75,
+          "p90": 36.300000000000004
+        },
+        "count": 48,
+        "first_near_close_step": {
+          "median": 301.0,
+          "n": 48,
+          "p10": 282.0,
+          "p25": 287.75,
+          "p75": 351.25,
+          "p90": 372.90000000000003
+        },
+        "gripper_abs_at_onset": {
+          "median": 0.5101328492164612,
+          "n": 48,
+          "p10": 0.5085408508777618,
+          "p25": 0.5091845840215683,
+          "p75": 0.5367173850536346,
+          "p90": 0.6581041395664216
+        },
+        "gripper_to_abs_le_0_30_steps": {
+          "median": 1.0,
+          "n": 48,
+          "p10": 1.0,
+          "p25": 1.0,
+          "p75": 1.0,
+          "p90": 1.0
+        },
+        "heading_error_abs_deg": {
+          "median": 5.341480296248392,
+          "n": 48,
+          "p10": 1.030513702950583,
+          "p25": 2.928792499185562,
+          "p75": 12.528151168863829,
+          "p90": 20.79003724879664
+        },
+        "truck_frame_height_mm": {
+          "median": 11.492567200232077,
+          "n": 48,
+          "p10": 7.497341710878418,
+          "p25": 8.741050667120877,
+          "p75": 14.811432452406699,
+          "p90": 15.864957726316304
+        },
+        "truck_frame_offset_x_mm": {
+          "median": 2.4595185943254867,
+          "n": 48,
+          "p10": -8.678029605808936,
+          "p25": -4.152379921457817,
+          "p75": 12.290928395934124,
+          "p90": 16.767696961921185
+        },
+        "truck_frame_offset_y_mm": {
+          "median": 5.0364742204847275,
+          "n": 48,
+          "p10": -6.315093218113018,
+          "p25": -0.4313444616045823,
+          "p75": 7.856917360962987,
+          "p90": 13.945190414900745
+        },
+        "xy_offset_mm": {
+          "median": 12.109733248899566,
+          "n": 48,
+          "p10": 5.8007166787743865,
+          "p25": 7.376135403456554,
+          "p75": 17.626379775859096,
+          "p90": 22.79989180447126
+        }
+      },
+      "initial_layout": {
+        "x_m": {
+          "median": 0.6391341686248779,
+          "n": 200,
+          "p10": 0.48728289604187014,
+          "p25": 0.551013708114624,
+          "p75": 0.7209491282701492,
+          "p90": 0.7619991302490234
+        },
+        "y_m": {
+          "median": -0.23125717043876648,
+          "n": 200,
+          "p10": -0.2861853390932083,
+          "p25": -0.2591845691204071,
+          "p75": -0.19446900486946106,
+          "p90": -0.16706208884716037
+        },
+        "yaw_deg": {
+          "median": 11.214182998079538,
+          "n": 200,
+          "p10": -147.11803800285938,
+          "p25": -95.11520330812668,
+          "p75": 79.4195798303299,
+          "p90": 132.3087509578515
+        }
+      },
+      "never_near_final_stage_counts": {
+        "approach": 20,
+        "grasp": 4
+      },
+      "stage_counts": {
+        "approach": 20,
+        "grasp": 120,
+        "placement": 2,
+        "success": 27,
+        "transport": 31
+      },
+      "successes": 27,
+      "trials": 200
+    }
+  },
+  "definitions": {
+    "near_close": "existing scripts/tools/toy2box_analysis/recovery_metrics.py first action close onset within 6 cm",
+    "physical_gripper_timing": "exploratory steps from first near-close action onset until mean(abs(gripper_pos[:2])) <=0.30 before reopen",
+    "position_heading_height": "measured at first near-close, not decisive/best close",
+    "secured": "existing >=40 consecutive-step held definition",
+    "stage": "existing scripts/tools/toy2box_analysis/stage_v3.py classifier",
+    "statistical_tests": "exploratory, two-sided, unpaired; no H4 verdict reuse"
+  },
+  "diagnosis": {
+    "concrete_gap": "E6 generated close poses remain precise, but the learned policy closes 18 steps earlier with much worse wrist heading/lateral alignment; acquisition falls before transport. The gap is policy attainment of the demonstrated aligned pre-close state, not source-pose precision.",
+    "evidence": [
+      "First near-close: E6 176 vs E2 167, so the acquisition loss is not explained by fewer close opportunities.",
+      "All-near heading median 2.982 -> 8.158 deg; gap has same sign in all four |yaw| strata.",
+      "All-near XY offset median 12.739 -> 18.412 mm.",
+      "First acquisition 78/167 -> 48/176; first-failed grasp increased 89 -> 128.",
+      "Generated first-close XY/heading precision is essentially unchanged (E2 3.705 mm/0.714 deg; E6 3.337 mm/0.717 deg), so worse rollout alignment is not inherited from worse generated close poses."
+    ],
+    "first_failed_milestone": "grasp acquisition (first near-close occurs, but the 40-step secured criterion is not reached)",
+    "height_conclusion": "The all-near close-height medians are similar and E6 is slightly higher, so the -5 mm generated offset did not transfer to policy rollout height.",
+    "recommendation": {
+      "caution": "This is post-hoc and may still fail: E1 showed that heading improvement alone need not raise success. H5 should be rejected unless acquisition and performance improve under frozen criteria.",
+      "concrete_intervention": "Starting from the stock E2 natural60 generation path (no Z offset), repeat the final already-aligned open-gripper waypoint for one preregistered fixed dwell duration immediately before the first close; leave pose geometry, source selection/pool, close/lift/place segments, generated count, BC, and evaluation unchanged.",
+      "proceed_with_H5": true,
+      "required_preregistration_gate": "Freeze one dwell duration before generation. Require generated first-close XY/heading/height to remain within a narrow preregistered tolerance of E2 and the dwell count to be exact; after training, require later first-near-close timing plus lower all-near heading/XY error and higher first-secured fraction versus E2 before interpreting performance.",
+      "single_factor": "fixed open-gripper alignment dwell immediately before the first close in every generated demonstration",
+      "why_single_factor": "Only the number of repeated pre-close alignment samples changes. This directly reweights the demonstrated state-action region the policy fails to attain without modifying positions, headings, close height, or lift timing after close."
+    }
+  },
+  "exploratory_unpaired_tests": {
+    "first_near_close_step": {
+      "e2_n": 167,
+      "e6_minus_e2_median": -18.0,
+      "e6_n": 176,
+      "mann_whitney_u": 11094.0,
+      "two_sided_p": 8.710684669404227e-05
+    },
+    "gripper_abs_at_onset": {
+      "e2_n": 167,
+      "e6_minus_e2_median": 0.0034450888633728027,
+      "e6_n": 176,
+      "mann_whitney_u": 18476.0,
+      "two_sided_p": 3.8304274244067754e-05
+    },
+    "heading_error_abs_deg": {
+      "e2_n": 167,
+      "e6_minus_e2_median": 5.176552739329601,
+      "e6_n": 176,
+      "mann_whitney_u": 20327.0,
+      "two_sided_p": 8.569633978545266e-10
+    },
+    "height": {
+      "e2_n": 167,
+      "e6_minus_e2_median": 0.7207477749738747,
+      "e6_n": 176,
+      "mann_whitney_u": 15435.0,
+      "two_sided_p": 0.4210855086292956
+    },
+    "near_proportion": {
+      "E2": [
+        167,
+        200
+      ],
+      "E6": [
+        176,
+        200
+      ],
+      "fisher_two_sided_p": 0.25235944585205583
+    },
+    "secured_proportion": {
+      "E2": [
+        78,
+        167
+      ],
+      "E6": [
+        48,
+        176
+      ],
+      "fisher_two_sided_p": 0.00021523551586342607
+    },
+    "success_proportion": {
+      "E2": [
+        40,
+        200
+      ],
+      "E6": [
+        27,
+        200
+      ],
+      "fisher_two_sided_p": 0.10762455310710811
+    },
+    "xy_offset_mm": {
+      "e2_n": 167,
+      "e6_minus_e2_median": 5.672714884439783,
+      "e6_n": 176,
+      "mann_whitney_u": 18480.0,
+      "two_sided_p": 3.758668815655929e-05
+    }
+  },
+  "generated_first_close_precision": {
+    "E2": {
+      "episodes": 500,
+      "heading_error_abs_deg_median": 0.7144644387587462,
+      "heading_error_abs_deg_p75": 0.7333788801313403,
+      "height_mm_median": 12.547045802109217,
+      "xy_offset_mm_median": 3.704647222847343,
+      "xy_offset_mm_p75": 4.155230763824921
+    },
+    "E6": {
+      "episodes": 500,
+      "heading_error_abs_deg_median": 0.7166687921440982,
+      "heading_error_abs_deg_p75": 0.8227666682967261,
+      "height_mm_median": 7.56538433540095,
+      "xy_offset_mm_median": 3.3371101397636065,
+      "xy_offset_mm_p75": 4.013328701341504
+    }
+  },
+  "heading_gap_by_abs_initial_yaw": [
+    {
+      "E2_median": 5.225472575260717,
+      "E2_n": 36,
+      "E6_median": 7.187654630750188,
+      "E6_minus_E2_median": 1.962182055489471,
+      "E6_n": 37,
+      "abs_yaw_deg": [
+        0,
+        45
+      ]
+    },
+    {
+      "E2_median": 11.824610968024444,
+      "E2_n": 40,
+      "E6_median": 24.289211241950525,
+      "E6_minus_E2_median": 12.46460027392608,
+      "E6_n": 50,
+      "abs_yaw_deg": [
+        45,
+        90
+      ]
+    },
+    {
+      "E2_median": 2.338429395077142,
+      "E2_n": 44,
+      "E6_median": 4.8961847554716655,
+      "E6_minus_E2_median": 2.5577553603945233,
+      "E6_n": 44,
+      "abs_yaw_deg": [
+        90,
+        135
+      ]
+    },
+    {
+      "E2_median": 1.3396386854676052,
+      "E2_n": 47,
+      "E6_median": 5.817265873034103,
+      "E6_minus_E2_median": 4.4776271875664975,
+      "E6_n": 45,
+      "abs_yaw_deg": [
+        135,
+        181
+      ]
+    }
+  ],
+  "initial_layout_distribution_tests": {
+    "x": {
+      "ks_statistic": 0.035,
+      "two_sided_p": 0.9997218397355462
+    },
+    "y": {
+      "ks_statistic": 0.02,
+      "two_sided_p": 0.9999999999997793
+    },
+    "yaw": {
+      "ks_statistic": 0.03,
+      "two_sided_p": 0.9999920612641017
+    }
+  },
+  "inputs": {
+    "E2": {
+      "101": {
+        "directory": "artifacts/experiments/e2/seed101/rollouts",
+        "results_sha256": "7b0dd17d60e63d65b19ace48b8237f63c825346332615850e0a1453c8f93a956"
+      },
+      "111": {
+        "directory": "artifacts/experiments/e2/seed111/rollouts",
+        "results_sha256": "7e332c709af6a229714874464f125b87bafcbc90adb69ad52923cb8a7e3056e9"
+      }
+    },
+    "E6": {
+      "101": {
+        "directory": "artifacts/experiments/e6/observers/seed101/rollouts",
+        "results_sha256": "e8a5495a7cce2a408c45baec36be8a8e69e27524a37cbbb8e600b43b9995c150"
+      },
+      "111": {
+        "directory": "artifacts/experiments/e6/observers/seed111/rollouts",
+        "results_sha256": "265d40186bad5b52abae45c715e6efa0441e5ad62c400a26e262cd35335f72f7"
+      }
+    },
+    "frozen_scripts": {
+      "local-only/task361-evidence/scripts/tools/toy2box_analysis/close_precision.py.py": "388062034bbabb2ade4780a934ce468794521354e14aa85efc9945e02a949721",
+      "local-only/task361-evidence/scripts/tools/toy2box_analysis/recovery_metrics.py.py": "5b4d040d98ac7f4c81004b4eb701526fd17cebc3d4b03478c9f9a65e2803de90",
+      "local-only/task361-evidence/scripts/tools/toy2box_analysis/stage_v3.py.py": "8106f0afcf68cf15b1c94184c1a4364964c5c23dd33dce76e9947bab4025e25f",
+      "local-only/task361-evidence/scripts/tools/toy2box_analysis/transport_slip.py.py": "7f3a6b5b5b7148058855a56ab5f4122366cdd2deba405017d38933a822556bed"
+    },
+    "generated_datasets": {
+      "E2": {
+        "path": "local-only/generated-data/toy2box_agibot_mimic_e2_natural_500.hdf5",
+        "sha256": "d3b7120862a50a774c459a21200c1aaeb65628ec2c17b4068507d0d2b9117447"
+      },
+      "E6": {
+        "path": "local-only/generated-data/toy2box_agibot_mimic_e6_lowpick_500.hdf5",
+        "sha256": "940eb1e86cc8c3a6430a800e3af590e905a2b0e0317c2c4efbbdd594c393f4a9"
+      }
+    }
+  },
+  "schema_version": 1,
+  "selection_artifact_checks": {
+    "does_not_filter_on_success_or_acquisition_for_primary_gap": true,
+    "heading_gap_persists_in_each_abs_yaw_stratum": true,
+    "heading_gap_persists_within_outcomes": {
+      "failed_E2_median": 4.1160083151483775,
+      "failed_E6_median": 8.844912576915142,
+      "secured_E2_median": 2.2295508306508367,
+      "secured_E6_median": 5.341480296248392
+    },
+    "near_close_opportunities": {
+      "E2": 167,
+      "E6": 176
+    },
+    "unpaired_batches_not_trial_matched": true,
+    "uses_all_first_near_close_trials": true
+  }
+}

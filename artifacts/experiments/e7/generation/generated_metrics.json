@@ -1,0 +1,28 @@
+{
+  "cohort_median_eef_acceleration_norm_p95": 0.48315244832338244,
+  "cohort_median_eef_jerk_norm_p95": 6.769577048898768,
+  "episodes": 500,
+  "first_close_heading_error_abs_deg_median": 0.7128391884629934,
+  "first_close_height_mm_median": 11.52673317229101,
+  "first_close_xy_offset_mm_median": 3.6715639859337488,
+  "lift_delay_median_steps": 40.0,
+  "lift_delay_minmax": [
+    39,
+    41
+  ],
+  "one_close_onset_each": true,
+  "per_episode_filter_applied": false,
+  "preclose10_mean_eef_speed_m_s_median": 0.012967375107109547,
+  "quality_dt": 0.05,
+  "quality_skip": 0,
+  "waypoint_audit": {
+    "all_invariants_pass": true,
+    "event_count": 2117,
+    "inserted_waypoint_count_minmax": [
+      9,
+      9
+    ],
+    "minimum_expanded_translation_interval_m_min": 0.0001604994758963585,
+    "original_waypoint_geometry_order_invariant": true
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "condition": "E7",
+  "generated": {
+    "cohort_median_eef_acceleration_norm_p95": 0.48315244832338244,
+    "cohort_median_eef_jerk_norm_p95": 6.769577048898768,
+    "episodes": 500,
+    "first_close_heading_error_abs_deg_median": 0.7128391884629934,
+    "first_close_height_mm_median": 11.52673317229101,
+    "first_close_xy_offset_mm_median": 3.6715639859337488,
+    "lift_delay_median_steps": 40.0,
+    "lift_delay_minmax": [
+      39,
+      41
+    ],
+    "one_close_onset_each": true,
+    "per_episode_filter_applied": false,
+    "preclose10_mean_eef_speed_m_s_median": 0.012967375107109547,
+    "quality_dt": 0.05,
+    "quality_skip": 0,
+    "waypoint_audit": {
+      "all_invariants_pass": true,
+      "event_count": 2117,
+      "inserted_waypoint_count_minmax": [
+        9,
+        9
+      ],
+      "minimum_expanded_translation_interval_m_min": 0.0001604994758963585,
+      "original_waypoint_geometry_order_invariant": true
+    }
+  },
+  "hypothesis": "H5",
+  "mechanism": {
+    "M1": true,
+    "M2": false,
+    "M3": false,
+    "acquisition_p_one_sided": 0.9999252392247339,
+    "baseline_acquisition": [
+      78,
+      167
+    ],
+    "baseline_generated": {
+      "episodes": 500,
+      "heading_error_abs_deg_median": 0.7144644387587462,
+      "heading_error_abs_deg_p75": 0.7333788801313403,
+      "height_mm_median": 12.547045802109217,
+      "preclose10_mean_eef_speed_m_s_median": 0.046253008767962456,
+      "reconstructed_target_min_interval_m_min": 0.00032101920805871487,
+      "xy_offset_mm_median": 3.704647222847343,
+      "xy_offset_mm_p75": 4.155230763824921
+    },
+    "baseline_policy_xy_mm_median": 12.73923200167833,
+    "measurement_unavailable": []
+  },
+  "performance": {
+    "passes": false,
+    "pooled_comparisons": {
+      "E0": {
+        "baseline": [
+          39,
+          200
+        ],
+        "p_one_sided": 0.4500272238980512,
+        "passes": false
+      },
+      "E2": {
+        "baseline": [
+          40,
+          200
+        ],
+        "p_one_sided": 0.5,
+        "passes": false
+      }
+    },
+    "seed_thresholds_pass": {
+      "101": false,
+      "111": true
+    },
+    "selected_condition": "E2"
+  },
+  "pooled_successes": 40,
+  "rollouts": {
+    "first_near_close_count": 162,
+    "first_near_close_xy_offset_mm_median": 13.3992279835742,
+    "no_near_close_count": 38,
+    "secured_first": 43,
+    "slipped": 17,
+    "trials": 200
+  },
+  "successes_by_seed": {
+    "101": 15,
+    "111": 25
+  },
+  "verdict": "rejected"
+}

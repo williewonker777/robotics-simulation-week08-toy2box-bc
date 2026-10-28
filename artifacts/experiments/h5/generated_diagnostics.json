@@ -1,0 +1,236 @@
+{
+  "convention": {
+    "convention_fraction": 0.934,
+    "demos_with_close": 500,
+    "path": "local-only/generated-data/toy2box_agibot_mimic_e7_slowapproach_500.hdf5",
+    "signed_yaw_bins": {
+      "[-135,-90)": {
+        "convention_fraction": 1.0,
+        "mode0": 0,
+        "mode180": 47,
+        "n": 47
+      },
+      "[-180,-135)": {
+        "convention_fraction": 1.0,
+        "mode0": 0,
+        "mode180": 83,
+        "n": 83
+      },
+      "[-45,0)": {
+        "convention_fraction": 1.0,
+        "mode0": 94,
+        "mode180": 0,
+        "n": 94
+      },
+      "[-90,-45)": {
+        "convention_fraction": 0.5952380952380952,
+        "mode0": 17,
+        "mode180": 25,
+        "n": 42
+      },
+      "[0,45)": {
+        "convention_fraction": 1.0,
+        "mode0": 52,
+        "mode180": 0,
+        "n": 52
+      },
+      "[135,180)": {
+        "convention_fraction": 1.0,
+        "mode0": 0,
+        "mode180": 89,
+        "n": 89
+      },
+      "[45,90)": {
+        "convention_fraction": 0.5151515151515151,
+        "mode0": 9,
+        "mode180": 24,
+        "n": 33
+      },
+      "[90,135)": {
+        "convention_fraction": 1.0,
+        "mode0": 0,
+        "mode180": 60,
+        "n": 60
+      }
+    },
+    "tool_contract": "scripts/tools/toy2box_analysis/dataset_convention.py; first close; (-90,90] +/-5deg",
+    "total_demos": 500
+  },
+  "dataset": {
+    "episodes": 500,
+    "path": "local-only/generated-data/toy2box_agibot_mimic_e7_slowapproach_500.hdf5",
+    "sha256": "204ce1d2e784b8ba4f8978890f1bd388df45b6eaf596e84b1a33870e667e8095"
+  },
+  "full_episode_quality_peaks": {
+    "acceleration_norm_max": {
+      "difference_index": 16,
+      "ending_observation_index": 18,
+      "episode": "demo_122",
+      "value_m_s2": 19.082536267914104
+    },
+    "dt_seconds": 0.05,
+    "jerk_norm_max": {
+      "difference_index": 390,
+      "ending_observation_index": 393,
+      "episode": "demo_150",
+      "value_m_s3": 600.6286061061986
+    },
+    "scope": "all observations in every finalized generated episode; no skipped samples"
+  },
+  "generation": {
+    "finalized_first_successes": 500,
+    "fixed_plan": [
+      [
+        1,
+        50
+      ],
+      [
+        3,
+        50
+      ],
+      [
+        4,
+        50
+      ],
+      [
+        5,
+        50
+      ],
+      [
+        6,
+        50
+      ],
+      [
+        7,
+        50
+      ],
+      [
+        8,
+        50
+      ],
+      [
+        9,
+        50
+      ],
+      [
+        10,
+        50
+      ],
+      [
+        11,
+        49
+      ],
+      [
+        12,
+        50
+      ]
+    ],
+    "manifest": "local-only/h5-run/e7/generation/manifest.json",
+    "yield": {
+      "attempts": 1042,
+      "denominator": "completed success+failed demos; settling-reset discarded layouts excluded",
+      "failures": 492,
+      "signed_yaw_bins": [
+        {
+          "attempts": 144,
+          "failures": 54,
+          "successes": 90,
+          "yaw_bin": "[-180,-135)",
+          "yield": 0.625
+        },
+        {
+          "attempts": 117,
+          "failures": 63,
+          "successes": 54,
+          "yaw_bin": "[-135,-90)",
+          "yield": 0.46153846153846156
+        },
+        {
+          "attempts": 150,
+          "failures": 103,
+          "successes": 47,
+          "yaw_bin": "[-90,-45)",
+          "yield": 0.31333333333333335
+        },
+        {
+          "attempts": 156,
+          "failures": 52,
+          "successes": 104,
+          "yaw_bin": "[-45,0)",
+          "yield": 0.6666666666666666
+        },
+        {
+          "attempts": 143,
+          "failures": 90,
+          "successes": 53,
+          "yaw_bin": "[0,45)",
+          "yield": 0.3706293706293706
+        },
+        {
+          "attempts": 84,
+          "failures": 49,
+          "successes": 35,
+          "yaw_bin": "[45,90)",
+          "yield": 0.4166666666666667
+        },
+        {
+          "attempts": 116,
+          "failures": 44,
+          "successes": 72,
+          "yaw_bin": "[90,135)",
+          "yield": 0.6206896551724138
+        },
+        {
+          "attempts": 132,
+          "failures": 37,
+          "successes": 95,
+          "yaw_bin": "[135,180)",
+          "yield": 0.7196969696969697
+        }
+      ],
+      "successes": 550,
+      "yield": 0.527831094049904
+    }
+  },
+  "preregistration_sha256": "c950e1f091dc245a0bca6094ca5f6f679c448c71f6e582f7167981cb5c7ce36e",
+  "registered_generated_metrics": {
+    "cohort_median_eef_acceleration_norm_p95": 0.48315244832338244,
+    "cohort_median_eef_jerk_norm_p95": 6.769577048898768,
+    "episodes": 500,
+    "first_close_heading_error_abs_deg_median": 0.7128391884629934,
+    "first_close_height_mm_median": 11.52673317229101,
+    "first_close_xy_offset_mm_median": 3.6715639859337488,
+    "lift_delay_median_steps": 40.0,
+    "lift_delay_minmax": [
+      39,
+      41
+    ],
+    "one_close_onset_each": true,
+    "per_episode_filter_applied": false,
+    "preclose10_mean_eef_speed_m_s_median": 0.012967375107109547,
+    "quality_dt": 0.05,
+    "quality_skip": 0,
+    "waypoint_audit": {
+      "all_invariants_pass": true,
+      "event_count": 2117,
+      "inserted_waypoint_count_minmax": [
+        9,
+        9
+      ],
+      "minimum_expanded_translation_interval_m_min": 0.0001604994758963585,
+      "original_waypoint_geometry_order_invariant": true
+    }
+  },
+  "schema_version": 1,
+  "source_sha256": "14f6838ba5e68e54297a46b36ca41796addf4c1d85a006be0aeaf33a21e0862a",
+  "yaw_histogram": {
+    "[-135,-90)": 47,
+    "[-180,-135)": 83,
+    "[-45,0)": 94,
+    "[-90,-45)": 42,
+    "[0,45)": 52,
+    "[135,180)": 89,
+    "[45,90)": 33,
+    "[90,135)": 60
+  }
+}
