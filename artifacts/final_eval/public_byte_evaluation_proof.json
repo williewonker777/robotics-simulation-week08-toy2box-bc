@@ -1,0 +1,49 @@
+{
+  "condition": "E2",
+  "evaluation_kind": "stock_play_public_checkpoint_bytes",
+  "models": {
+    "101": {
+      "byte_equal": true,
+      "evaluated_local_derivative_sha256": "f0369c5c46f1cb557b564be1bd59c7224c82e467cc3f64607baa3d05771cfe1c",
+      "metadata_sanitization_proof": "deliverables/toy2box_bc/metadata_sanitization.json",
+      "original_trained_checkpoint_sha256": "ba8e8412080ea42857a9c26d18746292f90f079ecaae4060cac30f7667162e92",
+      "public_path": "deliverables/toy2box_bc/seed101/model_epoch_2000.pth",
+      "public_sha256": "f0369c5c46f1cb557b564be1bd59c7224c82e467cc3f64607baa3d05771cfe1c",
+      "tensor_storage_members_identical_to_original": true
+    },
+    "111": {
+      "byte_equal": true,
+      "evaluated_local_derivative_sha256": "6103aa6b8b95099078319a40bd3c0254c6c6ec9ce319f162dd0c74aa111eb4eb",
+      "metadata_sanitization_proof": "deliverables/toy2box_bc/metadata_sanitization.json",
+      "original_trained_checkpoint_sha256": "65a57ab17fa062dce45625578f974d248c065b52e11ac1cb7fad206a2f716e13",
+      "public_path": "deliverables/toy2box_bc/seed111/model_epoch_2000.pth",
+      "public_sha256": "6103aa6b8b95099078319a40bd3c0254c6c6ec9ce319f162dd0c74aa111eb4eb",
+      "tensor_storage_members_identical_to_original": true
+    }
+  },
+  "observer_vector_proof": {
+    "all_equal": true,
+    "matched_trials": 200,
+    "seed101_sha256": "d1c38ee396a7477f37a09ab1b9f3bbd18e997c61b35f539423d7c51e5a001d95",
+    "seed111_sha256": "10ecada21da61bf314863c644c26745d1f2d46a32db5655afdf3fc533d578fb8",
+    "total_trials": 200
+  },
+  "public_checkpoint_bytes_evaluated": true,
+  "raw_videos_published": false,
+  "runtime_sources": {
+    "bc_config": {
+      "byte_equal": true,
+      "public_path": "source/isaaclab_tasks/isaaclab_tasks/manager_based/manipulation/place/config/agibot/agents/robomimic/bc_rnn_low_dim.json",
+      "public_sha256": "1c6afe4440eaad1836e26c66a26420817db23f31fe0c9333ed9056b167409392",
+      "runtime_reference_sha256": "1c6afe4440eaad1836e26c66a26420817db23f31fe0c9333ed9056b167409392"
+    },
+    "stock_play": {
+      "byte_equal": true,
+      "public_path": "scripts/imitation_learning/robomimic/play.py",
+      "public_sha256": "8b6d0c329bbd5aad4f7639f1a469db2243a838aad3e7f7235a53ff992bf399a2",
+      "runtime_reference_sha256": "8b6d0c329bbd5aad4f7639f1a469db2243a838aad3e7f7235a53ff992bf399a2"
+    }
+  },
+  "schema_version": 1,
+  "video_manifests_include_count_size_sha256": true
+}

@@ -1,0 +1,37 @@
+{
+  "guard": {
+    "seed101": {
+      "elapsed_seconds": 3468.529850495048,
+      "min_available_gib": 7.972076416015625,
+      "owned_pid_exit_count": 104
+    },
+    "seed111": {
+      "elapsed_seconds": 3530.7240793079836,
+      "min_available_gib": 10.98892593383789,
+      "owned_pid_exit_count": 104
+    }
+  },
+  "observer_vectors_equal": "200/200",
+  "path_and_credential_scan": {
+    "files_scanned": 12,
+    "issues": 0
+  },
+  "public_checkpoint_bytes_evaluated": true,
+  "public_model_hashes_match_evaluated_derivatives": true,
+  "public_stock_play_and_bc_config_match_runtime_bytes": true,
+  "schema_version": 1,
+  "stock_results": {
+    "pooled": "40/200",
+    "seed101": "18/100",
+    "seed111": "22/100"
+  },
+  "video_manifests": {
+    "raw_videos_published": false,
+    "seed101": {
+      "files_verified": 100
+    },
+    "seed111": {
+      "files_verified": 100
+    }
+  }
+}

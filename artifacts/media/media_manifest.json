@@ -191,8 +191,8 @@
   "07_final_e2_outcomes": {
     "mp4": "07_final_e2_outcomes.mp4",
     "gif": "07_final_e2_outcomes.gif",
-    "mp4_bytes": 1656767,
-    "gif_bytes": 6548681,
+    "mp4_bytes": 1428771,
+    "gif_bytes": 5735640,
     "seconds": 20.0,
     "speed": 2,
     "panels": [
@@ -220,6 +220,8 @@
       {
         "label": "운반 실패: 이동 중 낙하",
         "sub": "E2 seed 101 · #11 · yaw -68°",
+        "start": 14,
+        "end": 22,
         "source": "rollout-episode-11.mp4"
       },
       {
@@ -228,9 +230,8 @@
         "source": "rollout-episode-6.mp4"
       }
     ],
-    "kind": "illustrative examples, not an exhaustive or causal validation",
-    "condition": "E2",
-    "learning_seed": 101,
-    "evaluation_seed": 42
+    "evaluated_checkpoint_sha256": "f0369c5c46f1cb557b564be1bd59c7224c82e467cc3f64607baa3d05771cfe1c",
+    "source_evaluation": "final_eval/summary.json: public checkpoint seed101 stock video evaluation",
+    "observer_vector_equal": true
   }
 }

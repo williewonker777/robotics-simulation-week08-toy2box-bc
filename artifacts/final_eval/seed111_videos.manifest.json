@@ -1,0 +1,406 @@
+{
+  "count": 100,
+  "files": {
+    "rollout-episode-0.mp4": {
+      "bytes": 1258429,
+      "sha256": "acca90d00de75ff15ab6c88c46a218299087ee3ff15a54fdd8313af711c3c2e9"
+    },
+    "rollout-episode-1.mp4": {
+      "bytes": 1262004,
+      "sha256": "f67aff1891cef4a921c93b52fb5ff34ba2286a06a1717ee479a439bef905575d"
+    },
+    "rollout-episode-10.mp4": {
+      "bytes": 1233488,
+      "sha256": "c58960ee32f68b2e929f62b8f8aa3d2e6830d5b367ae3b363d04822373bac58a"
+    },
+    "rollout-episode-11.mp4": {
+      "bytes": 586130,
+      "sha256": "a6bbd09e48cefbf29bd640dcf99be2f8eb3d43d1a24c0240912c06b2dcdf9d45"
+    },
+    "rollout-episode-12.mp4": {
+      "bytes": 686155,
+      "sha256": "0c7d18bfc28edde6f33b0c056ce9df9c0383996229df207fe79c72f1f9a2af09"
+    },
+    "rollout-episode-13.mp4": {
+      "bytes": 1036946,
+      "sha256": "55d90f343672c7d04350ac0d182aec2a60cc3543abcfad0bdcd81380da3888ac"
+    },
+    "rollout-episode-14.mp4": {
+      "bytes": 565129,
+      "sha256": "c338b022b06c476e3e33a090fe1847937dc8f5964be681fd6f5edb2ed95dfe40"
+    },
+    "rollout-episode-15.mp4": {
+      "bytes": 1251421,
+      "sha256": "618ae624000a4c96494d49583dc1a2926eaba1180aebde891249cb5336d0246d"
+    },
+    "rollout-episode-16.mp4": {
+      "bytes": 1271403,
+      "sha256": "9406c77e69ec34d00237fadbb5dee9869262708dc72e1842e7df7f07fe69b6fe"
+    },
+    "rollout-episode-17.mp4": {
+      "bytes": 1288855,
+      "sha256": "bbeb3879eccba791f45e1da554a11b0e308136f65d05aaa42f6c2619c349eb44"
+    },
+    "rollout-episode-18.mp4": {
+      "bytes": 1324013,
+      "sha256": "24283a55f50c6d41b0e803d5085ca215a0cdeb08708db43c987e60e4b1f213e3"
+    },
+    "rollout-episode-19.mp4": {
+      "bytes": 1280649,
+      "sha256": "110de3de88f1e076e49985d0681d9cb8c46565a34213c81c1b61697d57283f02"
+    },
+    "rollout-episode-2.mp4": {
+      "bytes": 1319394,
+      "sha256": "772ca5d1e196e04e329b70fd0c2d04ca9f20f3a80bf20db3578a13ed2d7fa3ee"
+    },
+    "rollout-episode-20.mp4": {
+      "bytes": 1391280,
+      "sha256": "93ad23ccc029d9833d637a402db9e07a3868f9b54affd2c4c8ac1ad9d4c46367"
+    },
+    "rollout-episode-21.mp4": {
+      "bytes": 1257011,
+      "sha256": "fa3cbfb4771c010c9781db9c383f6c15118b2988347d785ac0ed4c0d489f7b52"
+    },
+    "rollout-episode-22.mp4": {
+      "bytes": 1296527,
+      "sha256": "49d153a53c0594af85d82942174d17f8ab39178f6dfd6d1b1e14b6aec34aa08f"
+    },
+    "rollout-episode-23.mp4": {
+      "bytes": 1333297,
+      "sha256": "e5e01ecde3cbd1234cf5342eead19772bc38632e6c365d49775bae15453f7c61"
+    },
+    "rollout-episode-24.mp4": {
+      "bytes": 1292793,
+      "sha256": "009982585cb0b4ad7799dba010e57cc0442d98597d363f403a3b9db66013a085"
+    },
+    "rollout-episode-25.mp4": {
+      "bytes": 570232,
+      "sha256": "b1f75866f7c5f59a6a274c1b9fd2206cc9d5784aee063c1c79fa0db6e49e12e1"
+    },
+    "rollout-episode-26.mp4": {
+      "bytes": 551226,
+      "sha256": "8f909ca5db9f698751d7abe807aa022877f46ed01fb804c5bb5a01a0cd938ead"
+    },
+    "rollout-episode-27.mp4": {
+      "bytes": 1245933,
+      "sha256": "2272f3439c26122742ec15ac7c6e7065cc157098ea33edefe8a7e7467862d3e7"
+    },
+    "rollout-episode-28.mp4": {
+      "bytes": 1242585,
+      "sha256": "5971170e717da56586e521791f2b07582c8768087d6815e89593a4e9b98857bd"
+    },
+    "rollout-episode-29.mp4": {
+      "bytes": 1341905,
+      "sha256": "cee5dd1f17ea280e267ad93cfea4e6a3cf5d6348f5621ed815843a58d52e862e"
+    },
+    "rollout-episode-3.mp4": {
+      "bytes": 1156087,
+      "sha256": "f69456706e929a5ccada34b7c0ba01fb0400a0cf4920e2d87dfcd89ee0a5708c"
+    },
+    "rollout-episode-30.mp4": {
+      "bytes": 1342506,
+      "sha256": "eccef369628734f4a5a5bec452ece535d0fccdf8ebf4de1690d565b052978272"
+    },
+    "rollout-episode-31.mp4": {
+      "bytes": 1257586,
+      "sha256": "929dd3bcabf405f5a271c2cf35d8cc816eeb65e734bf620c4637c05290386d98"
+    },
+    "rollout-episode-32.mp4": {
+      "bytes": 1273160,
+      "sha256": "3b1432f5ad0038b256cd33df78615838bc4b6442b3aea858a4a0770a3008420c"
+    },
+    "rollout-episode-33.mp4": {
+      "bytes": 1277414,
+      "sha256": "fbe5c7eaebc4723f0ba9683f7878eba8b618e7b5d285f8b9b8ee929b269b07ca"
+    },
+    "rollout-episode-34.mp4": {
+      "bytes": 962075,
+      "sha256": "e32fbe299e133012be8d4aa6642beb54fff87c3e2909e21cc8d7bc4637a0d44f"
+    },
+    "rollout-episode-35.mp4": {
+      "bytes": 1267647,
+      "sha256": "db42e62c5467f98f17b9ce49fba089a3823c8b966b88df58485e56a263d32568"
+    },
+    "rollout-episode-36.mp4": {
+      "bytes": 1291840,
+      "sha256": "377a9087cffb7426cd5390f656eb0bdc86db9ccea35d912ae4faf684c000abae"
+    },
+    "rollout-episode-37.mp4": {
+      "bytes": 1326283,
+      "sha256": "a69642a7199cc0a31d256d2089b0bafee569e3adf9d347b65d1881a2446c4368"
+    },
+    "rollout-episode-38.mp4": {
+      "bytes": 547156,
+      "sha256": "4de57061984b9b7d3bf153c477bd3fd1f8bff59436743a57215ccf07a0df5f83"
+    },
+    "rollout-episode-39.mp4": {
+      "bytes": 1306153,
+      "sha256": "7d9d656c8263571ba28579b38d40862fed023ba870f7d6b70be654d8bfc29b9c"
+    },
+    "rollout-episode-4.mp4": {
+      "bytes": 1016728,
+      "sha256": "f698eb3252d409861e7ec9c101be3312ad30ba1e237e2e5f033a1b7385a4599f"
+    },
+    "rollout-episode-40.mp4": {
+      "bytes": 993009,
+      "sha256": "14aa095bb126a90826adea24a245ec6f6e19ff5a5980542da07ee5decfd1de2e"
+    },
+    "rollout-episode-41.mp4": {
+      "bytes": 1277345,
+      "sha256": "cc35d497633185acddae087d14359d4edff6547dc695212ae71eec621a0b3ad0"
+    },
+    "rollout-episode-42.mp4": {
+      "bytes": 1354404,
+      "sha256": "6696c3cc366c955048306386a0252ccf7db953b40aff8746795a659721907b8c"
+    },
+    "rollout-episode-43.mp4": {
+      "bytes": 1289207,
+      "sha256": "2e195a22c9c7bfca385f860153445d4fb8957d72efbd0334c072167055954449"
+    },
+    "rollout-episode-44.mp4": {
+      "bytes": 1272420,
+      "sha256": "a078cc8152c98c5e80f8cfe3ea49b5f77b3d4761bc9f515a9f7fa92dce3bbda5"
+    },
+    "rollout-episode-45.mp4": {
+      "bytes": 1350716,
+      "sha256": "c6785be20e773d9e53b1cf3cd539a3783d51f878141f295fa080ce25d35c8478"
+    },
+    "rollout-episode-46.mp4": {
+      "bytes": 907883,
+      "sha256": "9cbc67e4cd58827cfab3c0881e1ab006cdecb545a11a427134fca1bc2e2f5096"
+    },
+    "rollout-episode-47.mp4": {
+      "bytes": 1234118,
+      "sha256": "6967f59c703f35552879a9cb8b5d372c2d9920cf7e0858d84a960e93e8127714"
+    },
+    "rollout-episode-48.mp4": {
+      "bytes": 1261947,
+      "sha256": "8ff1cb0d79bfc7121964cbed698f4d289e74ea015d97a9d2e6115e624771e98b"
+    },
+    "rollout-episode-49.mp4": {
+      "bytes": 1299830,
+      "sha256": "1e81920c579aaa5b99fa25deec4d2608e5caf1e143a17053591b7e0a3144dd30"
+    },
+    "rollout-episode-5.mp4": {
+      "bytes": 1321891,
+      "sha256": "56149c125731aa485985170455cb2b5fabcc50e36d9b67eb3a8fb93d318d48df"
+    },
+    "rollout-episode-50.mp4": {
+      "bytes": 928773,
+      "sha256": "f1267ef999547fe2acb24adec2402a4de8cc26c2036ece9afc9550b585d7870a"
+    },
+    "rollout-episode-51.mp4": {
+      "bytes": 1250433,
+      "sha256": "8590a327574d2c448c4daa33819785421a80c9eadf2ea460882f77aa36ad3860"
+    },
+    "rollout-episode-52.mp4": {
+      "bytes": 1308767,
+      "sha256": "48c08de0b7134f41b61ce8197a55f5e0b00056f5e27c3c5c09045781830a00fc"
+    },
+    "rollout-episode-53.mp4": {
+      "bytes": 1133376,
+      "sha256": "104cc360da21f3f352e4ec221e8a4f590efeefa371f4159015566c11ec183b36"
+    },
+    "rollout-episode-54.mp4": {
+      "bytes": 1286766,
+      "sha256": "2bacabafb746ca4ac4d836b19576e867f0cb943559c48c792abdc58ac9a48534"
+    },
+    "rollout-episode-55.mp4": {
+      "bytes": 1227910,
+      "sha256": "a6bcf8046097266793ac097f34a6ddcca405abaa1a7276d3f6147aff1db9d941"
+    },
+    "rollout-episode-56.mp4": {
+      "bytes": 1280387,
+      "sha256": "b9c7c09d02a9287ddc7ce7e366076b125555cdb95fd3cc1610176d32221e4be1"
+    },
+    "rollout-episode-57.mp4": {
+      "bytes": 1019355,
+      "sha256": "facdb94d2dc07b98a99318a163a167320ea851e167817bdef99a9ae6524d2bba"
+    },
+    "rollout-episode-58.mp4": {
+      "bytes": 1229640,
+      "sha256": "9c34fdbccd5b18a3959177a4378193f0f04c409a9eb2b9c4dd4669f14785ce5c"
+    },
+    "rollout-episode-59.mp4": {
+      "bytes": 904126,
+      "sha256": "793acead89636d9ce6dfe2b5680781392e712c770fcb6308f79113b9b0804ffd"
+    },
+    "rollout-episode-6.mp4": {
+      "bytes": 1358265,
+      "sha256": "e1e77e6af9609fab3772b6b26cef3c26113599ab55a0d3509939c3d335116a89"
+    },
+    "rollout-episode-60.mp4": {
+      "bytes": 1277028,
+      "sha256": "17bb87f6a1020f63c3006f850dca1173f81bfac8ed8f5c8dc7ab9e6303245389"
+    },
+    "rollout-episode-61.mp4": {
+      "bytes": 585496,
+      "sha256": "1c4dff19dc04c6b53a88f4911152e38107cbdca3655826f8dc87e61d279259fc"
+    },
+    "rollout-episode-62.mp4": {
+      "bytes": 1047603,
+      "sha256": "d790b1ca776dcb75e683fb9492260f1fe67d9c9c4a0433763146aa19d023173f"
+    },
+    "rollout-episode-63.mp4": {
+      "bytes": 1292739,
+      "sha256": "3877774d9c84391d44c31e4e25ed656a479af4433329e410ffa511ee38493ef3"
+    },
+    "rollout-episode-64.mp4": {
+      "bytes": 1292255,
+      "sha256": "2705e1e15e29217c5bb3dc4fab451c08636350b2e7f83c1ab662f282883da9b5"
+    },
+    "rollout-episode-65.mp4": {
+      "bytes": 1076904,
+      "sha256": "2fcd0bd06ecd0b062f45d949235bc1424eb9cc6dc00e5a8c8451c40899fb15ee"
+    },
+    "rollout-episode-66.mp4": {
+      "bytes": 1224485,
+      "sha256": "9d38ce017e66f73ff4d148d0ec7ce3e66d08f96b45b43654370bdb9d6d666890"
+    },
+    "rollout-episode-67.mp4": {
+      "bytes": 1286844,
+      "sha256": "387d42c58e57d02619325b0975e36f1a9237e004995a9969790763d6f2f0a92b"
+    },
+    "rollout-episode-68.mp4": {
+      "bytes": 1280599,
+      "sha256": "b559a924250300052a465e25875e307338689bad371c83f279018c8440888ac4"
+    },
+    "rollout-episode-69.mp4": {
+      "bytes": 905982,
+      "sha256": "6a9301b7dbbf19cc18350382e1b03ed4b0a7eae23f80413d489698fb0779b660"
+    },
+    "rollout-episode-7.mp4": {
+      "bytes": 969869,
+      "sha256": "7814ae31858752a2be0d494ba43d37c44a2102bd468d33bc65e80875b8039ded"
+    },
+    "rollout-episode-70.mp4": {
+      "bytes": 1278424,
+      "sha256": "525a3742fec8112000b3abaa5a7cf1fcb53fa2f2db29b2ca21bc760c519e524f"
+    },
+    "rollout-episode-71.mp4": {
+      "bytes": 904577,
+      "sha256": "dfdc8a38f122cb85622c4eba43fdb14bc0a6ba5a0709af80c8c44e36605f90b4"
+    },
+    "rollout-episode-72.mp4": {
+      "bytes": 1206268,
+      "sha256": "f6eb69006870831af20fc67bcce599316c783c03d733427ad0eda153462fb08a"
+    },
+    "rollout-episode-73.mp4": {
+      "bytes": 1326838,
+      "sha256": "0046716d480f4741cd6c3db20933e47d547f61f8b3c52b70a51655e46efeb250"
+    },
+    "rollout-episode-74.mp4": {
+      "bytes": 557255,
+      "sha256": "030e30b96e936f99bbcdf44a235ccaa3bcdd0eab0047ccf752600500f1775fdc"
+    },
+    "rollout-episode-75.mp4": {
+      "bytes": 999600,
+      "sha256": "22b48e47590de17aa4eb7f012cea85a8cd0673694b146fd533ec5513cf1d37d2"
+    },
+    "rollout-episode-76.mp4": {
+      "bytes": 1165437,
+      "sha256": "7c664fbc7aa26ec6d3b41dcc6d0c11c2a77841769710ac3ca9a07fca44469655"
+    },
+    "rollout-episode-77.mp4": {
+      "bytes": 1314947,
+      "sha256": "d5170af89ceba50ce1c1f01ba64d93a2f73e91bc14deb7046d978fd457a67e6c"
+    },
+    "rollout-episode-78.mp4": {
+      "bytes": 1329925,
+      "sha256": "38ef90b3221c73d1764e1ac78ef38cf8588dd0b6a7eefcff51bbafcd34d85d79"
+    },
+    "rollout-episode-79.mp4": {
+      "bytes": 1255019,
+      "sha256": "7403b4733fa396426b2ed57e423364e1f1aa48a6a3c73c996e654b7b15111cdb"
+    },
+    "rollout-episode-8.mp4": {
+      "bytes": 861110,
+      "sha256": "4bb6fb00e374af6997b867c1558cc6d9734aa73a4b89efd2f597b96f514a12e3"
+    },
+    "rollout-episode-80.mp4": {
+      "bytes": 912079,
+      "sha256": "9531b4179d9b38ac45afe0c0fadd8ddcdbc6b442efc89376e5b89f180fb9fdff"
+    },
+    "rollout-episode-81.mp4": {
+      "bytes": 1279870,
+      "sha256": "005e785a08fdcc8b981473aafe624970f044664fc57f04fef6554c2b047b0801"
+    },
+    "rollout-episode-82.mp4": {
+      "bytes": 1362624,
+      "sha256": "8a309ff16429fb92ebaa549f326d488fbba4269b5900aa49e613bf33d1876404"
+    },
+    "rollout-episode-83.mp4": {
+      "bytes": 916293,
+      "sha256": "86ff2fef4e107c3eb0f3022c05cc4408b3a25d91053955f43a345ae22f417e1a"
+    },
+    "rollout-episode-84.mp4": {
+      "bytes": 944677,
+      "sha256": "7efc783724a127085a23f5239fbd7cc7c9af0cdf3d3fd9622c96b5f3c906bbe3"
+    },
+    "rollout-episode-85.mp4": {
+      "bytes": 1288593,
+      "sha256": "e0cbd5ddc23c70cfede672986a5b74f4c4d2634542028fd9505234cf9a34279c"
+    },
+    "rollout-episode-86.mp4": {
+      "bytes": 1313113,
+      "sha256": "ce9ddf5c731dd9ce4f76dd0bfb59046e3854cd1a7bcffd57e80eb97aaebff5c0"
+    },
+    "rollout-episode-87.mp4": {
+      "bytes": 1287414,
+      "sha256": "05aa536d19a18fc7f4d0f5e670daf36626647665976c0ee616e4d6d028d30578"
+    },
+    "rollout-episode-88.mp4": {
+      "bytes": 1279683,
+      "sha256": "3032a972c40b2083bf1bb76443ab75c5b1ce38877a06543f5327c37bffdc26b5"
+    },
+    "rollout-episode-89.mp4": {
+      "bytes": 1302149,
+      "sha256": "add8b9b4cf700802da514e72d48b5c48009afda4770e52be1cb9301e123d3ad0"
+    },
+    "rollout-episode-9.mp4": {
+      "bytes": 657892,
+      "sha256": "1fbe13d32da9dc78a382c6fd31b31d5d7ea8d928f2d4b4ae8db5a8efc37793dd"
+    },
+    "rollout-episode-90.mp4": {
+      "bytes": 1056883,
+      "sha256": "f46bbd90936224bafba0b60f773cf481c7d142f796d6a7d81ebeb4f2a9301cb7"
+    },
+    "rollout-episode-91.mp4": {
+      "bytes": 1247923,
+      "sha256": "d61dc762283f0d3ebc26f1123e6d5de7f2c02a0f697a4c71f86a111ab452afc8"
+    },
+    "rollout-episode-92.mp4": {
+      "bytes": 1253676,
+      "sha256": "541b98195b6b91a86dcf5733af5e21b0b63a705ab367dc569075f1f7b580235c"
+    },
+    "rollout-episode-93.mp4": {
+      "bytes": 1124585,
+      "sha256": "8646289b601e970b9125e98b994dce951a273f249488cdc75a45770726ecb443"
+    },
+    "rollout-episode-94.mp4": {
+      "bytes": 1083920,
+      "sha256": "e88a72100500cd2fec9742cbd27e42011f2f36c66728a527da311735cb0f2d3e"
+    },
+    "rollout-episode-95.mp4": {
+      "bytes": 1325001,
+      "sha256": "50a26a031314c7b015322248ebe70033e562a1d29df7c2a19f902acffa2956da"
+    },
+    "rollout-episode-96.mp4": {
+      "bytes": 1289079,
+      "sha256": "d8636a84ebff5c9c981ce66a9363642648e5baa8531611bc2dfe0a6ae082e119"
+    },
+    "rollout-episode-97.mp4": {
+      "bytes": 1281746,
+      "sha256": "b6f8018048a0ed9f19da40a86e9a1a4d7ea0be4862fe315be4bbfc19dfb8b8de"
+    },
+    "rollout-episode-98.mp4": {
+      "bytes": 1310992,
+      "sha256": "8db2bdc608292e4cb10799ed95204b7a615113f22a6165c02fb3326be13fa76b"
+    },
+    "rollout-episode-99.mp4": {
+      "bytes": 1240214,
+      "sha256": "54ac9f1d4ee879bc41d4cbbb401b72003295b074428c6a84a22d252be2d829bc"
+    }
+  },
+  "video_folder": "local-only/videos/task361_final_verified_20261029/seed111"
+}

@@ -1,13 +1,28 @@
 {
+  "all_observer_vectors_equal": true,
   "condition": "E2",
+  "evaluated_artifact": "The exact public checkpoint bytes were evaluated directly after metadata sanitization; tensor storage is identical to the original trained checkpoint.",
   "evaluation_seed": 42,
   "horizon": 800,
-  "num_rollouts_per_model": 100,
-  "stock_play_unchanged": true,
-  "evaluated_artifact": "Original trained checkpoint; public copy changes only two training path strings. Inference tensors identical; public metadata derivative not separately rolled out.",
   "models": {
     "101": {
+      "elapsed_seconds": 3468.529850495048,
+      "guard": {
+        "min_available_gib": 7.972076416015625,
+        "owned_pid_count": 104,
+        "owned_pid_exit_count": 104,
+        "peak_owned_rss_gib": 7.0582427978515625,
+        "protected_input_hashes_unchanged": true,
+        "remaining_owned_pid_count": 0,
+        "returncode": 0,
+        "signal_event_count": 0,
+        "state": "exited",
+        "threshold_available_gib": 3
+      },
       "learning_seed": 101,
+      "observer_vector_equal": true,
+      "public_checkpoint": "deliverables/toy2box_bc/seed101/model_epoch_2000.pth",
+      "public_checkpoint_sha256": "f0369c5c46f1cb557b564be1bd59c7224c82e467cc3f64607baa3d05771cfe1c",
       "successes": 18,
       "trial_results": [
         false,
@@ -111,15 +126,26 @@
         false,
         false
       ],
-      "observer_vector_equal": true,
-      "elapsed_seconds": 3682.8070477599977,
-      "video_count": 100,
-      "original_checkpoint_sha256": "ba8e8412080ea42857a9c26d18746292f90f079ecaae4060cac30f7667162e92",
-      "public_checkpoint_sha256": "f0369c5c46f1cb557b564be1bd59c7224c82e467cc3f64607baa3d05771cfe1c",
-      "tensor_storage_members_identical": true
+      "video_count": 100
     },
     "111": {
+      "elapsed_seconds": 3530.7240793079836,
+      "guard": {
+        "min_available_gib": 10.98892593383789,
+        "owned_pid_count": 104,
+        "owned_pid_exit_count": 104,
+        "peak_owned_rss_gib": 7.078113555908203,
+        "protected_input_hashes_unchanged": true,
+        "remaining_owned_pid_count": 0,
+        "returncode": 0,
+        "signal_event_count": 0,
+        "state": "exited",
+        "threshold_available_gib": 3
+      },
       "learning_seed": 111,
+      "observer_vector_equal": true,
+      "public_checkpoint": "deliverables/toy2box_bc/seed111/model_epoch_2000.pth",
+      "public_checkpoint_sha256": "6103aa6b8b95099078319a40bd3c0254c6c6ec9ce319f162dd0c74aa111eb4eb",
       "successes": 22,
       "trial_results": [
         false,
@@ -223,12 +249,14 @@
         false,
         false
       ],
-      "observer_vector_equal": true,
-      "elapsed_seconds": 3544.402796469978,
-      "video_count": 100,
-      "original_checkpoint_sha256": "65a57ab17fa062dce45625578f974d248c065b52e11ac1cb7fad206a2f716e13",
-      "public_checkpoint_sha256": "6103aa6b8b95099078319a40bd3c0254c6c6ec9ce319f162dd0c74aa111eb4eb",
-      "tensor_storage_members_identical": true
+      "video_count": 100
     }
-  }
+  },
+  "num_rollouts_per_model": 100,
+  "pooled_successes": 40,
+  "pooled_trials": 200,
+  "prior_evaluation": "artifacts/final_eval/original_checkpoint_20261028/summary.json",
+  "proof": "artifacts/final_eval/public_byte_evaluation_proof.json",
+  "schema_version": 2,
+  "stock_play_unchanged": true
 }
