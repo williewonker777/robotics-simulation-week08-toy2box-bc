@@ -1,0 +1,23 @@
+{
+  "created_from_existing_e2_only": true,
+  "created_utc": "2026-10-28T16:17:45.301943+00:00",
+  "generated": {
+    "episodes": 500,
+    "heading_error_abs_deg_median": 0.7144644387587462,
+    "heading_error_abs_deg_p75": 0.7333788801313403,
+    "height_mm_median": 12.547045802109217,
+    "preclose10_mean_eef_speed_m_s_median": 0.046253008767962456,
+    "reconstructed_target_min_interval_m_min": 0.00032101920805871487,
+    "xy_offset_mm_median": 3.704647222847343,
+    "xy_offset_mm_p75": 4.155230763824921
+  },
+  "generated_dataset": "datasets/toy2box_agibot_mimic_e2_natural_500.hdf5",
+  "generated_sha256": "d3b7120862a50a774c459a21200c1aaeb65628ec2c17b4068507d0d2b9117447",
+  "policy": {
+    "near": 167,
+    "no_near": 33,
+    "secured": 78,
+    "trials": 200,
+    "xy_mm_median": 12.73923200167833
+  }
+}

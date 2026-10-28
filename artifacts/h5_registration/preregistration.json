@@ -1,0 +1,183 @@
+{
+  "attempt_number": 2,
+  "condition": "E7",
+  "constraints": [
+    "no env/success/termination/observation/core changes",
+    "BC config seed only; restore exact seed101 bytes",
+    "previous data/model files read-only",
+    "one Kit;3GiB RAM guard;owned PIDs only",
+    "no package install/remote git",
+    "no generated observation rewriting",
+    "same stock matching;no yaw fold;D3scope6 flags unchanged",
+    "second and final new experiment; no H6 without new user approval",
+    "H4 Z offset disabled",
+    "all original ten open target positions preserved; no repeated stationary hold added"
+  ],
+  "definitions": {
+    "close": "action last<0 and previous>=0; before first sample open",
+    "policy_near_secured": "Unchanged claude_recovery_metrics.py trial near_closes and claude_transport_slip.py secured_rows first-secured criteria; no successful-only selection",
+    "precision": "Actual truck-frame EEF position at first close, XY norm mm and z mm; wrist/truck x-axis heading absolute error modulo180 degrees",
+    "preclose_speed": "Per-episode mean norm(diff(actual obs/eef_pos[k-10:k],axis=0)) / .05, 9 differences; cohort median; k first close onset",
+    "quality": "full episode dt.05 skip0 per-episode p95 then cohort median, no per-episode rejection"
+  },
+  "epochs": 2000,
+  "estimate_hours": {
+    "including_final_stock_video": [
+      5.5,
+      6.5
+    ],
+    "to_verdict": [
+      3.5,
+      4.5
+    ]
+  },
+  "evaluation": {
+    "horizon": 800,
+    "primary_comparison": "E2",
+    "rollouts_per_seed": 100,
+    "secondary_comparison": "E0",
+    "seed": 42,
+    "unpaired": true
+  },
+  "extra_corrections": 0,
+  "factor": {
+    "inserted_waypoints": 9,
+    "name": "pregrasp_time_dilation",
+    "open_waypoints": 10,
+    "profile": "After stock source selection and transform, in agibot/subtask0/toy_truck only, identify first negative-gripper waypoint. Insert one shortest-rotation SE(3) midpoint between each adjacent pair among the immediately preceding ten open-gripper waypoints. Preserve all original poses/fields/order, all subsequent close/lift/place and other subtasks. Clone only; no stationary hold, no yaw fold, Z offset zero. Fail if ten preceding open waypoints absent.",
+    "value": 2
+  },
+  "generated_count": 500,
+  "generation_plan": [
+    [
+      1,
+      50
+    ],
+    [
+      3,
+      50
+    ],
+    [
+      4,
+      50
+    ],
+    [
+      5,
+      50
+    ],
+    [
+      6,
+      50
+    ],
+    [
+      7,
+      50
+    ],
+    [
+      8,
+      50
+    ],
+    [
+      9,
+      50
+    ],
+    [
+      10,
+      50
+    ],
+    [
+      11,
+      49
+    ],
+    [
+      12,
+      50
+    ]
+  ],
+  "hypothesis": "H5",
+  "maximum_new_experiments": 2,
+  "mechanism": {
+    "M1": "Generated preclose10 mean EEF speed cohort median <=75% E2; generated close height within2mm, XY median<=E2+2mm and heading median<=E2+2deg; original waypoint geometry/order invariant and exactly9 midpoint insertions verified",
+    "M2": "All first-near-close policy truck-frame XY error median <=E2 median-3mm; no-near separately counted, not success-conditioned",
+    "M3": "First-secured/all-first-near-close proportion >78/167 with one-sided pooled two-proportion z p<.05; report first-secured absolute count and no-near fraction",
+    "baseline_acquisition": [
+      78,
+      167
+    ],
+    "baseline_generated": {
+      "episodes": 500,
+      "heading_error_abs_deg_median": 0.7144644387587462,
+      "heading_error_abs_deg_p75": 0.7333788801313403,
+      "height_mm_median": 12.547045802109217,
+      "preclose10_mean_eef_speed_m_s_median": 0.046253008767962456,
+      "reconstructed_target_min_interval_m_min": 0.00032101920805871487,
+      "xy_offset_mm_median": 3.704647222847343,
+      "xy_offset_mm_p75": 4.155230763824921
+    },
+    "baseline_policy_xy_mm_median": 12.73923200167833,
+    "policy_xy_mm_median_max": 9.73923200167833
+  },
+  "performance_selection": {
+    "alpha_one_sided": 0.025,
+    "if_pass": "E7",
+    "multiple_attempts": "Bonferroni budget for at most2 new experiments; each alpha.025",
+    "otherwise": "E2",
+    "pooled_successes_p_less_than_alpha_vs": {
+      "E0": [
+        39,
+        200
+      ],
+      "E2": [
+        40,
+        200
+      ]
+    },
+    "seed101_successes_gt": 18,
+    "seed111_successes_gt": 22,
+    "test": "unpaired pooled two-proportion z; scipy norm.sf; no continuity correction"
+  },
+  "pilot": {
+    "cohort_median_acceleration_p95_max": 1.5,
+    "cohort_median_jerk_p95_max": 40.0,
+    "generated_close_heading_deg_median_max": 2.714464438758746,
+    "generated_close_height_median_mm_range": [
+      10.547045802109217,
+      14.547045802109217
+    ],
+    "generated_close_xy_mm_median_max": 5.704647222847343,
+    "generated_lift_delay_median_steps_range": [
+      39.0,
+      41.0
+    ],
+    "goal": 50,
+    "max_added_waypoints": 9,
+    "max_reset_retry_ratio": 0.02,
+    "max_unrecovered_caps": 0,
+    "min_added_waypoints": 9,
+    "min_completed_success_rate": 0.4,
+    "min_expanded_translation_interval_m": 1e-06,
+    "no_per_episode_quality_filter": true,
+    "num_envs": 100,
+    "preclose10_mean_eef_speed_m_s_median_max": 0.03468975657597184,
+    "quality_dt": 0.05,
+    "quality_skip": 0,
+    "reuse_as_first_production_chunk": true,
+    "seed": 1,
+    "timeout_seconds": 1200
+  },
+  "registered_utc": "2026-10-28T16:19:04.788595+00:00",
+  "schema_version": 1,
+  "source": "datasets/toy2box_agibot_sources_e2_natural60_annotated.hdf5",
+  "source_count": 60,
+  "source_sha256": "14f6838ba5e68e54297a46b36ca41796addf4c1d85a006be0aeaf33a21e0862a",
+  "training_seeds": [
+    101,
+    111
+  ],
+  "verdict": {
+    "generation_gate_failure": "H5 feasibility failure; preserve outputs, no tuning/retry with different factor or relaxed gate; no third experiment",
+    "inconclusive": "all other outcomes; unavailable measures flagged separately, not auto-rejected alone",
+    "rejected": "pooled successes<=40 OR available M1/M2 fails OR available first-secured/near<=78/167",
+    "supported": "P AND M1 AND M2 AND M3"
+  }
+}
