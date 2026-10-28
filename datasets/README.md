@@ -12,8 +12,12 @@
 
 모든 시범은 20 Hz이며 `actions`, `obs`, `states`, `initial_state`를 포함합니다. annotated 파일은 해당 raw 파일과 episode가 대응하고, `datagen_info`는 각 episode의 `obs/` 아래에 있습니다.
 
+위 원본·source-pool·교정 HDF5는 모든 Mimic 생성 실험에서 **읽기 전용**으로 사용했습니다. 생성·병합 출력은 다른 새 경로에 쓰었으며 이 파일들을 후처리하거나 덮어쓰지 않았습니다.
+
 원본 40개의 트럭 초기 yaw는 |yaw| > 90°가 35개이고 ±(45~90)°가 0개입니다. E1의 추가 20개는 `[−90,−45)`, `[−45,0)`, `[0,45)`, `[45,90]`에 각각 5개입니다. E2의 추가 20개는 자연 분포입니다.
 
-학습용 Mimic 데이터 E0/E1/E2 500개와 E4 540개는 용량 때문에 포함하지 않았습니다. 생성·병합 명령과 E2의 seed 12 보충 규칙은 [재현 문서](../report/REPRODUCE.md)에 있습니다. source60 선택과 파일 지문은 `artifacts/h1pp_sources/`, 교정 수집 로그는 `artifacts/h3_corrections/`에서 확인할 수 있습니다.
+학습용 Mimic 데이터 E0/E1/E2 500개, E4 540개, H4/E6 500개, H5/E7 500개는 용량 때문에 포함하지 않았습니다. E6의 SHA-256은 `940eb1e86cc8c3a6430a800e3af590e905a2b0e0317c2c4efbbdd594c393f4a9`, E7은 `204ce1d2e784b8ba4f8978890f1bd388df45b6eaf596e84b1a33870e667e8095`입니다. 같은 E2 annotated source60을 읽기 전용으로 사용한 생성 명령, 고정 chunk 계획, seed 12 보충, 결정적 first-500 병합 규칙은 [재현 문서](../report/REPRODUCE.md)에 있습니다. H4·H5 생성·판정 요약은 `artifacts/experiments/{h4,h5}/`, source60 선택과 파일 지문은 `artifacts/h1pp_sources/`, 교정 수집 로그는 `artifacts/h3_corrections/`에서 확인할 수 있습니다.
 
 Isaac Lab의 `.gitignore`가 `datasets/`를 제외하므로 공개 HDF5는 명시적으로 추가했습니다. 무결성은 저장소 루트에서 `sha256sum -c artifacts/SHA256SUMS`로 확인합니다.
+
+최종 E2 모델은 배포한 체크포인트와 같은 SHA-256 바이트로 stock 100회·seed 검증을 완료했습니다. 데이터셋과 모델 검증 범위의 차이는 [`artifacts/final_eval/summary.json`](../artifacts/final_eval/summary.json)에서 확인하십시오.

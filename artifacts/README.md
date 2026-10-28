@@ -16,6 +16,10 @@
 | `experiments/verdicts_recomputed.{json,txt}` | 공개 자료만으로 다시 계산한 판정; 등록 결과와 일치 |
 | `experiments/final_selection.json` | H1″ inconclusive, H3 rejected, 최종 E2 선택과 원본 가중치 SHA |
 | `experiments/generation/{e1,e2}_manifest.json` | chunk seed·목표·성공·실패·정착 재시도·생성 수율 |
+| `h4_registration/` | H4/E6 결과 전에 고정한 계약과 E2 baseline |
+| `experiments/h4/` | H4/E6 생성 진단, 11/100·16/100, 합산 27/200, 기각 및 E2 유지 판정 |
+| `h5_registration/` | H5/E7 결과 전에 고정한 계약과 E2 baseline |
+| `experiments/h5/` | H5/E7 생성 진단, 15/100·25/100, 합산 40/200, 기각 및 E2 유지 판정 |
 | `final_eval/summary.json` | 최종 E2 두 원본 체크포인트의 stock 영상 평가 결과·소요 시간·observer vector 일치 |
 | `final_eval/seed{101,111}_stock_trials.txt` | stock `play.py`의 100개 Trial 줄과 `Trial Results` |
 
@@ -34,7 +38,7 @@
 | `mechanism/close_precision_{E0,E1,E2,E4}.txt` | 조건별 닫는 순간 방향·위치 요약 |
 | `h1_fold_pilot/` | 생성 단계에서 기각한 180° 대칭 접기 파일럿 |
 
-`transport_slip`과 `pregrasp_labels`는 사전 등록 판정에 사용하지 않은 사후 분석입니다. 특히 E4 성능 저하의 원인은 이 자료만으로 특정하지 않았습니다.
+`transport_slip`과 `pregrasp_labels`는 최초 사전 등록 판정에 사용하지 않은 사후 분석입니다. 특히 E4 성능 저하의 원인은 이 자료만으로 특정하지 않았습니다. H4·H5는 각각 별도의 결과 전 계약으로 판정했으며 둘 다 기각됐습니다. 추가 실험은 없으며, 통계적으로 확인된 성공률 개선 없이 E2를 최종 조건으로 유지했습니다.
 
 ## 그림·영상·무결성
 
@@ -44,8 +48,8 @@
 | `media/` | 과정별 MP4·GIF와 원본 구간을 기록한 manifest |
 | `SHA256SUMS` | 공개 파일의 SHA-256 목록 |
 
-분석 재계산 명령은 [`report/REPRODUCE.md`](../report/REPRODUCE.md#7-공개-자료로-분석-재계산)에 있습니다. 매 step rollout은 용량이 크므로 저장소 전체 무결성 확인에 시간이 걸릴 수 있습니다.
+분석 재계산 명령은 [`report/REPRODUCE.md`](../report/REPRODUCE.md#7-공개-자료로-분석-재계산)에 있습니다. 공개 `h4_verdict.py`·`h5_verdict.py`는 배포한 결과 JSON에 동결한 판정을 다시 적용할 수 있습니다. 매 step rollout은 용량이 크므로 저장소 전체 무결성 확인에 시간이 걸릴 수 있습니다. E6·E7 생성 HDF5는 용량 때문에 배포하지 않았고, 각 실험 디렉터리에 명령·생성 SHA·진단을 남겼습니다.
 
 E0에서는 stock `play.py`와 관측 평가기의 rollout별 성공 vector가 두 학습 seed 모두 100/100 일치했습니다. 최종 E2도 `EVAL_COMMANDS.txt`와 같은 강의 형식으로 원본 체크포인트를 평가했고, seed 101은 18/100, seed 111은 22/100으로 각각 관측 vector와 100/100 일치했습니다. 각 seed에서 영상 100개를 생성했습니다.
 
-최종 모델은 공개 전에 체크포인트 config의 머신 경로 두 개만 저장소 상대 경로로 바꿨습니다. `experiments/final_selection.json`은 평가한 원본 체크포인트 SHA를 유지하고, 공개 derivative SHA와 tensor 동일성 증명은 [`deliverables/toy2box_bc/metadata_sanitization.json`](../deliverables/toy2box_bc/metadata_sanitization.json)에 분리해 기록합니다.
+최종 모델은 공개 전에 체크포인트 config의 머신 경로 두 개만 저장소 상대 경로로 바꿨습니다. `experiments/final_selection.json`은 평가한 원본 체크포인트 SHA를 유지하고, 공개 derivative SHA와 tensor 동일성 증명은 [`deliverables/toy2box_bc/metadata_sanitization.json`](../deliverables/toy2box_bc/metadata_sanitization.json)에 분리해 기록합니다. 최종 stock 재검증은 공개 derivative와 같은 SHA-256 바이트를 사용했고 18/100·22/100, 영상 100개/model, 성공 vector 200/200 일치를 확인했습니다. stock `play.py`·BC config 지문도 이전 검증과 같았습니다. [`final_eval/summary.json`](final_eval/summary.json)은 이 체크포인트·vector 검증을 기록하며, clean install 재현성이나 step별 궤적 동등성을 주장하지 않습니다.

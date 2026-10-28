@@ -1,11 +1,18 @@
 # Toy2Box BC final E2 models - lecture play.py format
 # Run from the repository root with Isaac Sim 5.1.0, Isaac Lab 2.3.0 and robomimic 0.4.0.
 # Fixed evaluation: seed 42, 100 rollouts, horizon 800, video enabled.
+# H4/E6 was rejected at 27/200 (11,16). H5/E7 was rejected at 40/200 (15,25).
+# Neither experiment met its preregistered performance rule; no further experiment was run.
+# E2 remains the final registered selection. No statistically confirmed improvement was found.
 # Observer evaluation: seed101 18/100, seed111 22/100.
 # Stock-video confirmation on the original checkpoints: seed101 18/100, seed111 22/100;
 # both match the observer vector exactly for all 100 rollouts and produced 100 videos per seed.
-# The public files below are metadata-sanitized derivatives. Their tensor storage is byte-identical
-# to the evaluated originals, but the public derivatives were not separately run for 100 rollouts.
+# The public files below are metadata-sanitized derivatives. A final stock run used checkpoint
+# bytes with exactly the published SHA-256 values: seed101 18/100, seed111 22/100, 100 videos
+# per model, and all 200 success-vector entries equal to the observer evaluation. The stock
+# play.py and BC config fingerprints matched the earlier stock run.
+# This verifies the checkpoint bytes and success vectors, not clean-install reproducibility or
+# step-by-step trajectory equivalence.
 # Published trial lines and the summary are under artifacts/final_eval/.
 # Public-file SHA-256:
 # seed101 f0369c5c46f1cb557b564be1bd59c7224c82e467cc3f64607baa3d05771cfe1c

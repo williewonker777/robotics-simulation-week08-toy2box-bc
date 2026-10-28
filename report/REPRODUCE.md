@@ -8,7 +8,7 @@ export TERM=xterm
 mkdir -p work/{targeted,natural,corrections,generation,analysis,videos}
 ```
 
-공개 저장소에는 원본·확장 시범, 교정 데이터, 평가 rollout, 최종 가중치가 들어 있습니다. 용량이 큰 Mimic 생성 데이터 E0/E1/E2/E4는 포함하지 않았습니다.
+공개 저장소에는 원본·확장 시범, 교정 데이터, 평가 rollout, 최종 가중치가 들어 있습니다. 용량이 큰 Mimic 생성 데이터 E0/E1/E2/E4/E6/E7은 포함하지 않았습니다. 공개 `datasets/`의 원본·source-pool·교정 파일은 모든 생성 조건에서 읽기 전용으로 사용하고, 출력은 항상 `work/`의 새 경로에 쓰십시오.
 
 ## 1. 원본 40개 수집
 
@@ -243,7 +243,7 @@ with h5py.File(dst, "r") as check:
 PY
 ```
 
-고정 계획 전체를 실행한 생성 결과는 성공 550/846이며, 위 결정적 순서의 앞 500개만 E6 학습에 사용합니다. BC는 기존 설정에서 학습 seed만 101·111로 바꾸고 각각 2000 epoch를 실행합니다.
+고정 계획 전체를 실행한 생성 결과는 성공 550/846이며, 위 결정적 순서의 앞 500개만 E6 학습에 사용합니다. 생성 데이터는 배포하지 않았고 SHA-256은 `940eb1e86cc8c3a6430a800e3af590e905a2b0e0317c2c4efbbdd594c393f4a9`입니다. BC는 기존 설정에서 학습 seed만 101·111로 바꾸고 각각 2000 epoch를 실행합니다.
 
 ```bash
 DATASET=./work/toy2box_agibot_mimic_e6_lowpick_500.hdf5
@@ -321,7 +321,9 @@ CHECKPOINT="${CHECKPOINT:?set CHECKPOINT to the E7 seed 101 checkpoint}"
   --num_rollouts 100 --horizon 800 --seed 42 --headless
 ```
 
-BC는 2000 epoch이고 학습 JSON에서 seed 101·111만 변경합니다. 각 학습 뒤에는 원래 seed 101 JSON 바이트를 복원합니다. 평가는 seed 42, seed별 100회, horizon 800, headless로 고정했습니다. H5 평가가 완료되기 전이므로 여기서는 E7 성공률이나 최종 선택을 기록하지 않습니다. 현재 선택은 E2이며 사전 등록한 H5 성능 기준을 통과할 때만 E7 두 seed로 교체합니다.
+BC는 2000 epoch이고 학습 JSON에서 seed 101·111만 변경합니다. 각 학습 뒤에는 원래 seed 101 JSON 바이트를 복원합니다. 평가는 seed 42, seed별 100회, horizon 800, headless로 고정했습니다.
+
+E7 생성은 550/1042 성공이었고 앞 500개 데이터의 SHA-256은 `204ce1d2e784b8ba4f8978890f1bd388df45b6eaf596e84b1a33870e667e8095`입니다. 이 생성 데이터도 배포하지 않았습니다. E7 평가는 seed 101이 15/100, seed 111이 25/100, 합산 40/200이었습니다. E2 40/200을 넘지 못했고 seed 101 개별 기준도 통과하지 못했으며 M1은 통과, M2·M3는 실패해 H5는 **기각**됐습니다. 세부 결과는 `artifacts/experiments/h5/{h5_results.json,summary.md}`에 있습니다. 허용된 새 실험 두 번을 모두 완료했으며 추가 H6는 실행하지 않습니다. 사전 등록 선택 규칙에 따라 최종 조건은 E2입니다.
 
 ## 5. E4 데이터와 BC 학습
 
@@ -344,7 +346,7 @@ DATASET=./work/toy2box_agibot_mimic_e2_natural_500.hdf5
   --algo bc --dataset "$DATASET"
 ```
 
-각 학습 뒤 JSON을 원래 seed 101 바이트로 복원했습니다. 공개 가중치는 H4 기각 후에도 유지된 E2 모델입니다. H5는 결과 전에 동결한 규칙으로 평가 중이며, 판정 완료 전에는 E2 선택을 바꾸지 않습니다.
+각 학습 뒤 JSON을 원래 seed 101 바이트로 복원했습니다. H4는 27/200, H5는 40/200으로 둘 다 사전 등록 성능 기준을 통과하지 못했습니다. 통계적으로 확인된 성공률 개선은 없으며 공개 가중치와 최종 선택은 E2로 확정했습니다. 추가 실험은 실행하지 않습니다.
 
 공개 체크포인트는 학습 머신 경로를 제거한 **metadata-sanitized derivative**입니다. 원본에서 `train.data`와 `train.output_dir` 두 config 값만 저장소 상대 경로로 바꿨습니다. tensor storage bytes와 그 밖의 decoded 구조는 원본과 같고, `torch.load`와 robomimic policy load를 확인했습니다. 공개 파일 자체의 SHA-256은 seed 101이 `f0369c5c46f1cb557b564be1bd59c7224c82e467cc3f64607baa3d05771cfe1c`, seed 111이 `6103aa6b8b95099078319a40bd3c0254c6c6ec9ce319f162dd0c74aa111eb4eb`입니다. 원본·공개 SHA와 tensor member 증명은 [`metadata_sanitization.json`](../deliverables/toy2box_bc/metadata_sanitization.json)에 있습니다.
 
@@ -361,7 +363,9 @@ DATASET=./work/toy2box_agibot_mimic_e2_natural_500.hdf5
   --num_rollouts 100 --horizon 800 --seed 42 --headless
 ```
 
-관측 평가 결과는 E2 seed 101이 18/100, seed 111이 22/100입니다. 원본 체크포인트의 stock 영상 평가도 각각 18/100(3682.807초), 22/100(3544.403초)이며 두 seed 모두 관측 평가와 rollout vector가 100/100 정확히 일치했습니다. seed마다 영상 100개를 만들었습니다. 공개 trial 줄과 요약은 [`artifacts/final_eval/`](../artifacts/final_eval/)에 있습니다. 이 stock 실행은 metadata sanitization 전 원본을 사용했습니다. 공개 derivative는 tensor가 같고 robomimic load가 통과했지만, 공개 파일 자체로 100회 전체 rollout을 별도로 반복하지는 않았습니다. 조건 간 정책은 GMM sampling과 reset이 같은 난수열을 공유해 배치가 달라질 수 있으므로 짝지어 비교하지 않았습니다.
+관측 평가 결과는 E2 seed 101이 18/100, seed 111이 22/100입니다. metadata sanitization 전 원본 체크포인트의 stock 영상 평가도 각각 18/100(3682.807초), 22/100(3544.403초)이며 두 seed 모두 관측 평가와 rollout vector가 100/100 정확히 일치했습니다.
+
+최종으로 공개한 체크포인트와 **SHA-256이 정확히 같은 바이트**를 이용해 stock `play.py`를 다시 실행했습니다. seed 101은 18/100, seed 111은 22/100이었고 각 model에서 영상 100개를 생성했으며, 총 200회의 성공 vector가 관측 평가와 모두 일치했습니다. stock `play.py`와 BC config의 지문도 이전 stock 검증과 같았습니다. 공개 trial 줄과 요약은 [`artifacts/final_eval/summary.json`](../artifacts/final_eval/summary.json)에 있습니다. 이 증명은 공개 체크포인트 바이트·stock 성공 수·성공 vector를 확인하지만, 새 clean install에서의 재현성이나 매 step 궤적의 수치적 동등성까지 증명하지는 않습니다. 조건 간 정책은 GMM sampling과 reset이 같은 난수열을 공유해 배치가 달라질 수 있으므로 짝지어 비교하지 않았습니다.
 
 ## 7. 공개 자료로 분석 재계산
 
@@ -375,6 +379,14 @@ python "$A/verdicts.py" --root . --json ./work/analysis/verdicts.json \
   > ./work/analysis/verdicts.txt
 python "$A/summarize_results.py" artifacts/experiments/registered_results.json \
   > ./work/analysis/registered_summary.txt
+
+# H4·H5의 공개 결과에 사전 등록 판정을 다시 적용
+python "$A/h4_verdict.py" \
+  --recorded-result artifacts/experiments/h4/h4_results.json \
+  --output ./work/analysis/h4_verdict.json
+python "$A/h5_verdict.py" \
+  --recorded-result artifacts/experiments/h5/h5_results.json \
+  --output ./work/analysis/h5_verdict.json
 
 # 회복과 운반 중 미끄러짐
 python "$A/recovery_metrics.py" \
@@ -416,7 +428,10 @@ env -u PYTHONPATH PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 python -m pytest -q \
   scripts/tools/tests/test_collect_toy2box_corrections.py \
   scripts/tools/tests/test_toy2box_correction_logic.py \
   scripts/tools/tests/test_evaluate_toy2box_bc.py \
-  scripts/tools/tests/test_classify_toy2box_failures.py
+  scripts/tools/tests/test_classify_toy2box_failures.py \
+  scripts/tools/tests/test_toy2box_pregrasp_dilation.py \
+  scripts/tools/tests/test_h4_verdict.py \
+  scripts/tools/tests/test_h5_verdict.py
 ```
 
 GPU 물리 시뮬레이션과 GMM sampling 때문에 같은 seed라도 생성·학습 결과가 비트 단위로 같지 않을 수 있습니다. 원자료와 최종 파일의 무결성 기준은 `artifacts/SHA256SUMS`입니다.
