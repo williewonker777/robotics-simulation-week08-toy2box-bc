@@ -1,11 +1,19 @@
-# Toy2Box BC final models - evaluation commands (lecture play.py format)
-# Run from the repository root (Isaac Sim 5.1.0, Isaac Lab 2.3.0, robomimic 0.4.0).
-# Self-check protocol: evaluation seed 42, 100 rollouts, horizon 800.
-# Report: success rate per model and mean +/- sample standard deviation over the two training seeds.
-# NOTE (2026-10-27): the final checkpoints are added when the H1'' experiment finishes.
+# Toy2Box BC final E2 models - lecture play.py format
+# Run from the repository root with Isaac Sim 5.1.0, Isaac Lab 2.3.0 and robomimic 0.4.0.
+# Fixed evaluation: seed 42, 100 rollouts, horizon 800, video enabled.
+# Observer evaluation: seed101 18/100, seed111 22/100.
+# Stock-video confirmation on the original checkpoints: seed101 18/100, seed111 22/100;
+# both match the observer vector exactly for all 100 rollouts and produced 100 videos per seed.
+# The public files below are metadata-sanitized derivatives. Their tensor storage is byte-identical
+# to the evaluated originals, but the public derivatives were not separately run for 100 rollouts.
+# Published trial lines and the summary are under artifacts/final_eval/.
+# Public-file SHA-256:
+# seed101 f0369c5c46f1cb557b564be1bd59c7224c82e467cc3f64607baa3d05771cfe1c
+# seed111 6103aa6b8b95099078319a40bd3c0254c6c6ec9ce319f162dd0c74aa111eb4eb
+# See deliverables/toy2box_bc/metadata_sanitization.json for original hashes and proofs.
 
 # training seed 101
-./isaaclab.sh -p scripts/imitation_learning/robomimic/play.py --task Isaac-Place-Toy2Box-Agibot-Right-Arm-RmpFlow-v0 --checkpoint ./deliverables/toy2box_bc/seed101/model_epoch_2000.pth --num_rollouts 100 --horizon 800 --video --video_length 1000 --video_folder ./videos/eval_seed101 --seed 42 --headless
+./isaaclab.sh -p scripts/imitation_learning/robomimic/play.py --task Isaac-Place-Toy2Box-Agibot-Right-Arm-RmpFlow-v0 --checkpoint ./deliverables/toy2box_bc/seed101/model_epoch_2000.pth --num_rollouts 100 --horizon 800 --video --video_length 1000 --video_folder ./videos/final_e2_seed101 --seed 42 --headless
 
 # training seed 111
-./isaaclab.sh -p scripts/imitation_learning/robomimic/play.py --task Isaac-Place-Toy2Box-Agibot-Right-Arm-RmpFlow-v0 --checkpoint ./deliverables/toy2box_bc/seed111/model_epoch_2000.pth --num_rollouts 100 --horizon 800 --video --video_length 1000 --video_folder ./videos/eval_seed111 --seed 42 --headless
+./isaaclab.sh -p scripts/imitation_learning/robomimic/play.py --task Isaac-Place-Toy2Box-Agibot-Right-Arm-RmpFlow-v0 --checkpoint ./deliverables/toy2box_bc/seed111/model_epoch_2000.pth --num_rollouts 100 --horizon 800 --video --video_length 1000 --video_folder ./videos/final_e2_seed111 --seed 42 --headless

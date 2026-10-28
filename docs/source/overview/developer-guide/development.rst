@@ -104,7 +104,7 @@ As an example, the following ``extension.toml`` file specifies the dependencies 
 
    # ROS workspace
    # note: if this path is relative, it is relative to the extension directory's root
-   ros_ws = "/home/user/catkin_ws"
+   ros_ws = "/path/to/catkin_ws"
 
 These dependencies are installed using the ``install_deps.py`` script provided in the ``tools`` directory.
 To install all dependencies for all extensions, run the following command:

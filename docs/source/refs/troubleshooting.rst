@@ -44,7 +44,7 @@ you run the standalone script. The log file location is printed at the start of 
 
 .. code:: bash
 
-    [INFO] Using python from: /home/${USER}/git/IsaacLab/_isaac_sim/python.sh
+    [INFO] Using python from: $HOME/git/IsaacLab/_isaac_sim/python.sh
     ...
     Passing the following args to the base kit application:  []
     Loading user config located at: '.../data/Kit/Isaac-Sim/2023.1/user.config.json'
