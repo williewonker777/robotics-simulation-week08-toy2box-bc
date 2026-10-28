@@ -713,6 +713,7 @@ def make_settled_generator(
     enable_source_audit: bool = False,
     enable_truck_yaw_fold: bool = False,
     truck_yaw_fold_logger: JsonlLog | None = None,
+    truck_pick_z_offset_m: float = 0.0,
 ) -> type:
     """Create the dynamic subclass installed into the stock generation module."""
 
@@ -723,6 +724,58 @@ def make_settled_generator(
                 if truck_yaw_fold_logger is None:
                     raise ConfigurationError("truck yaw folding requires its audit logger")
                 _fold_source_truck_poses(self)
+
+        def _apply_truck_pick_z_offset(
+            self,
+            trajectory: Any,
+            *,
+            env_id: int,
+            eef_name: str,
+            subtask_ind: int,
+        ) -> Any:
+            if truck_pick_z_offset_m == 0.0:
+                return trajectory
+            if eef_name != "agibot" or subtask_ind != 0:
+                return trajectory
+            object_ref = self.env_cfg.subtask_configs[eef_name][subtask_ind].object_ref
+            if object_ref != "toy_truck":
+                return trajectory
+
+            before_z: list[float] = []
+            after_z: list[float] = []
+            # WaypointTrajectory asserts on out-of-range __getitem__ instead of
+            # raising IndexError, so Python fallback iteration is not supported.
+            for index in range(len(trajectory)):
+                waypoint = trajectory[index]
+                original_pose = waypoint.pose
+                shifted_pose = original_pose.clone()
+                before_z.append(float(original_pose[2, 3].item()))
+                shifted_pose[2, 3] += truck_pick_z_offset_m
+                waypoint.pose = shifted_pose
+                after_z.append(float(shifted_pose[2, 3].item()))
+            coordinator.logger.write(
+                {
+                    "record_type": "truck_pick_z_offset",
+                    "env_id": env_id,
+                    "attempt": coordinator.attempts.get(env_id),
+                    "subtask": f"{eef_name}/{subtask_ind}",
+                    "subtask_index": subtask_ind,
+                    "eef_name": eef_name,
+                    "object_ref": object_ref,
+                    "shift_m": truck_pick_z_offset_m,
+                    "waypoint_count": len(before_z),
+                    "first_z_before_m": before_z[0] if before_z else None,
+                    "first_z_after_m": after_z[0] if after_z else None,
+                    "last_z_before_m": before_z[-1] if before_z else None,
+                    "last_z_after_m": after_z[-1] if after_z else None,
+                    "application_count": 1,
+                    "applied_exactly_once": all(
+                        math.isclose(after - before, truck_pick_z_offset_m, abs_tol=1e-6)
+                        for before, after in zip(before_z, after_z)
+                    ),
+                }
+            )
+            return trajectory
 
         def generate_eef_subtask_trajectory(
             self,
@@ -735,13 +788,19 @@ def make_settled_generator(
         ) -> Any:
             audit_context_enabled = enable_source_audit or enable_truck_yaw_fold
             if not audit_context_enabled:
-                return super().generate_eef_subtask_trajectory(
+                trajectory = super().generate_eef_subtask_trajectory(
                     env_id=env_id,
                     eef_name=eef_name,
                     subtask_ind=subtask_ind,
                     all_randomized_subtask_boundaries=all_randomized_subtask_boundaries,
                     runtime_subtask_constraints_dict=runtime_subtask_constraints_dict,
                     selected_src_demo_inds=selected_src_demo_inds,
+                )
+                return self._apply_truck_pick_z_offset(
+                    trajectory,
+                    env_id=env_id,
+                    eef_name=eef_name,
+                    subtask_ind=subtask_ind,
                 )
             if hasattr(self, "_source_selection_context"):
                 raise ConfigurationError("nested source-selection audit context")
@@ -789,7 +848,7 @@ def make_settled_generator(
 
                 self.env.get_object_poses = folded_get_object_poses
             try:
-                return super().generate_eef_subtask_trajectory(
+                trajectory = super().generate_eef_subtask_trajectory(
                     env_id=env_id,
                     eef_name=eef_name,
                     subtask_ind=subtask_ind,
@@ -804,6 +863,12 @@ def make_settled_generator(
                     else:
                         delattr(self.env, "get_object_poses")
                 del self._source_selection_context
+            return self._apply_truck_pick_z_offset(
+                trajectory,
+                env_id=env_id,
+                eef_name=eef_name,
+                subtask_ind=subtask_ind,
+            )
 
         def select_source_demo(
             self,
@@ -1383,6 +1448,7 @@ def execute(
                 "grasp_offset_override_enabled": settings.grasp_offset_range is not None,
                 "per_env_rmp_reset_enabled": settings.per_env_rmp_reset,
                 "settle_reset_retries": settings.settle_reset_retries,
+                "truck_pick_z_offset_m": settings.truck_pick_z_offset_m,
                 "settle_retry_ratio_limit": MAX_RESET_RETRY_RATIO,
                 "output_label": paths["output"].name,
                 "box_transition_metrics": {
@@ -1434,6 +1500,7 @@ def execute(
                 enable_source_audit=settings.enable_box_reselection,
                 enable_truck_yaw_fold=getattr(settings, "truck_yaw_fold", False),
                 truck_yaw_fold_logger=fold_logger,
+                truck_pick_z_offset_m=settings.truck_pick_z_offset_m,
             )
             main_globals: dict[str, Any] | None = None
             original_setup_env_config: Any = None
@@ -1522,6 +1589,7 @@ def parse_args(argv: Iterable[str] | None = None) -> tuple[argparse.Namespace, l
     parser.add_argument("--settle_reset_retries", type=int, default=0)
     parser.add_argument("--truck_yaw_fold", action="store_true")
     parser.add_argument("--truck_yaw_fold_log", default=None)
+    parser.add_argument("--truck_pick_z_offset_m", type=float, default=0.0)
     settings, original_args = parser.parse_known_args(arguments)
     for name in ("settle_linear_velocity", "settle_angular_velocity"):
         value = getattr(settings, name)
@@ -1620,6 +1688,19 @@ def parse_args(argv: Iterable[str] | None = None) -> tuple[argparse.Namespace, l
         parser.error("--truck_yaw_fold requires --truck_yaw_fold_log")
     if settings.truck_yaw_fold_log is not None and not settings.truck_yaw_fold:
         parser.error("--truck_yaw_fold_log requires --truck_yaw_fold")
+    if settings.truck_pick_z_offset_m not in (0.0, -0.005):
+        parser.error("--truck_pick_z_offset_m must be 0 or the registered H4 value -0.005")
+    if settings.truck_pick_z_offset_m != 0.0:
+        if not (
+            settings.per_env_rmp_reset
+            and settings.settle_reset_retries == 2
+            and settings.chunk_seed is not None
+            and not settings.truck_yaw_fold
+        ):
+            parser.error(
+                "nonzero --truck_pick_z_offset_m requires the stock nonfold D3 regime, "
+                "two settling retries, and an explicit chunk seed"
+            )
     return settings, original_args
 
 

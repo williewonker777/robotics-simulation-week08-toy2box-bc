@@ -677,6 +677,7 @@ def wrapper_settings(**overrides):
         "grasp_offset_range": None,
         "per_env_rmp_reset": False,
         "settle_reset_retries": 0,
+        "truck_pick_z_offset_m": 0.0,
     }
     values.update(overrides)
     return types.SimpleNamespace(**values)
@@ -1227,6 +1228,133 @@ def test_source_selection_audit_preserves_parent_arguments_and_result(tmp_path):
     }
 
 
+def test_truck_pick_z_offset_off_preserves_trajectory_and_pose_identity(tmp_path):
+    source_pose = torch.eye(4, dtype=torch.float64)
+    trajectory = [types.SimpleNamespace(pose=source_pose)]
+
+    class TrajectoryBase:
+        def __init__(self, env):
+            self.env = env
+            self.calls = []
+
+        def generate_eef_subtask_trajectory(self, **kwargs):
+            self.calls.append(kwargs)
+            return trajectory
+
+    log, stream = logger(tmp_path)
+    coordinator = SETTLED.SettlingCoordinator(log, torch, 0.001, 0.02, 2, 10)
+    generator = SETTLED.make_settled_generator(TrajectoryBase, coordinator)(object())
+    arguments = {
+        "env_id": 2,
+        "eef_name": "agibot",
+        "subtask_ind": 0,
+        "all_randomized_subtask_boundaries": {"same": True},
+        "runtime_subtask_constraints_dict": {"same": "constraints"},
+        "selected_src_demo_inds": {"agibot": 4},
+    }
+
+    result = generator.generate_eef_subtask_trajectory(**arguments)
+    stream.close()
+
+    assert result is trajectory
+    assert result[0].pose is source_pose
+    assert generator.calls == [arguments]
+    assert (tmp_path / "settling.jsonl").read_text() == ""
+
+
+def test_truck_pick_z_offset_clones_pick_poses_and_leaves_box_and_source_unchanged(tmp_path):
+    source_pool_poses = torch.eye(4, dtype=torch.float64).repeat(3, 1, 1)
+    source_pool_poses[:, 0, 3] = torch.tensor([0.1, 0.2, 0.3], dtype=torch.float64)
+    source_pool_poses[:, 1, 3] = torch.tensor([-0.2, -0.1, 0.0], dtype=torch.float64)
+    source_pool_poses[:, 2, 3] = torch.tensor([0.40, 0.41, 0.42], dtype=torch.float64)
+    source_before = source_pool_poses.clone()
+    class BoundedTrajectory:
+        # Match the actual Mimic WaypointTrajectory indexing contract.
+        def __init__(self, waypoints):
+            self.waypoints = waypoints
+
+        def __len__(self):
+            return len(self.waypoints)
+
+        def __getitem__(self, index):
+            assert 0 <= index < len(self.waypoints)
+            return self.waypoints[index]
+
+    pick_trajectory = BoundedTrajectory([
+        types.SimpleNamespace(pose=source_pool_poses[index], gripper_action=-1, noise=0.0)
+        for index in range(3)
+    ])
+    box_pose = torch.eye(4, dtype=torch.float64)
+    box_pose[2, 3] = 0.9
+    box_trajectory = [types.SimpleNamespace(pose=box_pose)]
+
+    class TrajectoryBase:
+        def __init__(self, env):
+            self.env = env
+            self.env_cfg = toy2box_config()
+            self.calls = []
+
+        def generate_eef_subtask_trajectory(self, **kwargs):
+            self.calls.append(kwargs)
+            return pick_trajectory if kwargs["subtask_ind"] == 0 else box_trajectory
+
+    log, stream = logger(tmp_path)
+    coordinator = SETTLED.SettlingCoordinator(log, torch, 0.001, 0.02, 2, 10)
+    coordinator.attempts[6] = 12
+    generator = SETTLED.make_settled_generator(
+        TrajectoryBase,
+        coordinator,
+        truck_pick_z_offset_m=-0.005,
+    )(object())
+    common = {
+        "env_id": 6,
+        "eef_name": "agibot",
+        "all_randomized_subtask_boundaries": {},
+        "runtime_subtask_constraints_dict": {},
+        "selected_src_demo_inds": {"agibot": 1},
+    }
+
+    pick_result = generator.generate_eef_subtask_trajectory(subtask_ind=0, **common)
+    box_result = generator.generate_eef_subtask_trajectory(subtask_ind=1, **common)
+    stream.close()
+
+    assert pick_result is pick_trajectory
+    assert box_result is box_trajectory
+    assert box_result[0].pose is box_pose
+    assert torch.equal(box_result[0].pose, box_pose)
+    assert torch.equal(source_pool_poses, source_before)
+    for index in range(len(pick_result)):
+        waypoint = pick_result[index]
+        assert waypoint.gripper_action == -1 and waypoint.noise == 0.0
+        assert waypoint.pose is not source_pool_poses[index]
+        expected = source_before[index].clone()
+        expected[2, 3] -= 0.005
+        assert torch.equal(waypoint.pose, expected)
+        assert torch.equal(waypoint.pose[:2], source_before[index, :2])
+        assert torch.equal(waypoint.pose[3], source_before[index, 3])
+
+    records = [json.loads(line) for line in (tmp_path / "settling.jsonl").read_text().splitlines()]
+    assert records == [
+        {
+            "application_count": 1,
+            "applied_exactly_once": True,
+            "attempt": 12,
+            "eef_name": "agibot",
+            "env_id": 6,
+            "first_z_after_m": pytest.approx(0.395),
+            "first_z_before_m": pytest.approx(0.4),
+            "last_z_after_m": pytest.approx(0.415),
+            "last_z_before_m": pytest.approx(0.42),
+            "object_ref": "toy_truck",
+            "record_type": "truck_pick_z_offset",
+            "shift_m": -0.005,
+            "subtask": "agibot/0",
+            "subtask_index": 0,
+            "waypoint_count": 3,
+        }
+    ]
+
+
 def test_source_selection_audit_logging_error_fails_closed():
     class FailingLogger:
         def write(self, record):
@@ -1561,6 +1689,7 @@ def test_wrapper_passes_original_argv_flushes_summary_then_closes_once(tmp_path,
         assert records[0]["settle_eef_velocity"] == pytest.approx(0.01)
         assert records[0]["per_env_rmp_reset_enabled"] is False
         assert records[0]["settle_reset_retries"] == 0
+        assert records[0]["truck_pick_z_offset_m"] == 0.0
         assert records[0]["settle_retry_ratio_limit"] == pytest.approx(0.02)
         assert records[0]["output_label"] == "new.hdf5"
         assert records[0]["grasp_offset_override_enabled"] is False
@@ -1679,6 +1808,7 @@ def test_parse_args_keeps_stock_arguments_order_and_validates_positive():
     assert settings.grasp_offset_range is None
     assert settings.per_env_rmp_reset is False
     assert settings.settle_reset_retries == 0
+    assert settings.truck_pick_z_offset_m == 0.0
     assert remaining == ["--task", "x", "--num_envs", "100", "--headless"]
     with pytest.raises(SystemExit):
         SETTLED.parse_args(["--settling_log", "log", "--settle_max_steps", "0"])
@@ -1767,6 +1897,39 @@ def test_parse_args_keeps_stock_arguments_order_and_validates_positive():
     assert d3_retry.settle_reset_retries == 2
     assert d3_retry.chunk_seed == 4
     assert remaining == []
+    h4, remaining = SETTLED.parse_args(
+        [
+            *d3_args,
+            "--chunk_seed", "4",
+            "--settle_reset_retries", "2",
+            "--truck_pick_z_offset_m", "-0.005",
+        ]
+    )
+    assert h4.truck_pick_z_offset_m == pytest.approx(-0.005)
+    assert remaining == []
+    for invalid_offset in ("-0.004", "0.001", "nan"):
+        with pytest.raises(SystemExit):
+            SETTLED.parse_args(
+                [
+                    *d3_args,
+                    "--chunk_seed", "4",
+                    "--settle_reset_retries", "2",
+                    "--truck_pick_z_offset_m", invalid_offset,
+                ]
+            )
+    with pytest.raises(SystemExit):
+        SETTLED.parse_args(["--settling_log", "log", "--truck_pick_z_offset_m", "-0.005"])
+    with pytest.raises(SystemExit):
+        SETTLED.parse_args(
+            [
+                *d3_args,
+                "--chunk_seed", "4",
+                "--settle_reset_retries", "2",
+                "--truck_yaw_fold",
+                "--truck_yaw_fold_log", "fold.jsonl",
+                "--truck_pick_z_offset_m", "-0.005",
+            ]
+        )
     with pytest.raises(SystemExit):
         SETTLED.parse_args([*d3_args, "--settle_reset_retries", "2"])
     for value in ("-1", "1", "3"):

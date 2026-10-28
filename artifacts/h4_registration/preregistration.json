@@ -1,0 +1,154 @@
+{
+  "schema_version": 1,
+  "hypothesis": "H4",
+  "condition": "E6",
+  "registered_utc": "2026-10-28T12:42:49.486990+00:00",
+  "factor": {
+    "name": "truck_pick_z_offset_m",
+    "value": -0.005,
+    "profile": "constant world-Z translation of every returned agibot/subtask0/toy_truck waypoint, after source selection and object transform, before merging/execution; clone poses; all other fields and subtask1(box) unchanged"
+  },
+  "source": "datasets/toy2box_agibot_sources_e2_natural60_annotated.hdf5",
+  "source_sha256": "14f6838ba5e68e54297a46b36ca41796addf4c1d85a006be0aeaf33a21e0862a",
+  "source_count": 60,
+  "extra_corrections": 0,
+  "generated_count": 500,
+  "generation_plan": [
+    [
+      1,
+      50
+    ],
+    [
+      3,
+      50
+    ],
+    [
+      4,
+      50
+    ],
+    [
+      5,
+      50
+    ],
+    [
+      6,
+      50
+    ],
+    [
+      7,
+      50
+    ],
+    [
+      8,
+      50
+    ],
+    [
+      9,
+      50
+    ],
+    [
+      10,
+      50
+    ],
+    [
+      11,
+      49
+    ],
+    [
+      12,
+      50
+    ]
+  ],
+  "pilot": {
+    "seed": 1,
+    "goal": 50,
+    "num_envs": 100,
+    "timeout_seconds": 1200,
+    "reuse_as_first_production_chunk": true,
+    "min_completed_success_rate": 0.4,
+    "max_unrecovered_caps": 0,
+    "max_reset_retry_ratio": 0.02,
+    "generated_close_height_median_mm_range": [
+      5.0,
+      10.0
+    ],
+    "min_generated_height_reduction_mm": 3.0,
+    "generated_lift_delay_median_steps_range": [
+      39.0,
+      41.0
+    ],
+    "cohort_median_acceleration_p95_max": 1.5,
+    "cohort_median_jerk_p95_max": 40.0,
+    "quality_skip": 0,
+    "quality_dt": 0.05,
+    "no_per_episode_quality_filter": true
+  },
+  "training_seeds": [
+    101,
+    111
+  ],
+  "epochs": 2000,
+  "evaluation": {
+    "seed": 42,
+    "rollouts_per_seed": 100,
+    "horizon": 800,
+    "primary_comparison": "E2",
+    "secondary_comparison": "E0",
+    "unpaired": true
+  },
+  "performance_selection": {
+    "alpha_one_sided": 0.025,
+    "multiple_attempts": "Bonferroni budget for at most2 new experiments; each alpha.025",
+    "seed101_successes_gt": 18,
+    "seed111_successes_gt": 22,
+    "pooled_successes_p_less_than_alpha_vs": {
+      "E2": [
+        40,
+        200
+      ],
+      "E0": [
+        39,
+        200
+      ]
+    },
+    "test": "unpaired pooled two-proportion z; scipy norm.sf; no continuity correction",
+    "if_pass": "E6",
+    "otherwise": "E2"
+  },
+  "mechanism": {
+    "M1": "successful generated first-close truck-frame actual EEF z median <= E2 median-3mm and <10mm",
+    "M2": "all first-near-close rollout truck-frame actual EEF z median <= E2 median-3mm; no-near-close trials excluded and separately counted",
+    "M3": "first-secured slip proportion below E2 42/78 at one-sided pooled two-proportion z p<.05",
+    "baseline_generated_close_height_mm": 12.547045802109217,
+    "baseline_policy_close_height_mm": 13.630639760921525,
+    "baseline_slip": [
+      42,
+      78
+    ]
+  },
+  "verdict": {
+    "supported": "performance_selection passes AND M1 AND M2 AND M3",
+    "rejected": "pooled successes <=40 OR M1 fails OR M2 fails OR first-secured slip rate >=42/78",
+    "inconclusive": "all other outcomes; performance selection remains separate",
+    "generation_gate_failure": "H4 implementation/feasibility failure; no training, preserve evidence, no delta tuning under H4"
+  },
+  "estimate_hours": {
+    "to_verdict": [
+      4,
+      5
+    ],
+    "including_final_stock_video": [
+      6,
+      7
+    ]
+  },
+  "constraints": [
+    "no env/success/termination/observation/core changes",
+    "BC config seed only; restore exact seed101 bytes",
+    "previous data/model files read-only",
+    "one Kit;3GiB RAM guard;owned PIDs only",
+    "no package install/remote git",
+    "no generated observation rewriting",
+    "same stock matching;no yaw fold;D3scope6 flags unchanged"
+  ]
+}

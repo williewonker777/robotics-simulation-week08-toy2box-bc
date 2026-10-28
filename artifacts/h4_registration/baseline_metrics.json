@@ -1,0 +1,43 @@
+{
+  "created_from_existing_e2_only": true,
+  "dataset_sha256": "d3b7120862a50a774c459a21200c1aaeb65628ec2c17b4068507d0d2b9117447",
+  "generated_500": {
+    "first_close_height_mm_median": 12.547045802109217,
+    "lift_delay_median_steps": 40.0,
+    "lift_delay_minmax": [
+      39,
+      41
+    ],
+    "one_close_onset_each": true,
+    "quality_skip": 0,
+    "cohort_median_eef_acceleration_norm_p95": 0.4921365088,
+    "cohort_median_eef_jerk_norm_p95": 6.6929657376
+  },
+  "e2_rollouts_200": {
+    "first_near_close_count": 167,
+    "no_near_close_count": 33,
+    "first_near_close_height_mm_median": 13.630639760921525,
+    "secured_first": 78,
+    "slipped": 42,
+    "by_seed": {
+      "101": {
+        "first_near_close": 77,
+        "secured_first": 32,
+        "slipped": 17
+      },
+      "111": {
+        "first_near_close": 90,
+        "secured_first": 46,
+        "slipped": 25
+      }
+    }
+  },
+  "definitions": {
+    "close": "actions[k,-1]<0 and previous>=0, initial previous open",
+    "height": "R(truck quaternion wxyz).T @ (actual obs eef_pos - truck_pos), z",
+    "lift_delay": "first j>=0 with eef_pos[k+j,z]-eef_pos[k,z]>.01m",
+    "near_close": "close crossing and EuclideanEEF-truck<=.06m",
+    "secured_and_slip": "unchanged claude_transport_slip.py secured_rows and claude_recovery_metrics.py trial; >=40 consecutive closed acquired steps; slipping from firstnearclose to nextopening"
+  },
+  "measured_by": "native architect read-only offline computation before H4 data"
+}
