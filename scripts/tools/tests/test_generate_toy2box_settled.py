@@ -678,6 +678,7 @@ def wrapper_settings(**overrides):
         "per_env_rmp_reset": False,
         "settle_reset_retries": 0,
         "truck_pick_z_offset_m": 0.0,
+        "pregrasp_time_dilation": 1,
     }
     values.update(overrides)
     return types.SimpleNamespace(**values)
@@ -1809,6 +1810,7 @@ def test_parse_args_keeps_stock_arguments_order_and_validates_positive():
     assert settings.per_env_rmp_reset is False
     assert settings.settle_reset_retries == 0
     assert settings.truck_pick_z_offset_m == 0.0
+    assert settings.pregrasp_time_dilation == 1
     assert remaining == ["--task", "x", "--num_envs", "100", "--headless"]
     with pytest.raises(SystemExit):
         SETTLED.parse_args(["--settling_log", "log", "--settle_max_steps", "0"])

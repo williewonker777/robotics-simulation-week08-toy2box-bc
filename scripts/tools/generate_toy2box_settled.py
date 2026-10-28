@@ -667,6 +667,155 @@ def _absolute_yaw_delta_degrees(first: float, second: float) -> float:
     return math.degrees(abs(math.atan2(math.sin(first - second), math.cos(first - second))))
 
 
+def _scalar(value: Any, *, field: str) -> float:
+    """Convert a scalar waypoint field without importing torch at module load."""
+    if hasattr(value, "numel"):
+        if int(value.numel()) != 1:
+            raise ConfigurationError(f"pregrasp dilation requires scalar {field}")
+        value = value.item()
+    try:
+        result = float(value)
+    except (TypeError, ValueError) as exc:
+        raise ConfigurationError(f"pregrasp dilation requires numeric {field}") from exc
+    if not math.isfinite(result):
+        raise ConfigurationError(f"pregrasp dilation requires finite {field}")
+    return result
+
+
+def _se3_midpoint(first: Any, second: Any, torch_module: Any) -> Any:
+    """Return the translation and shortest-rotation midpoint of two 4x4 poses."""
+    if tuple(first.shape) != (4, 4) or tuple(second.shape) != (4, 4):
+        raise ConfigurationError("pregrasp dilation requires 4x4 waypoint poses")
+    midpoint = first.clone()
+    midpoint[:3, 3] = 0.5 * (first[:3, 3] + second[:3, 3])
+    # The polar factor of R0 + R1 is the SO(3) geodesic midpoint whenever the
+    # adjacent rotations are not antipodal. Source trajectories have small
+    # adjacent rotations; fail closed for the ambiguous pi boundary.
+    relative = first[:3, :3].transpose(0, 1) @ second[:3, :3]
+    cosine = ((torch_module.trace(relative) - 1.0) * 0.5).clamp(-1.0, 1.0)
+    angle = float(torch_module.acos(cosine).item())
+    if math.isclose(angle, math.pi, abs_tol=1e-6):
+        raise ConfigurationError("pregrasp dilation cannot midpoint antipodal rotations")
+    u, _, vh = torch_module.linalg.svd(first[:3, :3] + second[:3, :3])
+    correction = torch_module.eye(3, dtype=first.dtype, device=first.device)
+    if float(torch_module.linalg.det(u @ vh).item()) < 0.0:
+        correction[2, 2] = -1.0
+    midpoint[:3, :3] = u @ correction @ vh
+    return midpoint
+
+
+def _trajectory_linear_path_length(trajectory: Any, torch_module: Any) -> float:
+    if len(trajectory) < 2:
+        return 0.0
+    return float(
+        sum(
+            torch_module.linalg.vector_norm(
+                trajectory[index + 1].pose[:3, 3] - trajectory[index].pose[:3, 3]
+            ).item()
+            for index in range(len(trajectory) - 1)
+        )
+    )
+
+
+def _pose_payload(pose: Any) -> list[list[float]]:
+    value = pose.detach().cpu() if hasattr(pose, "detach") else pose
+    return [[float(item) for item in row] for row in value.tolist()]
+
+
+def _insert_after_flat_index(trajectory: Any, flat_index: int, waypoint: Any) -> None:
+    """Insert into a real WaypointTrajectory while retaining sequence boundaries."""
+    sequences = getattr(trajectory, "waypoint_sequences", None)
+    if not isinstance(sequences, list):
+        raise ConfigurationError("pregrasp dilation requires WaypointTrajectory waypoint_sequences")
+    offset = 0
+    for sequence in sequences:
+        count = len(sequence)
+        if flat_index < offset + count:
+            values = getattr(sequence, "sequence", None)
+            if not isinstance(values, list):
+                raise ConfigurationError("pregrasp dilation requires mutable WaypointSequence data")
+            values.insert(flat_index - offset + 1, waypoint)
+            return
+        offset += count
+    raise ConfigurationError("pregrasp dilation insertion index is outside the trajectory")
+
+
+def _dilate_pregrasp_trajectory(
+    trajectory: Any,
+    *,
+    torch_module: Any,
+) -> tuple[Any, dict[str, Any]]:
+    """Insert nine SE(3) midpoints into the final ten open pre-close waypoints."""
+    if getattr(trajectory, "_pregrasp_time_dilation_applied", False):
+        raise ConfigurationError("pregrasp dilation was already applied to this trajectory")
+    original_count = len(trajectory)
+    close_indices = [
+        index
+        for index in range(original_count)
+        if _scalar(trajectory[index].gripper_action, field="gripper_action") < 0.0
+    ]
+    if not close_indices:
+        raise ConfigurationError("pregrasp dilation requires a negative gripper close waypoint")
+    close_index = close_indices[0]
+    if close_index < 10:
+        raise ConfigurationError("pregrasp dilation requires ten open waypoints before first close")
+    window_start = close_index - 10
+    window = [trajectory[index] for index in range(window_start, close_index)]
+    if any(_scalar(waypoint.gripper_action, field="gripper_action") < 0.0 for waypoint in window):
+        raise ConfigurationError("pregrasp dilation window must contain ten open waypoints")
+    if any(
+        not math.isclose(_scalar(waypoint.noise, field="noise"), 0.0, abs_tol=0.0)
+        for waypoint in window
+    ):
+        raise ConfigurationError("pregrasp dilation window requires zero waypoint noise")
+
+    before_path_length = _trajectory_linear_path_length(trajectory, torch_module)
+    before_window = [_pose_payload(waypoint.pose) for waypoint in window]
+    result = copy.deepcopy(trajectory)
+    midpoint_indices = [window_start + 1 + 2 * index for index in range(9)]
+    # Reverse insertion keeps the original flat indices valid.
+    for gap_index in reversed(range(9)):
+        left = result[window_start + gap_index]
+        right = result[window_start + gap_index + 1]
+        midpoint = copy.deepcopy(left)
+        midpoint.pose = _se3_midpoint(left.pose, right.pose, torch_module)
+        midpoint.gripper_action = copy.deepcopy(left.gripper_action)
+        midpoint.noise = copy.deepcopy(left.noise)
+        _insert_after_flat_index(result, window_start + gap_index, midpoint)
+    result._pregrasp_time_dilation_applied = True
+    after_path_length = _trajectory_linear_path_length(result, torch_module)
+    expanded_window = [
+        _pose_payload(result[index].pose)
+        for index in range(window_start, close_index + 9)
+    ]
+    expanded_translation_intervals = [
+        float(
+            torch_module.linalg.vector_norm(
+                result[index + 1].pose[:3, 3] - result[index].pose[:3, 3]
+            ).item()
+        )
+        for index in range(window_start, close_index + 8)
+    ]
+    if len(result) != original_count + 9:
+        raise ConfigurationError("pregrasp dilation did not insert exactly nine waypoints")
+    return result, {
+        "original_waypoint_count": original_count,
+        "new_waypoint_count": len(result),
+        "inserted_waypoint_count": 9,
+        "first_close_index_before": close_index,
+        "first_close_index_after": close_index + 9,
+        "window_start_index": window_start,
+        "window_pose_before": before_window,
+        "window_pose_after": expanded_window,
+        "midpoint_indices": midpoint_indices,
+        "linear_path_length_before_m": before_path_length,
+        "linear_path_length_after_m": after_path_length,
+        "minimum_expanded_translation_interval_m": min(expanded_translation_intervals),
+        "application_count": 1,
+        "applied_exactly_once": True,
+    }
+
+
 def _fold_source_truck_poses(generator: Any) -> None:
     """Fold each source episode consistently using its first subtask start pose."""
     pool = generator.src_demo_datagen_info_pool
@@ -714,8 +863,11 @@ def make_settled_generator(
     enable_truck_yaw_fold: bool = False,
     truck_yaw_fold_logger: JsonlLog | None = None,
     truck_pick_z_offset_m: float = 0.0,
+    pregrasp_time_dilation: int = 1,
 ) -> type:
     """Create the dynamic subclass installed into the stock generation module."""
+    if pregrasp_time_dilation not in (1, 2):
+        raise ConfigurationError("pregrasp time dilation must be 1 or 2")
 
     class SettledDataGenerator(base_class):
         def __init__(self, *args: Any, **kwargs: Any):
@@ -777,6 +929,61 @@ def make_settled_generator(
             )
             return trajectory
 
+        def _apply_pregrasp_time_dilation(
+            self,
+            trajectory: Any,
+            *,
+            env_id: int,
+            eef_name: str,
+            subtask_ind: int,
+        ) -> Any:
+            if pregrasp_time_dilation == 1:
+                return trajectory
+            if eef_name != "agibot" or subtask_ind != 0:
+                return trajectory
+            object_ref = self.env_cfg.subtask_configs[eef_name][subtask_ind].object_ref
+            if object_ref != "toy_truck":
+                return trajectory
+            result, audit = _dilate_pregrasp_trajectory(
+                trajectory,
+                torch_module=coordinator.torch,
+            )
+            coordinator.logger.write(
+                {
+                    "record_type": "pregrasp_time_dilation",
+                    "env_id": env_id,
+                    "attempt": coordinator.attempts.get(env_id),
+                    "subtask": f"{eef_name}/{subtask_ind}",
+                    "subtask_index": subtask_ind,
+                    "eef_name": eef_name,
+                    "object_ref": object_ref,
+                    "factor": pregrasp_time_dilation,
+                    **audit,
+                }
+            )
+            return result
+
+        def _apply_registered_trajectory_transform(
+            self,
+            trajectory: Any,
+            *,
+            env_id: int,
+            eef_name: str,
+            subtask_ind: int,
+        ) -> Any:
+            shifted = self._apply_truck_pick_z_offset(
+                trajectory,
+                env_id=env_id,
+                eef_name=eef_name,
+                subtask_ind=subtask_ind,
+            )
+            return self._apply_pregrasp_time_dilation(
+                shifted,
+                env_id=env_id,
+                eef_name=eef_name,
+                subtask_ind=subtask_ind,
+            )
+
         def generate_eef_subtask_trajectory(
             self,
             env_id: int,
@@ -796,7 +1003,7 @@ def make_settled_generator(
                     runtime_subtask_constraints_dict=runtime_subtask_constraints_dict,
                     selected_src_demo_inds=selected_src_demo_inds,
                 )
-                return self._apply_truck_pick_z_offset(
+                return self._apply_registered_trajectory_transform(
                     trajectory,
                     env_id=env_id,
                     eef_name=eef_name,
@@ -863,7 +1070,7 @@ def make_settled_generator(
                     else:
                         delattr(self.env, "get_object_poses")
                 del self._source_selection_context
-            return self._apply_truck_pick_z_offset(
+            return self._apply_registered_trajectory_transform(
                 trajectory,
                 env_id=env_id,
                 eef_name=eef_name,
@@ -1318,6 +1525,7 @@ def apply_box_selection_override(env_cfg: Any, settings: argparse.Namespace, log
             "override_enabled": settings.box_robot_distance,
             "reselection_enabled": settings.enable_box_reselection,
             "zero_action_noise_enabled": settings.zero_action_noise,
+            "pregrasp_time_dilation": settings.pregrasp_time_dilation,
             "grasp_offset_override_enabled": settings.grasp_offset_range is not None,
             "requested_grasp_offset_range": settings.grasp_offset_range,
             "datagen_seed_original": seed_before,
@@ -1449,6 +1657,7 @@ def execute(
                 "per_env_rmp_reset_enabled": settings.per_env_rmp_reset,
                 "settle_reset_retries": settings.settle_reset_retries,
                 "truck_pick_z_offset_m": settings.truck_pick_z_offset_m,
+                "pregrasp_time_dilation": settings.pregrasp_time_dilation,
                 "settle_retry_ratio_limit": MAX_RESET_RETRY_RATIO,
                 "output_label": paths["output"].name,
                 "box_transition_metrics": {
@@ -1501,6 +1710,7 @@ def execute(
                 enable_truck_yaw_fold=getattr(settings, "truck_yaw_fold", False),
                 truck_yaw_fold_logger=fold_logger,
                 truck_pick_z_offset_m=settings.truck_pick_z_offset_m,
+                pregrasp_time_dilation=settings.pregrasp_time_dilation,
             )
             main_globals: dict[str, Any] | None = None
             original_setup_env_config: Any = None
@@ -1590,6 +1800,7 @@ def parse_args(argv: Iterable[str] | None = None) -> tuple[argparse.Namespace, l
     parser.add_argument("--truck_yaw_fold", action="store_true")
     parser.add_argument("--truck_yaw_fold_log", default=None)
     parser.add_argument("--truck_pick_z_offset_m", type=float, default=0.0)
+    parser.add_argument("--pregrasp_time_dilation", type=int, choices=(1, 2), default=1)
     settings, original_args = parser.parse_known_args(arguments)
     for name in ("settle_linear_velocity", "settle_angular_velocity"):
         value = getattr(settings, name)
@@ -1700,6 +1911,18 @@ def parse_args(argv: Iterable[str] | None = None) -> tuple[argparse.Namespace, l
             parser.error(
                 "nonzero --truck_pick_z_offset_m requires the stock nonfold D3 regime, "
                 "two settling retries, and an explicit chunk seed"
+            )
+    if settings.pregrasp_time_dilation == 2:
+        if not (
+            settings.per_env_rmp_reset
+            and settings.settle_reset_retries == 2
+            and settings.chunk_seed is not None
+            and not settings.truck_yaw_fold
+            and settings.truck_pick_z_offset_m == 0.0
+        ):
+            parser.error(
+                "--pregrasp_time_dilation 2 requires the stock nonfold, zero-Z-offset "
+                "D3 scope6 regime, two settling retries, and an explicit chunk seed"
             )
     return settings, original_args
 

@@ -261,7 +261,67 @@ CHECKPOINT="${CHECKPOINT:?set CHECKPOINT to the E6 seed 101 checkpoint}"
   --num_rollouts 100 --horizon 800 --seed 42 --headless
 ```
 
-학습 JSON은 실행마다 seed만 변경하고 각 학습 뒤 원래 seed 101 바이트로 복원합니다. seed 111도 같은 평가 명령을 사용합니다. 평가 seed 42, seed별 100회, horizon 800, headless는 고정입니다. 성능 선택 기준을 통과해 E6가 최종 조건이 될 때만 두 모델을 stock `play.py --video`로 다시 확인합니다. H4 결과가 확정되기 전까지 E2는 기존 최종 선택으로 유지하며, 여기서는 E6 성공률이나 최종 선택을 예측하지 않습니다. 고정 가설·판정·선택 규칙은 [`PREREGISTRATION.md`](PREREGISTRATION.md)에 있습니다.
+학습 JSON은 실행마다 seed만 변경하고 각 학습 뒤 원래 seed 101 바이트로 복원합니다. seed 111도 같은 평가 명령을 사용합니다. 평가 seed 42, seed별 100회, horizon 800, headless는 고정입니다. E6 평가는 seed 101이 11/100, seed 111이 16/100, 합산 27/200이었습니다. H4는 사전 등록 기준으로 **기각**됐고 선택 모델은 E2로 유지됐습니다. 세부 결과는 [`artifacts/experiments/h4/summary.md`](../artifacts/experiments/h4/summary.md), 고정 가설·판정·선택 규칙은 [`PREREGISTRATION.md`](PREREGISTRATION.md)에 있습니다.
+
+### H5 / E7: 닫기 직전 접근 시간을 2배로 확장
+
+H5는 E2의 annotated natural source60·D3 scope6·stock matching을 그대로 사용하고 `--pregrasp_time_dilation 2`만 추가합니다. `agibot/subtask0/toy_truck` 궤적에서 첫 음수 gripper waypoint 직전의 open waypoint 10개를 찾고, 인접한 9개 구간에 SE(3) midpoint를 하나씩 삽입합니다. 회전은 shortest path를 사용하며 기존 pose·field·순서와 닫기 이후 궤적은 바꾸지 않습니다. 정지 hold를 추가하지 않으며 `--truck_yaw_fold`를 사용하지 않고 Z offset은 기본값 `0`입니다.
+
+```bash
+for seed in 1 3 4 5 6 7 8 9 10; do
+  gen_chunk ./datasets/toy2box_agibot_sources_e2_natural60_annotated.hdf5 \
+    "$seed" 50 "./work/generation/e7_seed$(printf '%03d' "$seed")" \
+    --pregrasp_time_dilation 2
+done
+gen_chunk ./datasets/toy2box_agibot_sources_e2_natural60_annotated.hdf5 \
+  11 49 ./work/generation/e7_seed011 --pregrasp_time_dilation 2
+gen_chunk ./datasets/toy2box_agibot_sources_e2_natural60_annotated.hdf5 \
+  12 50 ./work/generation/e7_seed012 --pregrasp_time_dilation 2
+
+python scripts/tools/merge_hdf5_datasets.py \
+  --input_files ./work/generation/e7_seed{001,003,004,005,006,007,008,009,010,011,012}.hdf5 \
+  --output_file ./work/e7_merged_candidates.hdf5
+
+python - <<'PY'
+from pathlib import Path
+import h5py
+
+src = Path("work/e7_merged_candidates.hdf5")
+dst = Path("work/toy2box_agibot_mimic_e7_slowapproach_500.hdf5")
+if dst.exists():
+    raise FileExistsError(dst)
+with h5py.File(src, "r") as source, h5py.File(dst, "x") as target:
+    source.copy("data", target)
+    data = target["data"]
+    if len(data) < 500:
+        raise RuntimeError(f"expected at least 500 successes, found {len(data)}")
+    for index in range(500, len(data)):
+        del data[f"demo_{index}"]
+    data.attrs["total"] = sum(int(data[name].attrs["num_samples"]) for name in data)
+with h5py.File(dst, "r") as check:
+    assert len(check["data"]) == 500
+PY
+```
+
+파일럿은 seed 1·goal 50 chunk를 통과할 때만 본 생성의 첫 chunk로 재사용합니다. 성공률, 정착, 9개 midpoint 삽입, 정지 구간 미생성, 닫기 직전 속도·정밀도·품질의 고정 게이트는 [`artifacts/h5_registration/preregistration.json`](../artifacts/h5_registration/preregistration.json)에 있습니다. 이 기준은 H5 결과 전에 등록됐습니다.
+
+```bash
+DATASET=./work/toy2box_agibot_mimic_e7_slowapproach_500.hdf5
+./isaaclab.sh -p scripts/imitation_learning/robomimic/train.py \
+  --task Isaac-Place-Toy2Box-Agibot-Right-Arm-RmpFlow-v0 \
+  --algo bc --dataset "$DATASET"
+
+# seed 101 학습 결과. seed 111도 같은 고정 평가를 반복합니다.
+CHECKPOINT="${CHECKPOINT:?set CHECKPOINT to the E7 seed 101 checkpoint}"
+./isaaclab.sh -p scripts/tools/evaluate_toy2box_bc.py \
+  --layout_log ./work/analysis/e7_seed101.jsonl \
+  --trajectory_dir ./work/analysis/e7_seed101_npz \
+  --task Isaac-Place-Toy2Box-Agibot-Right-Arm-RmpFlow-v0 \
+  --checkpoint "$CHECKPOINT" \
+  --num_rollouts 100 --horizon 800 --seed 42 --headless
+```
+
+BC는 2000 epoch이고 학습 JSON에서 seed 101·111만 변경합니다. 각 학습 뒤에는 원래 seed 101 JSON 바이트를 복원합니다. 평가는 seed 42, seed별 100회, horizon 800, headless로 고정했습니다. H5 평가가 완료되기 전이므로 여기서는 E7 성공률이나 최종 선택을 기록하지 않습니다. 현재 선택은 E2이며 사전 등록한 H5 성능 기준을 통과할 때만 E7 두 seed로 교체합니다.
 
 ## 5. E4 데이터와 BC 학습
 
@@ -284,7 +344,7 @@ DATASET=./work/toy2box_agibot_mimic_e2_natural_500.hdf5
   --algo bc --dataset "$DATASET"
 ```
 
-각 학습 뒤 JSON을 원래 seed 101 바이트로 복원했습니다. 공개 가중치는 H4 전 사전 등록 규칙으로 선택한 E2 모델입니다. H4는 별도로 고정된 성능 선택 기준을 평가 중이며, 결과가 확정되기 전에는 이 선택을 바꾸지 않습니다.
+각 학습 뒤 JSON을 원래 seed 101 바이트로 복원했습니다. 공개 가중치는 H4 기각 후에도 유지된 E2 모델입니다. H5는 결과 전에 동결한 규칙으로 평가 중이며, 판정 완료 전에는 E2 선택을 바꾸지 않습니다.
 
 공개 체크포인트는 학습 머신 경로를 제거한 **metadata-sanitized derivative**입니다. 원본에서 `train.data`와 `train.output_dir` 두 config 값만 저장소 상대 경로로 바꿨습니다. tensor storage bytes와 그 밖의 decoded 구조는 원본과 같고, `torch.load`와 robomimic policy load를 확인했습니다. 공개 파일 자체의 SHA-256은 seed 101이 `f0369c5c46f1cb557b564be1bd59c7224c82e467cc3f64607baa3d05771cfe1c`, seed 111이 `6103aa6b8b95099078319a40bd3c0254c6c6ec9ce319f162dd0c74aa111eb4eb`입니다. 원본·공개 SHA와 tensor member 증명은 [`metadata_sanitization.json`](../deliverables/toy2box_bc/metadata_sanitization.json)에 있습니다.
 
